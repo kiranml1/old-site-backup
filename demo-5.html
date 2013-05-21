@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <head>
+		<title>Demo-5</title>
+    </head>
+	<style type="text/css">
+	#sub-top
+	{
+		width:100px;
+		margin:150px 40%;
+	}
+	.rot
+	{	
+		position:relative;
+		width:200px;
+		height:100px;
+		background-color:#f60;
+	}
+	</style>
+    <body>
+        <div id="top">
+			<div id="sub-top">
+				<div class="rot"></div>
+			</div>
+		</div>
+		<select name="func" id="trig">
+			<option value="ASIN" selected>ASIN</option>
+			<option value="ACOS">ACOS</option>
+			<option value="SIN">SIN</option>
+			<option value="SIN2">SIN2</option>
+			<option value="TAN">TAN</option>
+		</select>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jKefex.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$('#trig').change(function(){
+				switch ($(this).val())
+				{
+					case "ASIN" : (function(){
+							jKefex.Trignomentry.cancelAnimation();
+							jKefex.Trignomentry.asinfunc(".rot");
+						})();
+						break;
+					case "ACOS" : (function(){
+							jKefex.Trignomentry.cancelAnimation();
+							jKefex.Trignomentry.acosfunc(".rot");
+						})();
+						break;
+					case "SIN" : (function(){
+							jKefex.Trignomentry.cancelAnimation();
+							jKefex.Trignomentry.sinfunc(".rot");
+						})();
+						break;
+					case "SIN2" : (function(){
+							jKefex.Trignomentry.cancelAnimation();
+							jKefex.Trignomentry.sin2func(".rot");
+						})();
+						break;
+					case "TAN" : (function(){
+							jKefex.Trignomentry.cancelAnimation();
+							jKefex.Trignomentry.tanfunc(".rot");
+						})();
+						break;
+					default : (function(){
+							jKefex.Trignomentry.cancelAnimation();
+							jKefex.Trignomentry.asinfunc(".rot");
+						})();
+				}
+			});
+			jKefex.Trignomentry.positionelem(".rot");
+			jKefex.Trignomentry.asinfunc(".rot");
+		});
+		</script>
+    </body>
+</html>

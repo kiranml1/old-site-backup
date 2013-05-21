@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>jKefex Demo - 1</title>
+	</head>
+	<style type="text/css">
+		#webcam
+		{
+			border:#000 solid 4px;
+		}
+	</style>
+	<body>
+		<center>
+			<video id="webcamera"></video>
+			<br />
+			<input type="button" id="snapPhoto" value="Take a Picture"/>
+			<br />
+			<canvas id="captureCanvas" style="display:none;"></canvas>
+			<img id="canvasImage"/>
+		</center>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jKefex.js"></script>
+		<script type="text/javascript">
+		$(function(){
+				jKefex.navagatorUserMedia.container = {"element":"#webcamera"};
+				jKefex.navagatorUserMedia.navClick = function(){
+					jKefex.navagatorUserMedia.takeSnapShot('#captureCanvas','#canvasImage',600,500);
+				};
+				jKefex.navagatorUserMedia.init("snapPhoto",true,false);
+		});
+		</script>
+	</body>
+</html>
