@@ -216,7 +216,7 @@
 					<div>
 						<div class="row">
 							<div class="12u">
-								<form method="post" action="#">
+								<form method="post" action="">
 									<div>
 										<div class="row">
 											<div class="6u">
@@ -238,8 +238,8 @@
 										</div>
 										<div class="row">
 											<div class="12u">
-												<a href="#" class="button form-button-submit">Send Message</a>
-												<a href="#" class="button button-alt form-button-reset">Clear Form</a>
+												<a href="javascript:void(0);" class="button form-button-submit">Send Message</a>
+												<a href="javascript:void(0);" class="button button-alt form-button-reset">Clear Form</a>
 											</div>
 										</div>
 									</div>
@@ -300,6 +300,7 @@
 					$('.simple_overlay').delegate('.close','click',function(){
 						$('#mies2 h4').show();
 						$(this).next().next().html('');
+						$(this).next().remove();
 					});
 					$('h6[rel]').overlay();
 				});

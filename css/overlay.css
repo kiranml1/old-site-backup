@@ -61,3 +61,12 @@
 	width:650px;
 	height:500px;
 }
+h6[rel*=mies]
+{
+	cursor:pointer;
+}
+.vid
+{
+	width:100%;
+	height:100%;
+}
