@@ -6,6 +6,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+		<link rel="stylesheet" href="css/overlay.css" />
 		<script src="js/jquery-1.9.1.min.js"></script>
 		<script src="js/config.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -39,9 +40,9 @@
 						</div>
 						<div class="8u">
 							<header>
-								<h1>Hi. I'm <strong>Kiran Kumar</strong></h1>
+								<h1>Hi, I'm <strong>Kiran Kumar</strong></h1>
 								<h3>Front End Developer - HTML5, CSS3, Core JS & JQuery</h3>
-								<h5><i>jKefex JS</i> - HTML5 Javascript & JQuery Framework Library in Active Development</h5>
+								<h5><i>jKefex JS</i> - My Javascript & JQuery based Library in Active Development</h5>
 								<i><h6><a href="https://github.com/kiranml1/jKefexJS">kiranml1@jKefexJS</a></h6></i>
 							</header>
 							<p><strong></strong></p>
@@ -65,7 +66,7 @@
 									<span class="icon featured-icon icon-comments-alt"></span>
 									<h3>Cartoon Movie</h3>
 									<p>Flash Rendered Cartoon Movie Telecasted in Disney XD at Feb 18th 2011</p>
-									<h6 href="#">Watch the Movie</h6>
+									<h6 rel="#mies1">Watch the Movie</h6>
 								</section>
 							</div>
 							<div class="4u">
@@ -73,7 +74,7 @@
 									<span class="icon featured-icon icon-file-alt"></span>
 									<h3>IIM Cartoon AD</h3>
 									<p>Flash Rendered IIM AD for the Event of Creative Minds on September 2011</p>
-									<h6 href="#">Watch the Movie</h6>
+									<h6 rel="#mies2">Watch the Movie</h6>
 								</section>
 							</div>
 							<div class="4u">
@@ -81,15 +82,33 @@
 									<span class="icon featured-icon icon-thumbs-up"></span>
 									<h3>Flash Interactive Applications</h3>
 									<p>Developed Flash Application in AS3.0 for Demonstration of UX Development</p>
-									<h6>Kefex Studios Flash App</h6>
-									<h6>Love Transformers</h6>
+									<h6 rel="#mies3">Kefex Studios Flash App</h6>
+									<h6 rel="#mies4">Love Transformers</h6>
 								</section>
 							</div>
 						</div>
 					</div>
+					
+					
+					<div class="simple_overlay" id="mies1">
+					  <div class="close"></div>
+					  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
+					</div>
+					<div class="simple_overlay" id="mies2">
+					  <div class="close"></div>
+					   <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe> -->
+					</div>
+					<div class="simple_overlay" id="mies3">
+					  <div class="close"></div>
+					</div>
+					<div class="simple_overlay" id="mies4">
+					  <div class="close"></div>
+					</div>
+					
+					
 					<footer>
 						<p>Presently I'm in Complete HTML5 Development</p>
-						<a href="#portfolio" class="button button-big">See some of jKefex JS Demos</a>
+						<a href="#portfolio" class="button button-big">jKefex JS Demos</a>
 					</footer>
 				</article>
 			</div>
@@ -252,12 +271,25 @@
 					</div>
 					<footer>
 						<p id="copyright">
-							&copy; 2012 Untitled | Images: <a href="http://fotogrph.com">fotogrph</a> | Design: <a href="http://html5up.net/">HTML5 UP</a>
+							&copy; 2013 jKefex JS | Kiran Kumar
 						</p>
 					</footer>
 				</article>
 			</div>
-
-
+			<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+			<script type="text/javascript">
+				$(function(){
+					$('h6[rel=#mies1]').click(function(){
+						$('#mies1 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
+					});
+					$('h6[rel=#mies2]').click(function(){
+						$('#mies2 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe>');
+					});
+					$('.simple_overlay').delegate('.close','click',function(){
+						$(this).next().remove();
+					});
+					$('h6[rel]').overlay();
+				});
+			</script>
 	</body>
 </html>
