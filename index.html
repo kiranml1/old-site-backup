@@ -1,346 +1,263 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 	<head>
-		<title></title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
-		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
-		<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="all">
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-		<!-- <script type="text/javascript" src="js/jquery-1.6.js" ></script> -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
-		<script type="text/javascript" src="js/cufon-yui.js"></script>
-		<script type="text/javascript" src="js/cufon-replace.js"></script>
-  		<script type="text/javascript" src="js/Ubuntu_400.font.js"></script>
-  		<script type="text/javascript" src="js/Ubuntu_700.font.js"></script>
-		<script type="text/javascript" src="js/bgSlider.js" ></script>
-		<script type="text/javascript" src="js/script.js" ></script>
-		<script type="text/javascript" src="js/pages.js"></script>
-		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-		<script type="text/javascript" src="js/bg.js" ></script>
-		<script type="text/javascript" src="js/tabs.js"></script>
-		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-		<!--[if lt IE 9]>
-			<script type="text/javascript" src="js/html5.js"></script>
-		<![endif]-->
-		<!--[if lt IE 7]>
-			<div style='clear:both;text-align:center;position:relative'>
-				<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"  alt="" /></a>
-			</div>
-		<![endif]-->
+		<title>jKefex JS</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/skel.min.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
 	</head>
-	<body id="page1">
-		<div class="spinner"></div>
-		<div id="bgSlider"></div>
-		<div class="extra">
-			<div class="main">
-				<div class="box">
-<!-- header -->
-					<header>
-						<h1><a href="index.html" id="logo">Kiran Kumar UI Developer’s Portfolio</a></h1>
-						<nav>
-							<ul id="menu">
-								<li><a href="#!/page_Home"><span></span><strong>Home Page</strong></a></li>
-								<li><a href="#!/page_About"><span></span><strong>About</strong></a></li>
-								<li><a href="#!/page_Portfolio"><span></span><strong>Portfolio</strong></a></li>
-								<li><a href="#!/page_Services"><span></span><strong><i>Git Repos</i></strong></a></li>
-								<!-- <li><a href="#!/page_Contact"><span></span><strong>Contact</strong></a></li> -->
-							</ul>
-						</nav>
-					</header>
-<!--content -->
-					<article id="content">
-						<div class="ic">More Website Templates @ TemplateMonster.com -September 19th, 2011!</div>
-						<ul>
-							<li id="page_Home">
-								<div class="box1">
-									<div class="inner">
-										<a href="#" class="close" data-type="close"><span></span></a>
-										<div class="wrapper pad_bot1">
-											<div class="col1">
-												<h2>Shortly About Me</h2>
-												<figure><img src="images/page1_img1.jpg" alt="" class="pad_bot1"></figure>
-												<p class="pad_bot1">Photographer’s Portfolio is one of <a href="http://blog.templatemonster.com/free-website-templates/" target="_blank">free web templates</a> created by TemplateMonster.com team, optimized for 1280X1024 screen res.</p>
-												<a href="#!/page_More" class="button1"><span></span><strong>Read More</strong></a>
-											</div>
-											<div class="col1 pad_left1">
-												<h2>What’s New</h2>
-												<div class="wrapper">
-													<span class="date"><strong>25</strong><span>sept</span></span>
-													<div class="col2">
-														<p class="pad_bot2 color1"><strong>Vero eos accusamus</strong></p>
-														<p>This <a href="http://blog.templatemonster.com/2011/09/19/free-website-template-full-js-photography/">Photographer’s Portfolio Template</a> goes with 2 packages– with PSD files (available for regi- stered members) &amp; without them.</p>
-													</div>
-												</div>
-												<div class="wrapper">
-													<span class="date"><strong>22</strong><span>sept</span></span>
-													<div class="col2">
-														<p class="pad_bot2 color1"><strong>Excepturi sint occaecati</strong></p>
-														<p class="pad_bot1">This template has several pages: <a href="#!/page_Home">Home Page</a>, <a href="#!/page_About">About</a>, <a href="#!/page_Portfolio">Portfolio</a>, <a href="#!/page_Services">My Services</a>, <a href="#!/page_Contact">Contact</a> (note that contact us form – doesn’t work).</p>
-													</div>
-												</div>
-												<a href="#!/page_More" class="button1"><span></span><strong>Read More</strong></a>
-											</div>
-										</div>
-										<h2>My Services</h2>
-										<div class="wrapper">
-											<figure class="left marg_right1"><img src="images/page1_img2.jpg" alt=""></figure>
-											<p class="color1 pad_bot2"><strong>Dereos accusamus dignis simos</strong></p>
-											<p>Ducimus blanditiis praesentium voluatum molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animimolestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur a, id est laborum et dolorum fuga.</p>
-										</div>
-										<p class="color1 pad_bot3">Nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus:</p>
-										<ul class="list1 pad_bot1">
-											<li><a href="#">Temporibus autem quibusdam et aut officiis debitis aut rerum</a></li>
-											<li><a href="#">Necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae</a></li>
-											<li><a href="#">Gon recusandae. Itaque earum rerum hic tenetur a sapiente delectus</a></li>
-										</ul>
-										<a href="#!/page_More" class="button1"><span></span><strong>Read More</strong></a>
-									</div>
-								</div>
-							</li>
-							<li id="page_About">
-								<div class="box1">
-									<div class="inner">
-										<a href="#" class="close" data-type="close"><span></span></a>
-										<h2>My Bio</h2>
-										<div class="wrapper">
-											<figure class="left marg_right1"><img src="images/page2_img1.jpg" alt=""></figure>
-											<p class="color1 pad_bot2"><strong>Excepturi sint occaecati</strong></p>
-											<p>Cupiditate noprovident similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores.</p>
-										</div>
-										<p class="pad_bot1">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
-										<h2>My Interests</h2>
-										<ul class="list2 pad_bot1">
-											<li><a href="#">Temporibus autem quibusdam et aut officiis debitis aut rerum</a></li>
-											<li><a href="#">Necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae</a></li>
-											<li><a href="#">Gon recusandae taque earum rerum hic tenetur a sapiente delectus</a></li>
-											<li><a href="#">Aut reiciendis voluptatibus maiores alias consequatur</a></li>
-											<li><a href="#">Aut perferendis doloribus asperiores eveniet et voluptates repudiandae</a></li>
-											<li><a href="#">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</a></li>
-										</ul>
-										<a href="#!/page_More" class="button1"><span></span><strong>Read More</strong></a>
-									</div>
-								</div>
-							</li>
-							<li id="page_Portfolio">
-								<div class="box1">
-									<div class="inner">
-										<a href="#" class="close" data-type="close"><span></span></a>
-										<div class="wrapper tabs">
-											<div class="col1">
-												<h2>Categories</h2>
-												<ul class="nav">
-													<li class="selected"><a href="#Fashion"><span></span><strong>Fashion</strong></a></li>
-													<li><a href="#Objects"><span></span><strong>3D Objects</strong></a></li>
-												</ul>
-											</div>
-											<div class="col2 pad_left1">
-												<div class="tab-content" id="Fashion">
-													<h2>Fashion</h2>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img1.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img1.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img2.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img2.jpg" alt=""></a></figure>
-													</div>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img3.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img3.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img4.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img4.jpg" alt=""></a></figure>
-													</div>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img5.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img5.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img6.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img6.jpg" alt=""></a></figure>
-													</div>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img7.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img7.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img8.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img8.jpg" alt=""></a></figure>
-													</div>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img9.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img9.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img10.jpg" class="lightbox-image" data-type="prettyPhoto[group2]"><span></span><img src="images/page3_img10.jpg" alt=""></a></figure>
-													</div>
-												</div>
-												 <div class="tab-content" id="Objects">
-													<h2>3D Objects</h2>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img3.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img3.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img4.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img4.jpg" alt=""></a></figure>
-													</div>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img5.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img5.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img6.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img6.jpg" alt=""></a></figure>
-													</div>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img7.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img7.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img8.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img8.jpg" alt=""></a></figure>
-													</div>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img9.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img9.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img10.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img10.jpg" alt=""></a></figure>
-													</div>
-													<div class="wrapper">
-														<figure class="left marg_right1"><a href="images/big_img1.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img1.jpg" alt=""></a></figure>
-														<figure class="left"><a href="images/big_img2.jpg" class="lightbox-image" data-type="prettyPhoto[group1]"><span></span><img src="images/page3_img2.jpg" alt=""></a></figure>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li id="page_Services">
-								<div class="box1">
-									<div class="inner">
-										<a href="#" class="close" data-type="close"><span></span></a>
-										<div class="wrapper pad_bot3">
-											<h2>Services</h2>
-											<div class="col1">
-												<ul class="list2">
-													<li><a href="#">Temporibus autem quibusdam etaut</a></li>
-													<li><a href="#">Necessitatibus saepe eveniet</a></li>
-													<li><a href="#">Uteautem volupttes repudiandae molestiae</a></li>
-													<li><a href="#">Gon recusandae taque earum rerum</a></li>
-													<li><a href="#">Auteiciendis voluptatibus maiores</a></li>
-												</ul>
-											</div>
-											<div class="col1 pad_left1">
-												<ul class="list2">
-													<li><a href="#">Eveniet et voluptates repudiandae</a></li>
-													<li><a href="#">Sed ut perspiciatis unde omnis iste natus </a></li>
-													<li><a href="#">Accusantium doloremque laudantium </a></li>
-													<li><a href="#">Eaque ipsa quae ab illo inventore veritatis </a></li>
-													<li><a href="#">Beatae vitae dictsunt explicabo</a></li>
-												</ul>
-											</div>
-										</div>
-										<h2>About My Works</h2>
-										<div class="wrapper pad_bot3">
-											<figure class="left marg_right1"><img src="images/page4_img1.jpg" alt=""></figure>
-											<p class="color1 pad_bot2"><strong>Abour Recent Exhibition</strong></p>
-											<p>Cupiditate noprovident similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas.</p>
-										</div>
-										<div class="wrapper pad_bot3">
-											<figure class="left marg_right1"><img src="images/page4_img2.jpg" alt=""></figure>
-											<p class="color1 pad_bot2"><strong>New Tecnologies</strong></p>
-											<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-										</div>
-										<div class="wrapper">
-											<figure class="left marg_right1"><img src="images/page4_img3.jpg" alt=""></figure>
-											<p class="color1 pad_bot2"><strong>Creative Ideas</strong></p>
-											<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et ident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et voluptates repudiandae sint et molestiae.</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li id="page_Contact">
-								<div class="box1">
-									<div class="inner">
-										<a href="#" class="close" data-type="close"><span></span></a>
-										<div class="wrapper">
-											<div class="col1">
-												<h2>Contact Info</h2>
-												<p>Thom Sander</p>
-												8901 Marmora Road, Glasgow, D04 89GR<br>
-												<p class="cols">Telephone:<br>
-														Fax:<br>
-														Email:</p>
-												<p>+1 959 603 6035<br>
-														+1 504 889 9898<br>
-														<a href="mailto:" class="link1">mail@thomsander.com</a></p>
-												9863 Mill Road, Cambridge, MG09 99HT<br>
-												<p class="cols">Telephone:<br>
-														Fax:<br>
-														Email:</p>
-												<p>+1 959 603 6035<br>
-														+1 504 889 9898<br>
-														<a href="mailto:" class="link1">mail@thomsander.com</a></p>
-											</div>
-											<div class="col1 pad_left1">
-												<h2>Our Location</h2>
-												<figure><iframe width="280" height="210" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe></figure>
-											</div>
-										</div>
-										<h2>Contact Form</h2>
-										<form id="ContactForm">
-											<div>
-												<div  class="wrapper">
-													<span>Full Name:</span>
-													<input type="text" class="input" >
-												</div>
-												<div  class="wrapper">
-													<span>E-mail:</span>
-													<input type="text" class="input" >
-												</div>
-												<div  class="textarea_box">
-													<span>Message:</span>
-													<textarea name="textarea" cols="1" rows="1"></textarea>
-												</div>
-												<div class="wrapper">
-													<span>&nbsp;</span>
-													<a href="#" class="button1" onClick="document.getElementById('ContactForm').reset()"><span></span><strong>Clear</strong></a>
-													<a href="#" class="button1" onClick="document.getElementById('ContactForm').submit()"><span></span><strong>Send</strong></a>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</li>
-							<li id="page_More">
-								<div class="box1">
-									<div class="inner">
-										<a href="#" class="close" data-type="close"><span></span></a>
+	<body>
 
-										<h2>Read more</h2>
-										<div class="wrapper pad_bot3">
-											<figure class="left marg_right1"><img src="images/page4_img1.jpg" alt=""></figure>
-											<p class="color1 pad_bot2"><strong>Et harum quidem rerum</strong></p>
-											<p>Cupiditate noprovident similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas.</p>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#top">Top</a></li>
+					<li><a href="#work">Work</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<div class="wrapper wrapper-style1 wrapper-first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u">
+							<span class="me image image-full"><img src="images/me.jpg" alt="" /></span>
+						</div>
+						<div class="8u">
+							<header>
+								<h1>Hi. I'm <strong>Kiran Kumar</strong></h1>
+								<h3>Front End Developer - HTML5, CSS3, Core JS & JQuery</h3>
+								<h5><i>jKefex JS</i> - HTML5 Javascript & JQuery Framework Library in Active Development</h5>
+								<i><h6><a href="https://github.com/kiranml1/jKefexJS">kiranml1@jKefexJS</a></h6></i>
+							</header>
+							<p><strong></strong></p>
+							<a href="#work" class="button button-big">Learn About What I Do <i>( jKefex JS )</i></a>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Work -->
+			<div class="wrapper wrapper-style2">
+				<article id="work">
+					<header>
+						<h2>Flash Development & Projects</h2>
+						<span>2011-2012 ( Past Projects ) </span>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="4u">
+								<section class="box box-style1">
+									<span class="icon featured-icon icon-comments-alt"></span>
+									<h3>Cartoon Movie</h3>
+									<p>Flash Rendered Cartoon Movie Telecasted in Disney XD at Feb 18th 2011</p>
+									<h6 href="#">Watch the Movie</h6>
+								</section>
+							</div>
+							<div class="4u">
+								<section class="box box-style1">
+									<span class="icon featured-icon icon-file-alt"></span>
+									<h3>IIM Cartoon AD</h3>
+									<p>Flash Rendered IIM AD for the Event of Creative Minds on September 2011</p>
+									<h6 href="#">Watch the Movie</h6>
+								</section>
+							</div>
+							<div class="4u">
+								<section class="box box-style1">
+									<span class="icon featured-icon icon-thumbs-up"></span>
+									<h3>Flash Interactive Applications</h3>
+									<p>Developed Flash Application in AS3.0 for Demonstration of UX Development</p>
+									<h6>Kefex Studios Flash App</h6>
+									<h6>Love Transformers</h6>
+								</section>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<p>Presently I'm in Complete HTML5 Development</p>
+						<a href="#portfolio" class="button button-big">See some of jKefex JS Demos</a>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Portfolio -->
+			<div class="wrapper wrapper-style3">
+				<article id="portfolio">
+					<header>
+						<h2>HTML5 Demos</h2>
+						<span>I Love Javascript, <i>It</i> gives me Passion in my Life</span>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="12u">
+							</div>
+						</div>
+						<div class="row">
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/generic-smartphone/8949517882265310" class="image image-full"><img src="images/portfolio01.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/generic-smartphone/8949517882265310">jKefex Cam Capture</a></h3>
+									<p>HTML Navigator Specification Plug-in</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/n33" class="image image-full"><img src="images/portfolio02.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/n33">jKefex Canvas</a></h3>
+									<p>HTML5 jKefex Canvas Plug-in</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/wood-ui-kit/3574765984616310" class="image image-full"><img src="images/portfolio03.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/wood-ui-kit/3574765984616310">jKefex Validation</a></h3>
+									<p>HTML5 RegExp Validation Plug-in</p>
+								</article>
+							</div>
+						</div>
+						<div class="row">
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/n33-pattern-set-1/3522389001865317" class="image image-full"><img src="images/portfolio04.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/n33-pattern-set-1/3522389001865317">jKefex Audio</a></h3>
+									<p>HTML5 Audio Plug-in</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/cityscape/9803996277226316" class="image image-full"><img src="images/portfolio05.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/cityscape/9803996277226316">jKefex Video</a></h3>
+									<p>HTML5 Video Plug-in</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/n33" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/n33">jKefex File API</a></h3>
+									<p>HTML5 File API Plug-in</p>
+								</article>
+							</div>
+						<div class="row">
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/n33" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/n33">jKefex Web Audio API</a></h3>
+									<p>HTML5 Web Audio API Plug-in</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/n33" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/n33">jKefex Events API</a></h3>
+									<p>HTML5 Events API Plug-in</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box box-style2">
+									<a href="http://flypixel.com/n33" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
+									<h3><a href="http://flypixel.com/n33">jKefex CSS3</a></h3>
+									<p>HTML5 CSS3 API Plug-in</p>
+								</article>
+							</div>
+						</div>
+						</div>
+					</div>
+					<footer>
+						<p>Fork me on Github</p>
+						<a href="#contact" class="button button-big">Get in touch with me</a>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Contact -->
+			<div class="wrapper wrapper-style4">
+				<article id="contact">
+					<header>
+						<h2>Want to hire me? Get in touch!</h2>
+						<span>Presently I'm Working on Chrome Experiment - HTML5 With Open Source Group</span>
+					</header>
+					<div>
+						<div class="row">
+							<div class="12u">
+								<form method="post" action="#">
+									<div>
+										<div class="row">
+											<div class="6u">
+												<input type="text" name="name" id="name" placeholder="Name" />
+											</div>
+											<div class="6u">
+												<input type="text" name="email" id="email" placeholder="Email" />
+											</div>
 										</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-										<p>Occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-										<div class="wrapper pad_bot3">
-											<figure class="left marg_right1"><img src="images/page4_img2.jpg" alt=""></figure>
-											<p class="color1 pad_bot2"><strong>Blanditiis praesentium voluptatum</strong></p>
-											<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti iusto odio dignissimos ducimus qui atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+										<div class="row">
+											<div class="12u">
+												<input type="text" name="subject" id="subject" placeholder="Subject" />
+											</div>
 										</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-										<p>Qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-										<p>Occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+										<div class="row">
+											<div class="12u">
+												<textarea name="message" id="message" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<a href="#" class="button form-button-submit">Send Message</a>
+												<a href="#" class="button button-alt form-button-reset">Clear Form</a>
+											</div>
+										</div>
 									</div>
-								</div>
-							</li>
-						</ul>
-					</article>
-<!-- / content -->
-				</div>
-			</div>
-			<div class="block"></div>
-		</div>
-		<div class="bg1">
-			<div class="main">
-<!-- footer -->
-				<footer>
-					<div class="bg_spinner"></div>
-					<ul class="pagination">
-						<li class="current" style="display:none;"><a href="images/bg_img1.jpg">1</a></li>
-						<!-- <li><a href="images/bg_img2.jpg">2</a></li>
-						<li><a href="images/bg_img3.jpg">3</a></li> -->
-					</ul>
-					<div class="col_1">
-						<a href="index.html" id="footer_logo">JKEFEX JS | KIRAN KUMAR</a> Copyright 2013
+								</form>
+							</div>
+						</div>
+						<div class="row row-special">
+							<div class="12u">
+								<h3>Find me on ...</h3>
+								<ul class="social">
+									<!-- <li class="twitter"><a href="http://twitter.com/n33co" class="icon icon-twitter"><span>Twitter</span></a></li> -->
+									<li class="facebook"><a href="https://www.facebook.com/kiranbubblyml1" class="icon icon-facebook"><span>Facebook</span></a></li>
+									<!-- <li class="dribbble"><a href="http://dribbble.com/n33" class="icon icon-dribbble"><span>Dribbble</span></a></li> -->
+									<!-- <li class="linkedin"><a href="#" class="icon icon-linkedin"><span>LinkedIn</span></a></li> -->
+									<!-- <li class="tumblr"><a href="#" class="icon icon-tumblr"><span>Tumblr</span></a></li> -->
+									<!-- <li class="googleplus"><a href="#" class="icon icon-google-plus"><span>Google+</span></a></li> -->
+									<li class="github"><a href="http://github.com/n33" class="icon icon-github"><span>Github</span></a></li>
+									<!-- <li class="youtube"><a href="#" class="icon icon-youtube"><span>YouTube</span></a></li> -->
+									<!--
+									<li class="rss"><a href="#" class="icon icon-rss"><span>RSS</span></a></li>
+									<li class="instagram"><a href="#" class="icon icon-instagram"><span>Instagram</span></a></li>
+									<li class="foursquare"><a href="#" class="icon icon-foursquare"><span>Foursquare</span></a></li>
+									<li class="skype"><a href="#" class="icon icon-skype"><span>Skype</span></a></li>
+									<li class="soundcloud"><a href="#" class="icon icon-soundcloud"><span>Soundcloud</span></a></li>
+									
+									<li class="blogger"><a href="#" class="icon icon-blogger"><span>Blogger</span></a></li>
+									<li class="flickr"><a href="#" class="icon icon-flickr"><span>Flickr</span></a></li>
+									<li class="vimeo"><a href="#" class="icon icon-vimeo"><span>Vimeo</span></a></li>
+									-->
+								</ul>
+							</div>
+						</div>
 					</div>
-					<div class="col_2">
-						Designed by <a rel="nofollow" href="http://www.templatemonster.com/" target="_blank">JKEFEX JS</a> | <a rel="nofollow" href="http://www.html5xcss3.com/" target="_blank">KIRAN KUMAR</a>
-						<!-- {%FOOTER_LINK} -->
-					</div>
-				</footer>
-<!-- / footer-->
+					<footer>
+						<p id="copyright">
+							&copy; 2012 Untitled | Images: <a href="http://fotogrph.com">fotogrph</a> | Design: <a href="http://html5up.net/">HTML5 UP</a>
+						</p>
+					</footer>
+				</article>
 			</div>
-		</div>
-		<script type="text/javascript"> Cufon.now(); </script>
-		<script>
-		$(window).load(function() {
-			$('.spinner').fadeOut();
-			$('body').css({overflow:'inherit'})
-		})
-		</script>
+
+
 	</body>
 </html>
