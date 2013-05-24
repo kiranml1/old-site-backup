@@ -100,9 +100,13 @@
 					</div>
 					<div class="simple_overlay" id="mies3">
 					  <div class="close"></div>
+					  <h4 style="color:#fff; box-shadow:none;">Click to Play</h4>
+					  <div class="vid"></div>
 					</div>
 					<div class="simple_overlay" id="mies4">
 					  <div class="close"></div>
+					  <h4 style="color:#fff; box-shadow:none;">Click to Play</h4>
+					  <div class="vid"></div>
 					</div>
 					
 					
@@ -285,8 +289,17 @@
 					$('h6[rel=#mies2]').click(function(){
 						$('#mies2 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe>');
 					});
+					$(document).delegate('h6[rel=#mies3]','click',function(){
+						$('#mies3 h4').hide();
+						$('#mies3 .vid').flashembed('flash/KefexLoader.swf');
+					});
+					$(document).delegate('h6[rel=#mies4]','click',function(){
+						$('#mies4 h4').hide();
+						$('#mies4 .vid').flashembed('flash/AppLoader.swf');
+					});
 					$('.simple_overlay').delegate('.close','click',function(){
-						$(this).next().remove();
+						$('#mies2 h4').show();
+						$(this).next().next().html('');
 					});
 					$('h6[rel]').overlay();
 				});
