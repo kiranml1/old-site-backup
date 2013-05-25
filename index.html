@@ -89,20 +89,22 @@
 					
 					<div class="simple_overlay" id="mies1">
 					  <div class="close"></div>
+					  <div id="ifrm1" class="vid">
 					  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
+					  </div>
 					</div>
 					<div class="simple_overlay" id="mies2">
 					  <div class="close"></div>
-					   <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe> -->
+					  <div id="ifrm2" class="vid">
+					  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
+					  </div>
 					</div>
 					<div class="simple_overlay" id="mies3">
 					  <div class="close"></div>
-					  <h4 style="color:#fff; box-shadow:none;">Click to Play</h4>
 					  <div id="flash1" class="vid"></div>
 					</div>
 					<div class="simple_overlay" id="mies4">
 					  <div class="close"></div>
-					  <h4 style="color:#fff; box-shadow:none;">Click to Play</h4>
 					  <div id="flash2" class="vid"></div>
 					</div>
 					
@@ -292,10 +294,10 @@
 				$(function(){
 					
 					$('h6[rel=#mies1]').click(function(){
-						$('#mies1 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
+						$('#mies1 #ifrm1').html('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
 					});
 					$('h6[rel=#mies2]').click(function(){
-						$('#mies2 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe>');
+						$('#mies2 #ifrm2').html('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe>');
 					});
 					$('.4u').on('click','h6[rel=#mies3]',function(){
 						$('#mies3 h4').hide();
@@ -309,7 +311,7 @@
 					});
 					$('.simple_overlay').on('click','.close',function(){
 						$('#mies2 h4').show();
-						$('#flash1,#flash2').html('');
+						$('#flash1,#flash2,#ifrm1,#ifrm2').html('');
 					});
 					$('h6[rel]').overlay();
 					$('#ajaxload #contentpage').html('Loading');
