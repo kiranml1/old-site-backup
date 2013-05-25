@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script>
+			
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="text" id="sub1" data-error="first value not given"/>
+			<input type="text" id="sub2" data-error="second value not given"/>
+			<input type="text" id="sub3" data-error="third value not given"/>
+			<input type="submit">
+		</form>
+		<div id="myid"></div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			(function($){
+				$.fn.jKefexValidation = function(options){
+					var settings = {};
+					var err = [];
+					if(options)
+					{	
+						$.extend(settings,options);
+						$(this).submit(function(e){
+							e.preventDefault();
+							e.stopPropagation();
+							for(var i = 0;i < (settings.inputid.length);i++)
+							{	
+								if(($(settings.inputid[i]).val() === ''))
+								{	
+									err[i] = ($(settings.inputid[i]).data('error'));
+								}
+							}
+							if(err[0] !== undefined)
+							{
+								err.slice(1,settings.inputid.length);
+								$(settings.containment).html('');
+								$.each(err,function(i,val){
+									if(val != undefined)
+									{
+										$(settings.containment).append('<li>'+ val +'</li>');
+									}
+								});
+							}
+							else
+							{	
+								$(settings.containment).html('successfull');
+							}
+						});
+					}
+				};
+			})(jQuery);
+			$('form').jKefexValidation({'inputid':['#sub1','#sub2','#sub3'],"containment":"#myid"});
+		</script>
+	</body>
+</html>

@@ -7,14 +7,24 @@
 		{
 			border:#000 solid 4px;
 		}
+		#CloseWebcam
+		{
+			visibility:hidden;
+			display:none;
+		}
+		#canvasImage
+		{
+			top: 230px;
+			position: absolute;
+			padding: 10px;
+		}
 	</style>
 	<body>
 		<center>
-			<video id="webcamera"></video>
-			<br />
 			<input type="button" id="snapPhoto" value="Take a Picture"/>
-			<input style="display:none;" type="button" id="stopwebcam" value="Take a Picture"/>
+			<input type="button" id="CloseWebcam" value="Close WebCam"/>
 			<br />
+			<video id="webcamera" width="500" height="400"></video>
 			<canvas id="captureCanvas" style="display:none;"></canvas>
 			<img id="canvasImage"/>
 		</center>
@@ -24,13 +34,12 @@
 		$(function(){
 				jKefex.navagatorUserMedia.container = {"element":"#webcamera"};
 				jKefex.navagatorUserMedia.navClick = function(){
-					jKefex.navagatorUserMedia.takeSnapShot('#captureCanvas','#canvasImage',600,500);
+					jKefex.navagatorUserMedia.takeSnapShot('#captureCanvas','#canvasImage',200,160);
 				};
-				jKefex.navagatorUserMedia.init("snapPhoto",true,false,'stopwebcam');
+				jKefex.navagatorUserMedia.init("snapPhoto",true,false,"CloseWebcam");
+				
 				$('#ajaxload').on('click','.close',function(){
-					$('#ajaxload #contentpage').html('').fadeOut('slow');
-					$('#ajaxload').fadeOut('slow');
-					jKefex.navagatorUserMedia.navStop();
+						jKefex.navagatorUserMedia.closeStream();
 				});
 		});
 		</script>

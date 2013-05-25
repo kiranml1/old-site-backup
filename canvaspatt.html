@@ -21,14 +21,16 @@
 		$(function(){
 			$('#pix').hide();
 			jKefex.canvasWallPlugin.createCanvas();
-				//jKefex.canvasWallPlugin.init();
+			//jKefex.canvasWallPlugin.init();
 			jKefex.canvasWallPlugin.createPattern("repeat");
 			$(window).resize(function(){
 				//jKefex.canvasWallPlugin.init();
 				jKefex.canvasWallPlugin.createPattern("repeat");
 			});
 			jKefex.canvasWallPlugin.update();
-			//jKefex.canvasWallPlugin.requestanimframe(jKefex.canvasWallPlugin.drawthis);
+			//$('#myCanvas').hover(function(){
+				//jKefex.canvasWallPlugin.requestanimframe(jKefex.canvasWallPlugin.drawthis);
+			//});
 		})
 		</script>
     </body>
