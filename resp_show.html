@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive SlideShow</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+		<style type="text/css">
+			*
+			{
+				margin:0;
+				padding:0;
+			}
+			#contain
+			{
+				width:100%;
+			}
+			#contain .next
+			{
+				float:right;
+				width:35px;
+				height:111px;
+			}
+			#contain .prev
+			{
+				float:left;
+				width:35px;
+				height:111px;
+			}
+			div#wrapper
+			{
+				width:1280px;
+				left:40px;
+				right:40px;
+				height:111px;
+				position:absolute;
+				text-align:justify;
+			}
+			div.cont:not(:first-child)
+			{
+				display:none;
+			}
+			div.cont
+			{
+				position:absolute;
+				width:1280px;
+			}
+			div#options
+			{
+				top:140px;
+				position:absolute;
+			}
+			div#options img
+			{
+				position:absolute;
+				width:118px;
+				height:39px;
+			}
+		</style>
+    </head>
+    <body>
+		<div id="contain">
+			<div class="prev"><img src="img/mobBanLft.png" alt="" /></div>
+			<div id="wrapper">
+			<div class="cont"><h1>Kiran</h1></div>
+			<div class="cont"><h1>Kumar</h1></div>
+			<div class="cont"><h1>Amruthaluri</h1></div>
+			<div class="cont"><h1>Haritha</h1></div>
+			</div>
+			<div class="next"><img src="img/mobBanRit.png" alt="" /></div>
+		</div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+        <script src="js/jKefex.js"></script>
+		<script type="text/javascript">
+			$(jKefex.responseSlideshow('#contain .next','#contain .prev','div#wrapper,div.cont'));
+		</script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <head>
+		<title>AJAX Core</title>
+    </head>
+    <body>
+		<div id="elemid"></div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jKefex.js"></script>
+		<script type="text/javascript">
+		$(function(){
+				jKefex.ajaxcore.coreGetPost('content.php','GET',"elemid");
+				jKefex.ajaxcore.coreGetPost('content.php','POST',"elemid");
+		});
+		</script>
+    </body>
+</html>
