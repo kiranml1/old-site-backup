@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <head>
+		<title>dragandrop</title>
+    </head>
+	<style type="text/css">
+		#sub-top1
+		{
+			width:100px;
+			margin:150px 40%;
+		}
+		#sub-top2
+		{
+			width:100px;
+			margin:150px 40%;
+		}
+		.rot
+		{	
+			position:relative;
+			width:200px;
+			height:100px;
+			background-color:#f60;
+		}
+		.over
+		{
+			background-color:#ff0;
+			border:2px dashed #000;
+		}
+		.success
+		{
+			background-color:#ff0;
+			border:2px solid #000;
+		}
+	</style>
+    <body>
+		<div id="sub-top1">
+				<div class="rot" draggable="true"><b>Kiran Kumar</b></div>
+			</div>
+			<div id="sub-top2">
+				<div class="rot" draggable="true"><b>Madhu Sudhan</b></div>
+			</div>
+		</div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jKefex.js"></script>
+		<script type="text/javascript">
+			jKefex.dragAnDrop('.rot');
+		</script>
+    </body>
+</html>

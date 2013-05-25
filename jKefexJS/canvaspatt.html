@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <head>
+		<link rel="stylesheet" href="css/custom.css">
+    </head>
+	<style type="text/css">
+		#myCanvas
+		{
+			margin: 5px;
+			margin-left: 8px;
+			margin-top: 12px;
+			border:4px solid #ccc;
+		}
+	</style>
+    <body>
+		<img id="pix" src="images/dark-metal-grid-8.jpg" alt="" />
+		<canvas id="myCanvas" width="920" height="500">This Browser Doesn't Support Canvas</canvas>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="js/jKefex.js"></script>
+		<script>
+		$(function(){
+			$('#pix').hide();
+			jKefex.canvasWallPlugin.createCanvas();
+			//jKefex.canvasWallPlugin.init();
+			jKefex.canvasWallPlugin.createPattern("repeat");
+			$(window).resize(function(){
+				//jKefex.canvasWallPlugin.init();
+				jKefex.canvasWallPlugin.createPattern("repeat");
+			});
+			jKefex.canvasWallPlugin.update();
+			//$('#myCanvas').hover(function(){
+				//jKefex.canvasWallPlugin.requestanimframe(jKefex.canvasWallPlugin.drawthis);
+			//});
+		})
+		</script>
+    </body>
+</html>
