@@ -7,9 +7,6 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
 		<link rel="stylesheet" href="css/overlay.css" />
-		<script src="js/jquery-1.9.1.min.js"></script>
-		<script src="js/config.js"></script>
-		<script src="js/skel.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -101,12 +98,12 @@
 					<div class="simple_overlay" id="mies3">
 					  <div class="close"></div>
 					  <h4 style="color:#fff; box-shadow:none;">Click to Play</h4>
-					  <div class="vid"></div>
+					  <div id="flash1" class="vid"></div>
 					</div>
 					<div class="simple_overlay" id="mies4">
 					  <div class="close"></div>
 					  <h4 style="color:#fff; box-shadow:none;">Click to Play</h4>
-					  <div class="vid"></div>
+					  <div id="flash2" class="vid"></div>
 					</div>
 					
 					
@@ -287,6 +284,9 @@
 					</footer>
 				</article>
 			</div>
+			<script src="js/jquery-1.9.1.min.js"></script>
+			<script src="js/config.js"></script>
+			<script src="js/skel.min.js"></script>
 			<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 			<script type="text/javascript">
 				$(function(){
@@ -297,18 +297,19 @@
 					$('h6[rel=#mies2]').click(function(){
 						$('#mies2 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe>');
 					});
-					$(document).delegate('h6[rel=#mies3]','click',function(){
+					$('.4u').on('click','h6[rel=#mies3]',function(){
 						$('#mies3 h4').hide();
-						$('#mies3 .vid').flashembed('flash/KefexLoader.swf');
+						//$('#mies3 .vid').flashembed('flash/KefexLoader.swf');
+						flashembed('flash1','flash/KefexLoader.swf');
 					});
-					$(document).delegate('h6[rel=#mies4]','click',function(){
+					$('.4u').on('click','h6[rel=#mies4]',function(){
 						$('#mies4 h4').hide();
-						$('#mies4 .vid').flashembed('flash/AppLoader.swf');
+						//$('#mies4 .vid').flashembed('flash/AppLoader.swf');
+						flashembed('flash2','flash/AppLoader.swf');
 					});
-					$('.simple_overlay').delegate('.close','click',function(){
+					$('.simple_overlay').on('click','.close',function(){
 						$('#mies2 h4').show();
-						$(this).next().next().html('');
-						$(this).next().remove();
+						$('#flash1,#flash2').html('');
 					});
 					$('h6[rel]').overlay();
 					$('#ajaxload #contentpage').html('Loading');
@@ -316,6 +317,7 @@
 						e.preventDefault();
 						$('#ajaxload').fadeIn('slow');
 						var href = $(this).attr('href');
+						
 						$.get(href,function(data){
 							$('#ajaxload #contentpage').html(data).fadeIn('slow');
 						},"html");
