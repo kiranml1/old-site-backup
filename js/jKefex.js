@@ -7,12 +7,12 @@ try
 			"init":function(id,VID_STATE,AUD_STATE,stopid){
 					navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia ||
 					navigator.webkitGetUserMedia || navigator.msGetUserMedia);
+					butt = document.getElementById(id);
 					if(stopid)
 					{
-						buttstop = document.getElementById(stopid);
-						buttstop.addEventListener("click",jKefex.navagatorUserMedia.navStop,false);
+						butstop = document.getElementById(stopid);
+						butstop.addEventListener("click",jKefex.navagatorUserMedia.closeStream,false);
 					}
-					butt = document.getElementById(id);
 					butt.addEventListener("click",jKefex.navagatorUserMedia.navClick,false);
 					if(!navigator.getUserMedia)
 					{
@@ -24,7 +24,7 @@ try
 					}
 			},
 			"navSuccess":function(stream){
-				stopStrem = stream;
+				stopStream = stream;
 				vidStream = this.vidStream;
 				vidContainer = this.vidContainer;
 				vidContainer = document.querySelector(jKefex.navagatorUserMedia.container.element);
@@ -60,9 +60,12 @@ try
 				$(imgCanvas)[0].src = dataURL;
 				console.log(dataURL);
 			},
-			"navStop" : function()
-			{
-				stopStrem.stop();
+			"closeStream" : function(){
+				if(stopStream)
+				{
+					console.log(stopStream);
+					stopStream.stop();
+				}
 			}
 		},
 	"canvasKefexLogo":{
@@ -152,16 +155,23 @@ try
 					canvas.addEventListener('dblclick',stopWorker,false);
 					function drawCircle(e)
 					{
-						var x = e.clientX;
-						var y = e.clientY;
+						//var x = e.clientX;
+						//var y = e.clientY;
+						//var x = e.pageX;
+						//var y = e.pageY;
+						drawX = e.offsetX;
+						drawY = e.offsetY;
+						//drawthis();
+					}
+					/*function drawthis()
+					{
 						ctx.beginPath();
-						ctx.arc(x, y, 20, x * Math.PI, y * Math.PI, false);
+						ctx.arc(drawX, drawY, 20, drawX * Math.PI, drawY * Math.PI, false);
 						ctx.strokeStyle = "white";
 						ctx.fillStyle = "rgba(0,0,100,0.5)";
 						ctx.stroke();
 						ctx.closePath();
-
-					}
+					}*/
 					function stopWorker()
 					{ 
 						w.terminate();
@@ -180,10 +190,46 @@ try
 							ctx.stroke();
 							ctx.closePath();
 						};
-					}
+					},
+			"drawthis" :function()
+						{
+							ctx.beginPath();
+							ctx.arc(drawX, drawY, 20, drawX * Math.PI, drawY * Math.PI, false);
+							ctx.strokeStyle = "white";
+							ctx.fillStyle = "rgba(0,0,100,0.5)";
+							ctx.stroke();
+							ctx.closePath();
+						},
+			"requestanimframe":function(drawset) {
+				var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+											  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+				var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame ||
+											  window.webkitCancelAnimationFrame || window.msCancelAnimationFrame;
+											  
+				if(!window.requestAnimationFrame)
+				{
+					window.requestAnimationFrame = function(drawset){
+						id = window.setTimeout( drawset, 1000/60 );
+						return id;
+					};
+				}
+				
+				if(!window.cancelAnimationFrame)
+				{
+					window.cancelAnimationFrame = function(id) {
+						clearTimeout(id);
+					};
+				}
+				
+				(function animloop(){
+						myReq = requestAnimationFrame(animloop);
+						drawset();
+				})();
+				
+				}
 	},
 	"canvasWallPlugin2" : {
-			"createCanvas":function(){
+			"createCanvas":function(w,h){
 					var canvas = document.querySelector('#canvas');
 					ctx = canvas.getContext('2d');
 					canvas.width = document.width;
@@ -822,7 +868,45 @@ try
 					}
 				});
 			}
-}};
+	},
+	//below is not implemented completely
+	"validation": function($){
+				$.fn.jKefexValidation = function(options){
+					var settings = {};
+					var err = [];
+					if(options)
+					{	
+						$.extend(settings,options);
+						$(this).submit(function(e){
+							e.preventDefault();
+							e.stopPropagation();
+							for(var i = 0;i < (settings.inputid.length);i++)
+							{	
+								if(($(settings.inputid[i]).val() === ''))
+								{	
+									err[i] = ($(settings.inputid[i]).data('error'));
+								}
+							}
+							if(err[0] !== undefined)
+							{
+								err.slice(1,settings.inputid.length);
+								$(settings.containment).html('');
+								$.each(err,function(i,val){
+									if(val != undefined)
+									{
+										$(settings.containment).append('<li>'+ val +'</li>');
+									}
+								});
+							}
+							else
+							{	
+								$(settings.containment).html('successfull');
+							}
+						});
+					}
+				};
+			}
+};
 
 }
 catch(e)

@@ -74,40 +74,45 @@ h6[rel*=mies]
 {
 	width:100%;
 	height:100%;
-	background-color:rgba(0,191,255,0.7);
+	background-color:rgba(135,206,235,0.4);
 	position:fixed;
-	z-index:100;
 	top:0;
-	left:0;
+	bottom:0;
+	z-index:100;
 	display:none;
-}
-#ajaxload #contentpage
-{
-	width:1000px;
-	height:600px;
-	background-color:rgba(255,255,255,0.5);
-	position:fixed;
-	z-index:101;
-	top:20px;
-	left:190px;
-	display:none;
-	overflow:hidden;
-	padding:8px;
-	padding-top:70px;
-	-webkit-border-bottom-right-radius: 20px;
-	-webkit-border-bottom-left-radius: 20px;
-	-moz-border-radius-bottomright: 20px;
-	-moz-border-radius-bottomleft: 20px;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
 }
 #ajaxload .close
 {
+	position: fixed;
+	right: 169px;
+	top: 55px;
+	z-index: 101;
+	font-weight: bold;
+	background-color: #ccc;
+	width: 54px;
+	padding: 4px;
+	height: 30px;
+	padding-top: 0px;
+	color: #000;
+	border:1px solid #000;
+}
+#ajaxload #contentpage
+{
+	padding:8px;
+	padding-top:60px;
+	background-color:rgba(248,251,255,0.9);
+	width:960px;
+	height:600px;
 	position:fixed;
-	z-index:102;
-	top:70px;
-	right:190px;
-	cursor:pointer;
-	color:black;
-	font-weight:bold;
+	top:20px;
+	left:220px;
+	-webkit-border-bottom-right-radius: 40px;
+	-webkit-border-bottom-left-radius: 40px;
+	-moz-border-radius-bottomright: 40px;
+	-moz-border-radius-bottomleft: 40px;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	border:1px solid #000;
+	display:none;
+	overflow:hidden;
 }

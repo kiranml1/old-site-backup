@@ -89,20 +89,22 @@
 					
 					<div class="simple_overlay" id="mies1">
 					  <div class="close"></div>
+					  <div id="ifrm1" class="vid">
 					  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
+					  </div>
 					</div>
 					<div class="simple_overlay" id="mies2">
 					  <div class="close"></div>
-					   <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe> -->
+					  <div id="ifrm2" class="vid">
+					  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
+					  </div>
 					</div>
 					<div class="simple_overlay" id="mies3">
 					  <div class="close"></div>
-					  <h4 style="color:#fff; box-shadow:none;">Click to Play</h4>
 					  <div id="flash1" class="vid"></div>
 					</div>
 					<div class="simple_overlay" id="mies4">
 					  <div class="close"></div>
-					  <h4 style="color:#fff; box-shadow:none;">Click to Play</h4>
 					  <div id="flash2" class="vid"></div>
 					</div>
 					
@@ -137,8 +139,8 @@
 							</div>
 							<div class="4u">
 								<article class="box box-style2">
-									<a href="http://flypixel.com/n33" class="image image-full"><img src="images/portfolio02.jpg" alt="" /></a>
-									<h3><a href="http://flypixel.com/n33">jKefex Canvas</a></h3>
+									<a href="canvaspatt.html" class="image image-full" rel="ajaxoverlay"><img src="images/portfolio02.jpg" alt="" /></a>
+									<h3><a href="canvaspatt.html" rel="ajaxoverlay">jKefex Canvas</a></h3>
 									<p>HTML5 jKefex Canvas Plug-in</p>
 								</article>
 							</div>
@@ -242,7 +244,7 @@
 										</div>
 										<div class="row">
 											<div class="12u">
-												<a href="javascript:void(0);" class="button form-button-submit">Send Message</a>
+												<a id="submit" href="#top" class="button form-button-submit">Send Message</a>
 												<a href="javascript:void(0);" class="button button-alt form-button-reset">Clear Form</a>
 											</div>
 										</div>
@@ -292,10 +294,10 @@
 				$(function(){
 					
 					$('h6[rel=#mies1]').click(function(){
-						$('#mies1 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
+						$('#mies1 #ifrm1').html('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
 					});
 					$('h6[rel=#mies2]').click(function(){
-						$('#mies2 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe>');
+						$('#mies2 #ifrm2').html('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe>');
 					});
 					$('.4u').on('click','h6[rel=#mies3]',function(){
 						$('#mies3 h4').hide();
@@ -309,22 +311,36 @@
 					});
 					$('.simple_overlay').on('click','.close',function(){
 						$('#mies2 h4').show();
-						$('#flash1,#flash2').html('');
+						$('#flash1,#flash2,#ifrm1,#ifrm2').html('');
 					});
 					$('h6[rel]').overlay();
 					$('#ajaxload #contentpage').html('Loading');
+					
 					$('a[rel=ajaxoverlay]').click(function(e){
 						e.preventDefault();
 						$('#ajaxload').fadeIn('slow');
 						var href = $(this).attr('href');
-						
-						$.get(href,function(data){
-							$('#ajaxload #contentpage').html(data).fadeIn('slow');
-						},"html");
+						if( href == "canvaspatt.html")
+						{
+							$.get(href,function(data){
+								$('#ajaxload #contentpage').html(data).fadeIn('slow');
+								jKefex.canvasWallPlugin.requestanimframe(jKefex.canvasWallPlugin.drawthis);
+							},"html");
+						}
+						else
+						{
+							$.get(href,function(data){
+								$('#ajaxload #contentpage').html(data).fadeIn('slow');
+							},"html");
+						}
 					});
 					$('#ajaxload').on('click','.close',function(){
 						$('#ajaxload #contentpage').html('').fadeOut('slow');
 						$('#ajaxload').fadeOut('slow');
+					});
+					$('#submit').submit(function(e){
+						e.preventDefault();
+						e.stopPropagation();
 					});
 				});
 			</script>
