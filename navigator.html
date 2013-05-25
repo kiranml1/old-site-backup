@@ -13,6 +13,7 @@
 			<video id="webcamera"></video>
 			<br />
 			<input type="button" id="snapPhoto" value="Take a Picture"/>
+			<input style="display:none;" type="button" id="stopwebcam" value="Take a Picture"/>
 			<br />
 			<canvas id="captureCanvas" style="display:none;"></canvas>
 			<img id="canvasImage"/>
@@ -25,7 +26,12 @@
 				jKefex.navagatorUserMedia.navClick = function(){
 					jKefex.navagatorUserMedia.takeSnapShot('#captureCanvas','#canvasImage',600,500);
 				};
-				jKefex.navagatorUserMedia.init("snapPhoto",true,false);
+				jKefex.navagatorUserMedia.init("snapPhoto",true,false,'stopwebcam');
+				$('#ajaxload').on('click','.close',function(){
+					$('#ajaxload #contentpage').html('').fadeOut('slow');
+					$('#ajaxload').fadeOut('slow');
+					jKefex.navagatorUserMedia.navStop();
+				});
 		});
 		</script>
 	</body>

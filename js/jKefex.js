@@ -4,9 +4,14 @@ try
 	var jKefex = {
 	"navagatorUserMedia":{
 			"container":{},
-			"init":function(id,VID_STATE,AUD_STATE){
+			"init":function(id,VID_STATE,AUD_STATE,stopid){
 					navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia ||
 					navigator.webkitGetUserMedia || navigator.msGetUserMedia);
+					if(stopid)
+					{
+						buttstop = document.getElementById(stopid);
+						buttstop.addEventListener("click",jKefex.navagatorUserMedia.navStop,false);
+					}
 					butt = document.getElementById(id);
 					butt.addEventListener("click",jKefex.navagatorUserMedia.navClick,false);
 					if(!navigator.getUserMedia)
@@ -19,6 +24,7 @@ try
 					}
 			},
 			"navSuccess":function(stream){
+				stopStrem = stream;
 				vidStream = this.vidStream;
 				vidContainer = this.vidContainer;
 				vidContainer = document.querySelector(jKefex.navagatorUserMedia.container.element);
@@ -53,6 +59,10 @@ try
 				dataURL = $(canvasElem)[0].toDataURL();
 				$(imgCanvas)[0].src = dataURL;
 				console.log(dataURL);
+			},
+			"navStop" : function()
+			{
+				stopStrem.stop();
 			}
 		},
 	"canvasKefexLogo":{

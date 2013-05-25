@@ -132,8 +132,9 @@
 						<div class="row">
 							<div class="4u">
 								<article class="box box-style2">
-									<a href="http://flypixel.com/generic-smartphone/8949517882265310" class="image image-full"><img src="images/portfolio01.jpg" alt="" /></a>
-									<h3><a href="http://flypixel.com/generic-smartphone/8949517882265310">jKefex Cam Capture</a></h3>
+									<a href="navigator.html" class="image image-full" rel="ajaxoverlay"><img src="images/portfolio01.jpg" alt="" /></a>
+									<h3><a href="navigator.html" rel="ajaxoverlay" style="text-decoration:none">
+									jKefex Cam Capture</a></h3>
 									<p>HTML Navigator Specification Plug-in</p>
 								</article>
 							</div>
@@ -204,6 +205,12 @@
 						<a href="#contact" class="button button-big">Get in touch with me</a>
 					</footer>
 				</article>
+			</div>
+			<div id="ajaxload">
+				<span class="close">Close</span>
+				<div id="contentpage">
+				Kiran Kumar
+				</div>
 			</div>
 
 		<!-- Contact -->
@@ -283,6 +290,7 @@
 			<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 			<script type="text/javascript">
 				$(function(){
+					
 					$('h6[rel=#mies1]').click(function(){
 						$('#mies1 div').after('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
 					});
@@ -303,6 +311,19 @@
 						$(this).next().remove();
 					});
 					$('h6[rel]').overlay();
+					$('#ajaxload #contentpage').html('Loading');
+					$('a[rel=ajaxoverlay]').click(function(e){
+						e.preventDefault();
+						$('#ajaxload').fadeIn('slow');
+						var href = $(this).attr('href');
+						$.get(href,function(data){
+							$('#ajaxload #contentpage').html(data).fadeIn('slow');
+						},"html");
+					});
+					$('#ajaxload').on('click','.close',function(){
+						$('#ajaxload #contentpage').html('').fadeOut('slow');
+						$('#ajaxload').fadeOut('slow');
+					});
 				});
 			</script>
 	</body>

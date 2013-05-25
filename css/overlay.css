@@ -70,3 +70,44 @@ h6[rel*=mies]
 	width:100%;
 	height:100%;
 }
+#ajaxload
+{
+	width:100%;
+	height:100%;
+	background-color:rgba(0,191,255,0.7);
+	position:fixed;
+	z-index:100;
+	top:0;
+	left:0;
+	display:none;
+}
+#ajaxload #contentpage
+{
+	width:1000px;
+	height:600px;
+	background-color:rgba(255,255,255,0.5);
+	position:fixed;
+	z-index:101;
+	top:20px;
+	left:190px;
+	display:none;
+	overflow:hidden;
+	padding:8px;
+	padding-top:70px;
+	-webkit-border-bottom-right-radius: 20px;
+	-webkit-border-bottom-left-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	-moz-border-radius-bottomleft: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+#ajaxload .close
+{
+	position:fixed;
+	z-index:102;
+	top:70px;
+	right:190px;
+	cursor:pointer;
+	color:black;
+	font-weight:bold;
+}
