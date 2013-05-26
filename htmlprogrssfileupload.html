@@ -45,7 +45,8 @@
 </head>
 <body>
 	<div id="main">
-		<h1>Upload Your Images</h1>
+		<h1>Upload Your File</h1>
+		
 		<form method="post" enctype="multipart/form-data"  action="upload.php">
     		<input type="file" name="images" id="images" multiple />
     		<button type="submit" id="btn">Upload Files!</button>
@@ -60,7 +61,12 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script src="js/jKefex.js"></script>
   <script type="text/javascript">
-	jKefex.formDataUpload("upload.php");
+  $(function(){
+		if(jKefex)
+		{
+			jKefex.formDataUpload("upload.php");
+		}	
+  });
   </script>
 </body>
 </html>

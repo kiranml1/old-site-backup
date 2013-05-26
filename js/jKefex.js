@@ -226,7 +226,11 @@ try
 						drawset();
 				})();
 				
-				}
+				},
+			"removeevents":function(){
+				canvas.removeEventListener('mousemove',drawCircle,false);
+				canvas.removeEventListener('dblclick',stopWorker,false);
+			}
 	},
 	"canvasWallPlugin2" : {
 			"createCanvas":function(w,h){
@@ -517,9 +521,16 @@ try
 			var data = new FormData();
 			for(var i = 0;i < input.files.length; ++i)
 			{
-				file = input.files[i];
-				data.append("images[]",file);
-				console.log(file);
+				if(input.files[i].type.match(/image.*/))
+				{
+					file = input.files[i];
+					data.append("images[]",file);
+					console.log(file);
+				}
+				else
+				{
+					alert('Please upload Only Images');
+				}
 			}
 			var xhr;
 			if(window.XMLHttpRequest)
@@ -541,7 +552,7 @@ try
 				}
 			},false);
 			xhr.upload.addEventListener("load",function(){
-				document.getElementById('upload_progress').style.display = "none";
+				document.getElementById('upload_progress').textContent = "Completed";
 				console.log("completed");
 			},false);
 			xhr.upload.addEventListener("error",function(){
@@ -654,12 +665,12 @@ try
 				setTopOptions(obj);
 			}
 	},
-	"audioplugin":function(url,text,button,stopbutt){
+	"audioplugin":function(url,text,audbutt,stopbutt){
 		var context;
 		var bufferSound = null;
 		//button.addEventListener('click',initAudio,false);
 		//stopbutt.addEventListener('click',stopSound,false);
-		$(button).one('click',initAudio);
+		$(audbutt).one('click',initAudio);
 		$(stopbutt).one('click',stopSound);
 		function initAudio()
 		{
@@ -789,15 +800,12 @@ try
 			width = $(window).innerWidth();
 			$(sizedcontent).width(( $(document).width() ) - ($(document).width() - (width - 86)));
 		});
-		
-		$.fn.doesExist = function(){
-				return $(this).length > 0;
-			};
 		$(next).click(function(){
 			$this_n = $(this).prev().find('.cont:visible').next();
 			$thisn = $(this).prev().find('.cont:visible');
 			$thisnh = $(this).prev().find('.cont:hidden');
-			if($this_n.doesExist())
+			//console.log($this_n.length);
+			if($this_n.length != 0)
 			{
 				$thisn.hide('slide',{direction:'left'},1000);
 				$this_n.show('slide',{direction:'right'},1000);
@@ -807,7 +815,8 @@ try
 			$this_p = $(this).next().find('.cont:visible').prev();
 			$thisp = $(this).next().find('.cont:visible');
 			$thisph = $(this).next().find('.cont:hidden');
-			if($this_p.doesExist())
+			//console.log($this_p.length);
+			if($this_p.length != 0)
 			{
 				$thisp.hide('slide',{direction:'right'},1000);
 				$this_p.show('slide',{direction:'left'},1000);

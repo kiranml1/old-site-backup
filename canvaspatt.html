@@ -29,6 +29,13 @@
 			});
 			jKefex.canvasWallPlugin.update();
 			//jKefex.canvasWallPlugin.requestanimframe(jKefex.canvasWallPlugin.drawthis);
+			//removeevents
+			$('#ajaxload').on('click','.close',function(){
+				if(jKefex.canvasWallPlugin)
+				{
+					jKefex.canvasWallPlugin.removeevents();
+				}
+			});
 		})
 		</script>
     </body>

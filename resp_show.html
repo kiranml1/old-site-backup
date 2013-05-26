@@ -19,12 +19,18 @@
 				float:right;
 				width:35px;
 				height:111px;
+				position: relative;
+				z-index: 1200;
+				margin-right:-9px;
 			}
 			#contain .prev
 			{
 				float:left;
 				width:35px;
 				height:111px;
+				position: relative;
+				z-index: 1200;
+				margin-left:-9px;
 			}
 			div#wrapper
 			{
@@ -34,6 +40,7 @@
 				height:111px;
 				position:absolute;
 				text-align:justify;
+				margin-top: 30px;
 			}
 			div.cont:not(:first-child)
 			{
@@ -61,18 +68,32 @@
 		<div id="contain">
 			<div class="prev"><img src="img/mobBanLft.png" alt="" /></div>
 			<div id="wrapper">
-			<div class="cont"><h1>Kiran</h1></div>
-			<div class="cont"><h1>Kumar</h1></div>
-			<div class="cont"><h1>Amruthaluri</h1></div>
-			<div class="cont"><h1>Haritha</h1></div>
+			<div class="cont"><h1>jKefex</h1></div>
+			<div class="cont"><h1>Core JS</h1></div>
+			<div class="cont"><h1>JQuery</h1></div>
+			<div class="cont"><h1>Crockford</h1></div>
 			</div>
 			<div class="next"><img src="img/mobBanRit.png" alt="" /></div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<hr />
+			<br />
+			<h2>jKefex Slide Show</h2>
 		</div>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
         <script src="js/jKefex.js"></script>
 		<script type="text/javascript">
+		(function($){
+			$.fn.doesExist = function(){
+				return $(this).length > 0;
+			};
+		})(jQuery);
+		$(function(){
 			$(jKefex.responseSlideshow('#contain .next','#contain .prev','div#wrapper,div.cont'));
+		});
 		</script>
     </body>
 </html>

@@ -16,8 +16,11 @@
 				//stop = document.querySelector('#buttstop');
 				//jKefex.audioplugin("Violan.mp3","h4",'#buttstart','#buttstop');
 				var stopping = new jKefex.audioplugin("Violan.mp3","h4",'#buttstart','#buttstop');
-				$('#ajaxload').on('click','.close',function(){
+				$('.close').one('click',function(){
+					if(stopping)
+					{
 						stopping.stopSound();
+					}
 				});
 		});
 		</script>

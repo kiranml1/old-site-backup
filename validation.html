@@ -1,15 +1,32 @@
 <html>
 	<head>
-		<script>
-			
-		</script>
+		<style type="text/css">
+			#myid li
+			{
+				text-decoration:none;
+				list-style:none;
+				color:#000;
+			}
+			#subm
+			{
+				padding:4px;
+			}
+			#fore .vald
+			{
+				background-color:darkgrey;
+				width:30%;
+				color:#000;
+			}
+		</style>
 	</head>
 	<body>
-		<form>
-			<input type="text" id="sub1" data-error="first value not given"/>
-			<input type="text" id="sub2" data-error="second value not given"/>
-			<input type="text" id="sub3" data-error="third value not given"/>
-			<input type="submit">
+		<h2>jKefex Validation</h2>
+		<hr />
+		<form id="fore">
+			Validation Input : <input type="text" class="vald" id="sub1" size="100" data-error="First value not given"/><br />
+			Validation Input : <input type="text" class="vald" id="sub2" size="100" data-error="Second value not given"/><br />
+			Validation Input : <input type="text" class="vald" id="sub3" size="100"data-error="Third value not given"><br />
+			<input id="subm" type="submit">
 		</form>
 		<div id="myid"></div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -44,7 +61,7 @@
 							}
 							else
 							{	
-								$(settings.containment).html('successfull');
+								$(settings.containment).html('Successfull Enter All Values');
 							}
 						});
 					}

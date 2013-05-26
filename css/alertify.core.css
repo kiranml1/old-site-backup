@@ -44,8 +44,9 @@
 		opacity: 0;
 		display: none;
 	}
-	/* overwrite display: none; for everything except IE6-8 */
-	:root *> .alertify-hidden { display: block; }
+	/* overwrite display: none; for everything except IE6-8 
+	:root *> .alertify-hidden { display: block; }*/
+	:root *> .alertify-hidden { display: none; }
 .alertify-logs {
 	position: fixed;
 	z-index: 5000;
