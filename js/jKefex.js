@@ -472,35 +472,40 @@ try
  	input.addEventListener("change", function (evt) {
  		document.getElementById("response").innerHTML = "Uploading . . ."
  		var i = 0, len = this.files.length, img, reader, file;
-	
-		for ( ; i < len; i++ ) {
-			file = this.files[i];
-	
-			if (!!file.type.match(/image.*/)) {
-				if ( window.FileReader ) {
-					reader = new FileReader();
-					reader.onloadend = function (e) { 
-						showUploadedItem(e.target.result, file.fileName);
-					};
-					reader.readAsDataURL(file);
-				}
-				if (formdata) {
-					formdata.append("images[]", file);
-				}
-			}	
+		if(len <= 3)
+		{
+			for ( ; i < len; i++ ) {
+				file = this.files[i];
+		
+				if (!!file.type.match(/image.*/)) {
+					if ( window.FileReader ) {
+						reader = new FileReader();
+						reader.onloadend = function (e) { 
+							showUploadedItem(e.target.result, file.fileName);
+						};
+						reader.readAsDataURL(file);
+					}
+					if (formdata) {
+						formdata.append("images[]", file);
+					}
+				}	
+			}
+			if (formdata) {
+				$.ajax({
+					url: uri,
+					type: "POST",
+					data: formdata,
+					processData: false,
+					contentType: false,
+					success: function (res) {
+						document.getElementById("response").innerHTML = res; 
+					}
+				});
+			}
 		}
-	
-		if (formdata) {
-			$.ajax({
-				url: uri,
-				type: "POST",
-				data: formdata,
-				processData: false,
-				contentType: false,
-				success: function (res) {
-					document.getElementById("response").innerHTML = res; 
-				}
-			});
+		else
+		{
+			alert('Please Select only 3 Files');
 		}
 	}, false);
 },
@@ -649,14 +654,16 @@ try
 				setTopOptions(obj);
 			}
 	},
-	"audioplugin":function(url){
+	"audioplugin":function(url,text,button,stopbutt){
 		var context;
 		var bufferSound = null;
-		window.addEventListener('load',initAudio,false);
+		button.addEventListener('click',initAudio,false);
+		stopbutt.addEventListener('click',stopSound,false);
 		function initAudio()
 		{
 			window.AudioContext = window.AudioContext||window.webkitAudioContext;
 			context = new AudioContext();
+			$(text).html('Loading... the Sound');
 			loadSound(url);
 		}
 		function loadSound(url)
@@ -669,6 +676,7 @@ try
 			{
 				context.decodeAudioData(request.response,function(buffer){
 					bufferSound = buffer;
+					$(text).html('Being Played Please Wait... the Sound');
 					playSound(buffer);
 					console.log("Completed");
 				});
@@ -677,12 +685,17 @@ try
 		};
 		function playSound(buffer)
 		{
-			var source = context.createBufferSource();
+			source = context.createBufferSource();
 			source.buffer = buffer;
 			source.connect(context.destination);
+			console.log(source);
 			source.start(0);
+			$(text).html("Playing the Music");
 		}
-		console.log("Completed");
+		function stopSound()
+		{
+			source.stop(0);
+		}
 	},
 	"ajaxcore":{ "coreGetPost":function(url,method,elemId){
 		var xhr;
