@@ -676,7 +676,7 @@ try
 		{
 			window.AudioContext = window.AudioContext||window.webkitAudioContext;
 			context = new AudioContext();
-			$(text).html('Loading... the Sound');
+			$(text).html('Loading... Web Audio Please Wait.. Do not Stop or Close the Pop-up');
 			loadSound(url);
 			$(this).hide();
 		}
