@@ -61,7 +61,7 @@
 	width:650px;
 	height:500px;
 }
-h6[rel*=mies]
+h6[rel*=mies],.close
 {
 	cursor:pointer;
 }

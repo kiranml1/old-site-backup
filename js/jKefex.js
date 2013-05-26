@@ -657,14 +657,17 @@ try
 	"audioplugin":function(url,text,button,stopbutt){
 		var context;
 		var bufferSound = null;
-		button.addEventListener('click',initAudio,false);
-		stopbutt.addEventListener('click',stopSound,false);
+		//button.addEventListener('click',initAudio,false);
+		//stopbutt.addEventListener('click',stopSound,false);
+		$(button).one('click',initAudio);
+		$(stopbutt).one('click',stopSound);
 		function initAudio()
 		{
 			window.AudioContext = window.AudioContext||window.webkitAudioContext;
 			context = new AudioContext();
 			$(text).html('Loading... the Sound');
 			loadSound(url);
+			$(this).hide();
 		}
 		function loadSound(url)
 		{
@@ -696,6 +699,10 @@ try
 		{
 			source.stop(0);
 		}
+		this.stopSound = function()
+		{
+			source.stop(0);
+		};
 	},
 	"ajaxcore":{ "coreGetPost":function(url,method,elemId){
 		var xhr;

@@ -7,15 +7,18 @@
 			<h4>Web Audio API</h4>
 			<button id="buttstart">Play Web Audio</button>
 			<button id="buttstop">Stop Web Audio</button>
-			<h6>Please Stop the Music if you were closing this Channel</h6>
 		</center>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jKefex.js"></script>
 		<script type="text/javascript">
 		$(function(){
-				butt = document.querySelector('#buttstart');
-				stop = document.querySelector('#buttstop');
-				jKefex.audioplugin("Violan.mp3","h4",butt,stop);
+				//butt = document.querySelector('#buttstart');
+				//stop = document.querySelector('#buttstop');
+				//jKefex.audioplugin("Violan.mp3","h4",'#buttstart','#buttstop');
+				var stopping = new jKefex.audioplugin("Violan.mp3","h4",'#buttstart','#buttstop');
+				$('#ajaxload').on('click','.close',function(){
+						stopping.stopSound();
+				});
 		});
 		</script>
 	</body>
