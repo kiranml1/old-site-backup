@@ -867,11 +867,11 @@ try
 			col.addEventListener('dragend', dragend, false);
 		});
 	},
-	"workers":function(workerURL){
+	"workers":function(workerURL,elem){
 		var worker = new Worker(workerURL);
 		worker.postMessage('Hello');
 		worker.addEventListener('message',function(e){
-			console.log(e.data);
+			$(elem).html(e.data);
 		},false);
 	},
 	"jqueryUIslideupdown":function($) {

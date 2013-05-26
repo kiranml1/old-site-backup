@@ -2,29 +2,57 @@
     <head>
 		<title>CSS Web filters</title>
     </head>
+	<style type="text/css">
+	#imag,#optionsfilters
+	{
+		float:left;
+		height:700px;
+	}
+	#imag img
+	{
+		width: 400px;
+		border:2px solid #000;
+	}
+	#optionsfilters
+	{
+		text-align:left;
+		padding:10px;
+		padding-top:0;
+	}
+	#webfilters
+	{
+	margin-left:80px;
+	}
+	</style>
     <body>
-        <center>
-			<img id="picture" src="img/pic.jpg" alt="" />
-			<br />
-			Brightness : <input type="range" id="brightness" min="0" max="10"/>
-			<br />
-			Contrast : <input type="range" id="contrast" min="0" max="10"/>
-			<br />
-			Sepia : <input type="range" id="sepia" min="0" max="10"/>
-			<br />
-			Grayscale : <input type="range" id="grayscale" min="0" max="10"/>
-			<br />
-			Invert : <input type="range" id="invert" min="0" max="10"/>
-			<br />
-			Blur : <input type="range" id="blur" min="0" max="10"/>
-			<br />
-			Opacity : <input type="range" id="opacity" min="0" max="10"/>
-			<br />
-			Saturate : <input type="range" id="saturate" min="0" max="10"/>
-			<br />
-			Hue-Rotate : <input type="range" id="hue-rotate" min="0" max="10"/>
-			<br />
-			dropshadow : <input type="range" id="drop-shadow" min="0" max="10"/>
+        <center id="webfilters">
+		<h3>Webkit Filters</h3>
+		<h6>Please view it only in chrome as it is only supporting browser for webfilters</h6>
+			<div id="imag">
+				<img id="picture" src="img/pic.jpg" alt="" />
+			</div>
+			<div id="optionsfilters">
+					Brightness : <input type="range" id="brightness" min="0" max="10"/>
+					<br />
+					Contrast : <input type="range" id="contrast" min="0" max="10"/>
+					<br />
+					Sepia : <input type="range" id="sepia" min="0" max="10"/>
+					<br />
+					Grayscale : <input type="range" id="grayscale" min="0" max="10"/>
+					<br />
+					Invert : <input type="range" id="invert" min="0" max="10"/>
+					<br />
+					Blur : <input type="range" id="blur" min="0" max="10"/>
+					<br />
+					Opacity : <input type="range" id="opacity" min="0" max="10"/>
+					<br />
+					Saturate : <input type="range" id="saturate" min="0" max="10"/>
+					<br />
+					Hue-Rotate : <input type="range" id="hue-rotate" min="0" max="10"/>
+					<br />
+					dropshadow : <input type="range" id="drop-shadow" min="0" max="10"/>
+			</div>
+			
 		</center>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/jKefex.js"></script>
