@@ -5,8 +5,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 		<style type="text/css">
-			*
-			{
+			*{
 				margin:0;
 				padding:0;
 			}
@@ -40,21 +39,19 @@
 				height:111px;
 				position:absolute;
 				text-align:justify;
-				margin-top: 30px;
+				margin-top: 10px;
+				overflow-y:hidden;
+				overflow-x:scroll;
 			}
-			div.cont:not(:first-child)
+			div#innerWrapper
 			{
-				display:none;
+				height:111px;
 			}
 			div.cont
 			{
-				position:absolute;
-				width:1280px;
-			}
-			div#options
-			{
-				top:140px;
-				position:absolute;
+				position:relative;
+				float:left;
+				width:1274px;
 			}
 			div#options img
 			{
@@ -67,23 +64,19 @@
     <body>
 		<div id="contain">
 			<div class="prev"><img src="img/mobBanLft.png" alt="" /></div>
-			<div id="wrapper">
-			<div class="cont"><h1>jKefex</h1></div>
-			<div class="cont"><h1>Core JS</h1></div>
-			<div class="cont"><h1>JQuery</h1></div>
-			<div class="cont"><h1>Crockford</h1></div>
-			</div>
+				<div id="wrapper">
+					<div id="innerWrapper">
+						<div class="cont"><h1>jKefex</h1></div>
+						<div class="cont"><h1>Core JS</h1></div>
+						<div class="cont"><h1>JQuery</h1></div>
+						<div class="cont"><h1>Crockford</h1></div>
+					</div>
+				</div>
 			<div class="next"><img src="img/mobBanRit.png" alt="" /></div>
-			<br />
-			<br />
-			<br />
-			<br />
-			<hr />
-			<br />
-			<h2>jKefex Slide Show</h2>
 		</div>
+		<br /><br /><br /><br /><br /><br /><br /><br />
+		<h2>jKefex Slide Show</h2>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
         <script src="js/jKefex.js"></script>
 		<script type="text/javascript">
 		(function($){
@@ -92,7 +85,7 @@
 			};
 		})(jQuery);
 		$(function(){
-			$(jKefex.responseSlideshow('#contain .next','#contain .prev','div#wrapper,div.cont'));
+			$(jKefex.responseSlideshow('#contain .next','#contain .prev','div#wrapper','div#innerWrapper','div.cont',true));
 		});
 		</script>
     </body>
