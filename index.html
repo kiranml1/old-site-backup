@@ -176,6 +176,7 @@
 									<p>HTML5 File API Plug-in</p>
 								</article>
 							</div>
+						</div>
 						<div class="row">
 							<div class="4u">
 								<article class="box box-style2">
@@ -199,80 +200,51 @@
 								</article>
 							</div>
 						</div>
-						<!--
-						<div class="row">
-							
-							<!--
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="resp_show.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
-									<h3><a href="resp_show.html" rel="ajaxoverlay">jKefex Slideshow</a></h3>
-									<p>HTML5 Slideshow API Plug-in</p>
-								</article>
+							<div id="overlayed">
+							<div class="simple_overlay" id="mies1">
+							  <div class="close"></div>
+							  <div id="ifrm1" class="vid">
+							  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
+							  </div>
 							</div>
-							<!--
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="http://flypixel.com/n33-pattern-set-1/3522389001865317" class="image image-full"><img src="images/portfolio04.jpg" alt="" /></a>
-									<h3><a href="http://flypixel.com/n33-pattern-set-1/3522389001865317">jKefex Audio</a></h3>
-									<p>HTML5 Audio Plug-in</p>
-								</article>
+							<div class="simple_overlay" id="mies2">
+							  <div class="close"></div>
+							  <div id="ifrm2" class="vid">
+							  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
+							  </div>
 							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="http://flypixel.com/n33" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
-									<h3><a href="http://flypixel.com/n33">jKefex Events API</a></h3>
-									<p>HTML5 Events API Plug-in</p>
-								</article>
+							<div class="simple_overlay" id="mies3">
+							  <div class="close"></div>
+							  <div id="flash1" class="vid"></div>
 							</div>
-							-->
+							<div class="simple_overlay" id="mies4">
+							  <div class="close"></div>
+							  <div id="flash2" class="vid"></div>
 							</div>
-						<!--</div>-->
+						</div>
+						<div id="ajaxload">
+							<span class="close">Close</span>
+							<div id="contentpage">
+							Kiran Kumar
+							</div>
+						</div>
 					</div>
 					<footer>
 						<p>Fork me on Github</p>
 						<a href="#contact" class="button button-big">Get in touch with me</a>
 					</footer>
-					<div id="overlayed">
-						<div class="simple_overlay" id="mies1">
-						  <div class="close"></div>
-						  <div id="ifrm1" class="vid">
-						  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
-						  </div>
-						</div>
-						<div class="simple_overlay" id="mies2">
-						  <div class="close"></div>
-						  <div id="ifrm2" class="vid">
-						  <!-- <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> -->
-						  </div>
-						</div>
-						<div class="simple_overlay" id="mies3">
-						  <div class="close"></div>
-						  <div id="flash1" class="vid"></div>
-						</div>
-						<div class="simple_overlay" id="mies4">
-						  <div class="close"></div>
-						  <div id="flash2" class="vid"></div>
-						</div>
-					</div>
-					<div id="ajaxload">
-						<span class="close">Close</span>
-						<div id="contentpage">
-						Kiran Kumar
-						</div>
-					</div>
 				</article>
 			</div>
 
 		<!-- Contact -->
-			<div class="wrapper wrapper-style4">
+			<div class="wrapper wrapper-style4 wrapper-last">
 				<article id="contact">
 					<header>
 						<h2>Want to hire me? Get in touch!</h2>
 						<span>Presently I'm Working on Chrome Experiment - HTML5 With Open Source Group</span>
 					</header>
 					<div>
-						<div class="row">
+						<!-- <div class="row">
 							<div class="12u">
 								<form method="post" action="">
 									<div>
@@ -296,14 +268,14 @@
 										</div>
 										<div class="row">
 											<div class="12u">
-												<a id="submit" href="#top" class="button form-button-submit">Send Message</a>
-												<a href="javascript:void(0);" class="button button-alt form-button-reset">Clear Form</a>
+												<a id="submit" href="javascript:void(0);" onclick="javascript:return false;"  class="button form-button-submit">Send Message</a>
+												<a href="javascript:void(0);" onclick="javascript:return false;" class="button button-alt form-button-reset">Clear Form</a>
 											</div>
 										</div>
 									</div>
 								</form>
 							</div>
-						</div>
+						</div> -->
 						<div class="row row-special">
 							<div class="12u">
 								<h3>Find me on ...</h3>
@@ -339,22 +311,16 @@
 				</article>
 			</div>
 			<script src="js/jquery-1.9.1.min.js"></script>
+			<script src="js/alertify.min.js"></script>
+			<script src="js/jKefex.js"></script>
 			<script src="js/config.js"></script>
 			<script src="js/skel.min.js"></script>
 			<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
-			<script src="js/alertify.min.js"></script>
-			<script src="js/jKefex.js"></script>
 			<script type="text/javascript">
 			try
 			{
-				$(document).hide();
 				$(function(){
-					$(document).show();
-					
-					
 					alertify.alert(" For Better Performance and Support, Please Choose Chrome and Presently, This Site is under Active Progress of Updates and For Extended Support in Compatibility, Please wait.. and you can also help me in Github....");
-					
-					
 					$('h6[rel=#mies1]').click(function(){
 						$('#mies1 #ifrm1').html('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
 					});
@@ -363,12 +329,10 @@
 					});
 					$('.4u').on('click','h6[rel=#mies3]',function(){
 						$('#mies3 h4').hide();
-						//$('#mies3 .vid').flashembed('flash/KefexLoader.swf');
 						flashembed('flash1','flash/KefexLoader.swf');
 					});
 					$('.4u').on('click','h6[rel=#mies4]',function(){
 						$('#mies4 h4').hide();
-						//$('#mies4 .vid').flashembed('flash/AppLoader.swf');
 						flashembed('flash2','flash/AppLoader.swf');
 					});
 					$('.simple_overlay').on('click','.close',function(){
@@ -377,7 +341,6 @@
 					});
 					$('h6[rel]').overlay();
 					$('#ajaxload #contentpage').html('Loading');
-					
 					$('#portfolio').on('click','a[rel=ajaxoverlay]',function(e){
 						$('#ajaxload #contentpage').html('<h1>Loading...</h1>');
 						e.preventDefault();
@@ -404,10 +367,7 @@
 						$('#ajaxload #contentpage').html('').fadeOut('slow');
 						$('#ajaxload').fadeOut('slow');
 					});
-					$('#submit').submit(function(e){
-						e.preventDefault();
-						e.stopPropagation();
-					});
+										
 				});
 			}
 			catch(e)
