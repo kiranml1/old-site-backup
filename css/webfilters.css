@@ -1,0 +1,20 @@
+#imag,#optionsfilters
+{
+	float:left;
+	height:700px;
+}
+#imag img
+{
+	width: 400px;
+	border:2px solid #000;
+}
+#optionsfilters
+{
+	text-align:left;
+	padding:10px;
+	padding-top:0;
+}
+#webfilters
+{
+margin-left:80px;
+}

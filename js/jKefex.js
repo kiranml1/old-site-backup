@@ -687,7 +687,7 @@ try
 				if(e.lengthComputable)
 				{
 					var percent = e.loaded/e.total;
-					$(text).html('Loading '+Math.round(percent*100)+'%');
+					$(text).html('Loading '+Math.round(percent*100)+'% Please Wait...');
 				}
 			};
 			
@@ -914,7 +914,6 @@ try
 				});
 			}
 	},
-	//below is not implemented completely
 	"validation": function(){
 				$.fn.jKefexValidation = function(options){
 					var settings = {};
