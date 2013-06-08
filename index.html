@@ -17,8 +17,10 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+		<script src="js/head.min.js"></script>
 	</head>
 	<body>
+	<div id="loader">
 		<!-- Nav -->
 			<nav id="nav">
 				<ul>
@@ -242,12 +244,19 @@
 					</footer>
 				</article>
 			</div>
-			<script src="js/jquery-1.9.1.min.js"></script>
-			<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
-			<script src="js/alertify.min.js"></script>
-			<script src="js/jKefex.js"></script>
-			<script src="js/config.js"></script>
-			<script src="js/skel.min.js"></script>
-			<script type="text/javascript" src="js/custom.js"></script>
+	</div>
+			<script type="text/javascript">
+				 document.getElementById("loader").style.display = "none";
+				 head.js("js/jquery-1.9.1.min.js",
+					 "http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js",
+					 "js/alertify.min.js",
+					 "js/jKefex.js",
+					 "js/config.js",
+					 "js/skel.min.js",
+					 "js/custom.js",
+					 function(){
+						$('#loader').fadeIn();
+					});
+			</script>
 	</body>
 </html>
