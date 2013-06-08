@@ -78,7 +78,7 @@ h6[rel*=mies],.close
 {
 	width:1200px;
 	height:100%;
-	background-color:rgba(135,206,235,0.4);
+	background:url('../images/pat.png') repeat;
 	position:fixed;
 	top:0;
 	bottom:0;
@@ -88,23 +88,25 @@ h6[rel*=mies],.close
 #ajaxload .close
 {
 	position:relative;
-	left: 452px;
-	top: 55px;
+	left: 1050px;
+	top: 62px;
 	z-index: 101;
 	font-weight: bold;
 	background-color: #ccc;
-	width: 54px;
-	padding: 4px;
-	height: 30px;
-	padding-top: 0px;
 	color: #000;
-	border:1px solid #000;
+	background:url('../images/close_1.png') no-repeat;
+}
+span.close
+{
+	width:24px;
+	height:24px;
+	display:block;
 }
 #ajaxload #contentpage
 {
 	padding:8px;
 	padding-top:60px;
-	background-color:rgba(248,251,255,0.9);
+	background:url('../images/gridme.png') repeat;
 	width:960px;
 	height:600px;
 	position:relative;
@@ -119,6 +121,13 @@ h6[rel*=mies],.close
 	border:1px solid #000;
 	display:none;
 	overflow:hidden;
+	color:#000;
+	font-weight:bold;
+}
+#ajaxload form input[type=text]
+{
+	padding:0;
+	border-radius:2px;
 }
 #overlayed
 {
@@ -129,4 +138,9 @@ h6[rel*=mies],.close
 	position:relative;
 	top:20px;
 	margin:0 auto;
+}
+#fork
+{
+	text-decoration:none;
+	color:#000;
 }

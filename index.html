@@ -41,7 +41,8 @@
 								<h1>Hi, I'm <strong>Kiran Kumar</strong></h1>
 								<h3>Front End Developer - HTML5, CSS3, Core JS & JQuery</h3>
 								<h5><i>jKefex JS</i> - Javascript & JQuery based Library in Active Development</h5>
-								<i><h6><a href="https://github.com/kiranml1/jKefexJS">kiranml1@jKefexJS</a></h6></i>
+								<i><h5><a href="https://github.com/kiranml1">kiranml1@GitHub</a> - Collection of Repos</h5></i>
+								<i><h5><a href="https://github.com/kiranml1/jKefexJS">kiranml1@jKefexJS</a> - GitHub</h5></i>
 							</header>
 							<p><strong></strong></p>
 							<a href="#work" class="button button-big">Learn About What I Do <i>( jKefex JS )</i></a>
@@ -134,7 +135,7 @@
 						<div class="row">
 							<div class="4u">
 								<article class="box box-style2">
-									<a href="trignomentryfuncs.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
+									<a href="trignomentryfuncs.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio04.jpg" alt="" /></a>
 									<h3><a href="trignomentryfuncs.html" rel="ajaxoverlay">jKefex Trignomentry</a></h3>
 									<p>HTML5 Trignomentry Plug-in</p>
 								</article>
@@ -157,21 +158,21 @@
 						<div class="row">
 							<div class="4u">
 								<article class="box box-style2">
-									<a href="webaudioapi.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
+									<a href="webaudioapi.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
 									<h3><a href="webaudioapi.html" rel="ajaxoverlay">jKefex Web Audio API</a></h3>
 									<p>HTML5 Web Audio API Plug-in</p>
 								</article>
 							</div>
 							<div class="4u">
 								<article class="box box-style2">
-									<a href="workers.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
+									<a href="workers.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
 									<h3><a href="workers.html" rel="ajaxoverlay">jKefex Workers</a></h3>
 									<p>HTML5 Workers API Plug-in</p>
 								</article>
 							</div>
 							<div class="4u">
 								<article class="box box-style2">
-									<a href="webfilters.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
+									<a href="webfilters.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
 									<h3><a href="webfilters.html" rel="ajaxoverlay">jKefex CSS3</a></h3>
 									<p>HTML5 CSS3 API Plug-in</p>
 								</article>
@@ -199,14 +200,14 @@
 							  <div id="flash2" class="vid"></div>
 							</div>
 						<div id="ajaxload">
-							<span class="close">Close</span>
+							<span class="close"></span>
 							<div id="contentpage">
 							Kiran Kumar
 							</div>
 						</div>
 					</div>
 					<footer>
-						<p>Fork me on Github</p>
+						<p><b><a id="fork" href="https://github.com/kiranml1/jKefexJS">Fork me on Github</a></b></p>
 						<a href="#contact" class="button button-big">Get in touch with me</a>
 					</footer>
 				</article>
@@ -218,7 +219,10 @@
 				<article id="contact">
 					<header>
 						<h2>Want to hire me? Get in touch!</h2>
-						<span>Presently I'm Working on Chrome Experiment as Extension with jKefex JS Library</span>
+						<span>Presently I'm Working on Chrome Experiment as Extension with jKefex JS Library 
+						<br />
+						<hr />
+						kirankumar.amruthaluri@gmail.com</span>
 					</header>
 					<div>
 						<div class="row row-special">
@@ -270,7 +274,6 @@
 					$('h6[rel]').overlay();
 					$('#ajaxload #contentpage').html('Loading');
 					$('#portfolio').on('click','a[rel=ajaxoverlay]',function(e){
-						$('#ajaxload #contentpage').html('<h1>Loading...</h1>');
 						e.preventDefault();
 						$('#ajaxload').fadeIn('slow');
 						var href = $(this).attr('href');
@@ -278,14 +281,16 @@
 						{
 							if(jKefex)
 							{
+								$('#ajaxload #contentpage').slideDown('slow').html('<h1>Loading...</h1>');
 								$.get(href,function(data){
-								$('#ajaxload #contentpage').html(data).fadeIn('slow');
+									$('#ajaxload #contentpage').html(data).fadeIn('slow');
 									jKefex.canvasWallPlugin.requestanimframe(jKefex.canvasWallPlugin.drawthis);
 									},"html");
 							}
 						}
 						else
 						{
+							$('#ajaxload #contentpage').slideDown('slow').html('<h1>Loading...</h1>');
 							$.get(href,function(data){
 								$('#ajaxload #contentpage').html(data).fadeIn('slow');
 							},"html");
