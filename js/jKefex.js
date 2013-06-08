@@ -686,7 +686,7 @@ try
 			request.onprogress = function(e){
 				if(e.lengthComputable)
 				{
-					var percent = Math.round(e.loaded/e.total)*100;
+					var percent = Math.floor(e.loaded/e.total)*100;
 					$(text).html('Loading '+percent+'%');
 				}
 			};
