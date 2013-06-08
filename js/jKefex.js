@@ -682,13 +682,18 @@ try
 			var request = new XMLHttpRequest();
 			request.open('GET',url,true);
 			request.responseType = 'arraybuffer';
-			
+
 			request.onprogress = function(e){
 				if(e.lengthComputable)
 				{
-					var percent = (e.loaded/e.total)*100;
+					var percent = Math.round(e.loaded/e.total)*100;
 					$(text).html('Loading '+percent+'%');
 				}
+			};
+			
+			request.onabort = function(){
+				request = null;
+				console.log('aborted');
 			};
 			
 			request.onload = function()
@@ -696,29 +701,41 @@ try
 				context.decodeAudioData(request.response,function(buffer){
 					$(text).html("Playing the Music");
 					bufferSound = buffer;
-					playSound(buffer);
+					playSound(bufferSound);
 					console.log("Completed");
 				});
 			};
+
 			request.send();
 		};
 		function playSound(buffer)
-		{
-			source = context.createBufferSource();
-			source.buffer = buffer;
-			source.connect(context.destination);
-			console.log(source);
-			source.start(0);
+		{	
+			if(buffer)
+			{
+				source = context.createBufferSource();
+				source.buffer = buffer;
+				source.connect(context.destination);
+				console.log(source);
+				source.start(0);
+			}	
 		}
 		function stopSound()
 		{
-			source.stop(0);
-			$(text).html("Stopped");
+			if(source.stop)
+			{
+				source.stop(0);
+				buffer = null;
+				$(text).html("Stopped");	
+			}
 		}
 		this.stopSound = function()
 		{
-			source.stop(0);
-			$(text).html("Stopped");
+			if(source.stop)
+			{
+				source.stop(0);
+				buffer = null;
+				$(text).html("Stopped");	
+			}
 		};
 	},
 	"ajaxcore":{ "coreGetPost":function(url,method,elemId){
