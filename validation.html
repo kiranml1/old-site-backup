@@ -13,61 +13,63 @@
 			}
 			#fore .vald
 			{
-				background-color:#000;
-				width:30%;
+				background-color:#fff;
+				width:50%;
 				padding:5px;
+				border:1px solid #000;
+				color:#000;
+			}
+			#fore td
+			{
+				width:50%;
+				padding:5px;
+			}
+			#fore td:first-child
+			{
+				text-align:right;
+			}
+			#fore td:last-child
+			{
+				text-align:left;
 			}
 		</style>
 	</head>
 	<body>
 		<h2>jKefex Validation</h2>
 		<hr />
-		<form id="fore">
-			Validation Input : <input type="text" class="vald" id="sub1" size="100" data-error="First value not given"/><br />
-			Validation Input : <input type="text" class="vald" id="sub2" size="100" data-error="Second value not given"/><br />
-			Validation Input : <input type="text" class="vald" id="sub3" size="100"data-error="Third value not given"><br />
-			<input id="subm" type="submit">
+		<form id="fore" onsubmit="javascript:return false;">
+			<table>
+				<tbody>
+					<tr>
+						<td>First Input </td>
+						<td><input type="text" class="vald" id="sub1" size="100" data-error="First value not given"/><br /></td>
+					</tr>
+					<tr>
+						<td>Second Input : </td>
+						<td><input type="text" class="vald" id="sub2" size="100" data-error="Second value not given"/><br /></td>
+					</tr>
+					<tr>
+						<td>Third Input : </td>
+						<td><input type="text" class="vald" id="sub3" size="100"data-error="Third value not given"><br /></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input id="subm" type="submit"></td>
+					</tr>
+				</tbody>
+			</table>
 		</form>
 		<div id="myid"></div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jKefex.js"></script>
 		<script>
-			(function($){
-				$.fn.jKefexValidation = function(options){
-					var settings = {};
-					var err = [];
-					if(options)
-					{	
-						$.extend(settings,options);
-						$(this).submit(function(e){
-							e.preventDefault();
-							e.stopPropagation();
-							for(var i = 0;i < (settings.inputid.length);i++)
-							{	
-								if(($(settings.inputid[i]).val() === ''))
-								{	
-									err[i] = ($(settings.inputid[i]).data('error'));
-								}
-							}
-							if(err[0] !== undefined)
-							{
-								err.slice(1,settings.inputid.length);
-								$(settings.containment).html('');
-								$.each(err,function(i,val){
-									if(val != undefined)
-									{
-										$(settings.containment).append('<li>'+ val +'</li>');
-									}
-								});
-							}
-							else
-							{	
-								$(settings.containment).html('Successfull Enter All Values');
-							}
-						});
-					}
-				};
-			})(jQuery);
-			$('form').jKefexValidation({'inputid':['#sub1','#sub2','#sub3'],"containment":"#myid"});
+			$(function(){
+				jKefex.validation();
+				$('form').jKefexValidation({'inputid':['#sub1','#sub2','#sub3'],"containment":"#myid","onSuccess":function(){
+						alertify.alert(" Successfully Entered Values");
+						return false;
+				}});
+			});
 		</script>
 	</body>
 </html>

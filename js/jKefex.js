@@ -134,20 +134,20 @@ try
 				ctx = canvas.getContext('2d');
 			},
 			"init":function(){
-				canvas.width = $(window).innerWidth();
-				canvas.height = $(window).innerHeight();
-				canvas.width -= ($(document).width() - canvas.width);
-				canvas.height -= ($(document).height() - canvas.height);
-				
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
 			},
-			"createPattern":function(direction){
+			"createPattern":function(direction, src){
 				if(ctx)
 				{
-					var img = document.getElementById("pix");
-					ctx.clearRect(0,0,canvas.width,canvas.height);
-					var pattern = ctx.createPattern(img,direction);
-					ctx.fillStyle = pattern;
-					ctx.fillRect(0, 0, canvas.width, canvas.height);
+					var img = new Image();
+					img.onload = function(){
+						ctx.clearRect(0,0,canvas.width,canvas.height);
+						var pattern = ctx.createPattern(img,direction);
+						ctx.fillStyle = pattern;
+						ctx.fillRect(0, 0, canvas.width, canvas.height);
+					};
+					img.src = src;
 				}
 			},
 			"update":function(){
@@ -155,23 +155,19 @@ try
 					canvas.addEventListener('dblclick',stopWorker,false);
 					function drawCircle(e)
 					{
-						//var x = e.clientX;
-						//var y = e.clientY;
-						//var x = e.pageX;
-						//var y = e.pageY;
 						drawX = e.offsetX;
 						drawY = e.offsetY;
 						//drawthis();
 					}
-					/*function drawthis()
+					function drawthis()
 					{
 						ctx.beginPath();
-						ctx.arc(drawX, drawY, 20, drawX * Math.PI, drawY * Math.PI, false);
+						ctx.arc(drawX, drawY, 10, drawX * Math.PI, drawY * Math.PI, false);
 						ctx.strokeStyle = "white";
 						ctx.fillStyle = "rgba(0,0,100,0.5)";
 						ctx.stroke();
 						ctx.closePath();
-					}*/
+					}
 					function stopWorker()
 					{ 
 						w.terminate();
@@ -194,9 +190,10 @@ try
 			"drawthis" :function()
 						{
 							ctx.beginPath();
-							ctx.arc(drawX, drawY, 20, drawX * Math.PI, drawY * Math.PI, false);
+							ctx.arc(drawX, drawY, 10, drawX * Math.PI, drawY * Math.PI, false);
+							ctx.fillStyle = "white";
+							ctx.fill();
 							ctx.strokeStyle = "white";
-							ctx.fillStyle = "rgba(0,0,100,0.5)";
 							ctx.stroke();
 							ctx.closePath();
 						},
@@ -676,7 +673,7 @@ try
 		{
 			window.AudioContext = window.AudioContext||window.webkitAudioContext;
 			context = new AudioContext();
-			$(text).html('Loading... Web Audio Please Wait.. Do not Stop or Close the Pop-up');
+			$(text).html('Loading...');
 			loadSound(url);
 			$(this).hide();
 		}
@@ -686,11 +683,19 @@ try
 			request.open('GET',url,true);
 			request.responseType = 'arraybuffer';
 			
+			request.onprogress = function(e){
+				if(e.lengthComputable)
+				{
+					var percent = (e.loaded/e.total)*100;
+					$(text).html('Loading '+percent+'%');
+				}
+			};
+			
 			request.onload = function()
 			{
 				context.decodeAudioData(request.response,function(buffer){
+					$(text).html("Playing the Music");
 					bufferSound = buffer;
-					$(text).html('Being Played Please Wait... the Sound');
 					playSound(buffer);
 					console.log("Completed");
 				});
@@ -704,15 +709,16 @@ try
 			source.connect(context.destination);
 			console.log(source);
 			source.start(0);
-			$(text).html("Playing the Music");
 		}
 		function stopSound()
 		{
 			source.stop(0);
+			$(text).html("Stopped");
 		}
 		this.stopSound = function()
 		{
 			source.stop(0);
+			$(text).html("Stopped");
 		};
 	},
 	"ajaxcore":{ "coreGetPost":function(url,method,elemId){
@@ -892,7 +898,7 @@ try
 			}
 	},
 	//below is not implemented completely
-	"validation": function($){
+	"validation": function(){
 				$.fn.jKefexValidation = function(options){
 					var settings = {};
 					var err = [];
@@ -900,8 +906,7 @@ try
 					{	
 						$.extend(settings,options);
 						$(this).submit(function(e){
-							e.preventDefault();
-							e.stopPropagation();
+							err = [];
 							for(var i = 0;i < (settings.inputid.length);i++)
 							{	
 								if(($(settings.inputid[i]).val() === ''))
@@ -909,21 +914,30 @@ try
 									err[i] = ($(settings.inputid[i]).data('error'));
 								}
 							}
-							if(err[0] !== undefined)
+							if(err.length)
 							{
-								err.slice(1,settings.inputid.length);
 								$(settings.containment).html('');
 								$.each(err,function(i,val){
-									if(val != undefined)
+									if(val)
 									{
 										$(settings.containment).append('<li>'+ val +'</li>');
 									}
 								});
+								return false;
 							}
 							else
 							{	
-								$(settings.containment).html('successfull');
+								$(settings.containment).html('Successfully Submitted');
+								if(settings.onSuccess)
+								{
+									onSuccess();
+									return false;
+								}
+								return false;
 							}
+							e.preventDefault();
+							e.stopPropagation();
+							return false;
 						});
 					}
 				};

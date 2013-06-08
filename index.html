@@ -297,8 +297,21 @@
 						}
 					});
 					$('#ajaxload').on('click','.close',function(){
-						$('#ajaxload #contentpage').html('').fadeOut('slow');
+						$('#ajaxload #contentpage').html('').slideUp('slow');
 						$('#ajaxload').fadeOut('slow');
+					});
+					$(document).keyup(function(e){
+						if(e.keyCode == 27)
+						{
+							$('#ajaxload #contentpage').html('').slideUp('slow');
+							$('#ajaxload').fadeOut('slow');
+						}
+						if(jKefex.navagatorUserMedia.closeStream)
+						{
+							jKefex.navagatorUserMedia.closeStream();
+						}
+						e.preventDefault();
+						e.stopPropagation();
 					});
 										
 				});
