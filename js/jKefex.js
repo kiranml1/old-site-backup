@@ -737,26 +737,27 @@ try
 			}
 		};
 	},
-	"ajaxcore":{ "coreGetPost":function(url,method,elemId){
-		var xhr;
-		if(window.XMLHttpRequest)
-		{
-			xhr = new XMLHttpRequest();
-		}
-		else
-		{
-			xhr = new ActiveXObject('Microsoft.XMLHTTP');
-		}
-		xhr.onreadystatechange = function()
-		{
-			if(xhr.readyState == 4 && xhr.status == 200)
+	"ajaxcore":{ 
+		"coreGetPost":function(url,method,elemId){
+			var xhr;
+			if(window.XMLHttpRequest)
 			{
-				document.getElementById(elemId).innerHTML = JSON.parse(xhr.responseText)[1];
+				xhr = new XMLHttpRequest();
 			}
-		};
-		xhr.open(method,url,true);
-		xhr.send();
-	}
+			else
+			{
+				xhr = new ActiveXObject('Microsoft.XMLHTTP');
+			}
+			xhr.onreadystatechange = function()
+			{
+				if(xhr.readyState == 4 && xhr.status == 200)
+				{
+					document.getElementById(elemId).innerHTML = JSON.parse(xhr.responseText)[1];
+				}
+			};
+			xhr.open(method,url,true);
+			xhr.send();
+		}
 	},
 	"windowresize":{ 
 		"overflowside":function()

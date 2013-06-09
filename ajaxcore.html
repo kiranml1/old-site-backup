@@ -6,7 +6,6 @@
     <body>
 		<div id="elemid"></div>
 		<button id="get">GET AJAX Method</button>
-		<!-- <button id="post">POST AJAX Method</button> -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/jKefex.js"></script>
 		<script type="text/javascript">
@@ -14,11 +13,6 @@
 			$('#get').click(function(){
 				jKefex.ajaxcore.coreGetPost('content.php','GET',"elemid");
 			});
-			/*
-			$('#post').click(function(){
-				jKefex.ajaxcore.coreGetPost('content.php','POST',"elemid");
-			});
-			*/
 		});
 		</script>
     </body>
