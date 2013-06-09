@@ -809,7 +809,6 @@ try
 							*/
 							var source = window.URL.createObjectURL(files.item(0));
 							$('#container').css({'background':'url('+source+') no-repeat center #ccc', 'background-size':'100% 100%'});
-							window.revokeObjectURL(source);
 						}
 					}
 			});   
