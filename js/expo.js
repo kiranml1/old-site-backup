@@ -1,5 +1,5 @@
-var canvas = document.getElementById("mycanvas");
-var ctx = canvas.getContext("2d");
+var particle_canvas = document.getElementById("mycanvas");
+var ctx_part = particle_canvas.getContext("2d");
 
 var W = 500,H = 500;
 var particles = [];
@@ -26,24 +26,24 @@ function createParticle()
 var x = 100,y = 100;
 function draw()
 {
-	ctx.globalCompositeOperation = "source-over";
-	ctx.fillStyle ="rgba(0,0,0,0.5)";
-	ctx.fillRect(0,0,W,H);
-	ctx.globalCompositeOperation = "lighter";
+	ctx_part.globalCompositeOperation = "source-over";
+	ctx_part.fillStyle ="rgba(0,0,0,0.5)";
+	ctx_part.fillRect(0,0,W,H);
+	ctx_part.globalCompositeOperation = "lighter";
 	for(var t=0;t<particles.length;t++)
 	{
 		var p = particles[t];
-		ctx.beginPath();
+		ctx_part.beginPath();
 		
-		var gradient = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.radius);
+		var gradient = ctx_part.createRadialGradient(p.x,p.y,0,p.x,p.y,p.radius);
 		gradient.addColorStop(0,"white");
 		gradient.addColorStop(0.4,"white");
 		gradient.addColorStop(0.4,p.color);
 		gradient.addColorStop(1,"black");
 		
-		ctx.fillStyle = gradient;
-		ctx.arc(p.x,p.y,40,Math.PI*2,false);
-		ctx.fill();
+		ctx_part.fillStyle = gradient;
+		ctx_part.arc(p.x,p.y,40,Math.PI*2,false);
+		ctx_part.fill();
 		
 		p.x += p.vx;
 		p.y += p.vy;

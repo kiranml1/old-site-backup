@@ -232,25 +232,25 @@ try
 	"canvasWallPlugin2" : {
 			"createCanvas":function(w,h){
 					var canvas = document.querySelector('#canvas');
-					ctx = canvas.getContext('2d');
+					ctx2 = canvas.getContext('2d');
 					canvas.width = document.width;
 					canvas.height = document.height;
 				},
 			"eventFunc1":function(e){
 					var x = e.clientX;
 					var y = e.clientY;
-					ctx.restore();
-					ctx.beginPath(e);
-					ctx.moveTo(e.clientX,e.clientY);
-					ctx.lineTo(x-200,y-200);
+					ctx2.restore();
+					ctx2.beginPath(e);
+					ctx2.moveTo(e.clientX,e.clientY);
+					ctx2.lineTo(x-200,y-200);
 			},
 			"eventFunc2":function(e){
 				var x = e.clientX;
 					var y = e.clientY;
-					ctx.lineTo(x,y);
-					ctx.closePath();
-					ctx.fillStyle = "rgba(100,100,100,0.2)";
-					ctx.fill();
+					ctx2.lineTo(x,y);
+					ctx2.closePath();
+					ctx2.fillStyle = "rgba(100,100,100,0.2)";
+					ctx2.fill();
 			},
 			"addEvents":function(){
 				canvas.addEventListener('mousedown',jKefex.canvasWallPlugin2.eventFunc1,false);
@@ -961,7 +961,33 @@ try
 						});
 					}
 				};
-			}
+			},
+	 "HistoryView":{ init:function(){
+						var self = this;
+						$('div>ul>li').on('click','a',function(e){
+							e.preventDefault();
+							self.templ(this);
+							self.updateHistroy(this);
+						});
+					},
+					templ:function(temp){
+						var template = $('#template').html().replace(/{{title}}/g,temp.title).replace(/{{src}}/g,temp.href);
+						$('#content').html(template);
+					},
+					updateHistroy:function(data){
+						var datastore = { "tit": data.dataset.state ,"title": data.title ,"href": data.href};
+						history.pushState(datastore, data.title, data.href);
+					},
+					handleState:function(){
+						var self = this;
+						$(window).bind('popstate',function(e){
+							if(e.originalEvent.state)
+							{
+								self.templ(e.originalEvent.state);	
+							}
+						});
+					}
+				}
 };
 
 }
