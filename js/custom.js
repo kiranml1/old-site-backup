@@ -26,7 +26,7 @@ try
 			e.preventDefault();
 			$('#ajaxload').fadeIn('slow');
 			var href = $(this).attr('href');
-			if( href == "canvaspatt.html")
+			if( href == "demos/canvaspatt.html")
 			{
 				if(jKefex)
 				{
