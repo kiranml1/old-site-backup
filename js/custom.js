@@ -26,18 +26,7 @@ try
 			e.preventDefault();
 			$('#ajaxload').fadeIn('slow');
 			var href = $(this).attr('href');
-			if( href == "demos/canvaspatt.html")
-			{
-				if(jKefex)
-				{
-					$('#ajaxload #contentpage').slideDown('slow').html('<h1>Loading...</h1>');
-					$.get(href,function(data){
-						$('#ajaxload #contentpage').html(data).fadeIn('slow');
-							jKefex.canvasWallPlugin.requestanimframe(jKefex.canvasWallPlugin.drawthis);
-						},"html");
-				}
-			}
-			else
+			if(href)
 			{
 				$('#ajaxload #contentpage').slideDown('slow').html('<h1>Loading...</h1>');
 				$.get(href,function(data){
@@ -54,10 +43,10 @@ try
 			{
 				$('#ajaxload #contentpage').html('').slideUp('slow');
 				$('#ajaxload').fadeOut('slow');
-			}
-			if(jKefex.navagatorUserMedia.closeStream)
-			{
-				jKefex.navagatorUserMedia.closeStream();
+				if(jKefex.navagatorUserMedia.closeStream)
+				{
+					jKefex.navagatorUserMedia.closeStream();
+				}
 			}
 			e.preventDefault();
 			e.stopPropagation();
