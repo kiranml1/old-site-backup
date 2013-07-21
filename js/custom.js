@@ -41,12 +41,17 @@ try
 		$(document).keyup(function(e){
 			if(e.keyCode == 27)
 			{
-				$('#ajaxload #contentpage').html('').slideUp('slow');
-				$('#ajaxload').fadeOut('slow');
-				if(jKefex.navagatorUserMedia.closeStream)
+				if(!webAudioStop)
+				{
+					source.stop(0);
+					buffer = null;
+				}
+				else if(jKefex.navagatorUserMedia.closeStream)
 				{
 					jKefex.navagatorUserMedia.closeStream();
 				}
+				$('#ajaxload #contentpage').html('').slideUp('slow');
+				$('#ajaxload').fadeOut('slow');
 			}
 			e.preventDefault();
 			e.stopPropagation();

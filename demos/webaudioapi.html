@@ -12,11 +12,12 @@
 		<script type="text/javascript" src="lib/jKefex.js"></script>
 		<script type="text/javascript">
 		$(function(){
-				var stopping = new jKefex.audioplugin("Violan.mp3","h4",'#buttstart','#buttstop');
+				webAudioStop = jKefex.audioplugin("Violan.mp3","h4",'#buttstart','#buttstop',true,false);
 				$('.close').one('click',function(){
-					if(stopping)
+					if(!webAudioStop)
 					{
-						stopping.stopSound();
+						source.stop(0);
+						buffer = null;
 					}
 				});
 		});

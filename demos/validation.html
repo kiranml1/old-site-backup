@@ -23,7 +23,7 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td><input id="subm" type="submit"></td>
+						<td><input id="subm" type="button" value="Check"></td>
 					</tr>
 				</tbody>
 			</table>
@@ -34,9 +34,9 @@
 		<script>
 			$(function(){
 				jKefex.validation();
-				$('form').jKefexValidation({'inputid':['#sub1','#sub2','#sub3'],"containment":"#myid","onSuccess":function(){
+				$(':button').jKefexValidation({'inputid':['#sub1','#sub2','#sub3'],"containment":"#myid",
+					"onSuccess":function(){
 						alertify.alert(" Successfully Entered Values");
-						return false;
 				}});
 			});
 		</script>
