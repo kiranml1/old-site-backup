@@ -1,7 +1,7 @@
 try
 {
 	$(function(){
-		alertify.alert(" For Better Performance and Support i recommend to use Chrome and Presently, This Site is under Active Updates and For Extended Support in features & Compatibility for other Browsers it takes time....!!");
+		alertify.alert(" Presently Site is Optimized for Chrome, Please Wait for further Development!!");
 		$('h6[rel=#mies1]').click(function(){
 			$('#mies1 #ifrm1').html('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
 		});
