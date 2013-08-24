@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jquery-youtube-api-plugin by patrickmarabeas</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+	<style type="text/css">
+	#yt {
+		position: relative;
+	}
+	
+    #aspect {
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;
+
+        border: 0;
+    }
+	
+	.video {
+		cursor: pointer;
+	}
+	</style>
+	
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>jKefex JS - Tutorials </h1>
+        <h2>Kiran Kumar</h2>
+
+      </header>
+      <section>
+        
+		<div class="video" data-id="UrS9AVPUMFQ">Kiran Kumar YouTube Channel</div>
+		
+		<div id="videoContainer">
+
+			<div id="yt">
+				<img id="aspect" alt="Aspect Ratio" src=""/>
+				<div id="player"></div>
+			</div>
+
+		</div>
+
+		<div id="youtubeCount"></div>
+		<div id="youtubeTitle"></div>
+		<div id="youtubeDescription"></div>
+
+      </section>
+      <footer>
+        <p>Tutorials are maintained by <a href="https://github.com/kiranml1">Kiran Kumar</a></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery.jsonp.js"></script>
+	<script type="text/javascript" src="scripts/ytapi/ytapi.js"></script>
+	<script type="text/javascript">
+	var testarr = [];
+	$.getJSON(
+	  'http://gdata.youtube.com/feeds/api/users/UCmjBUO8t-wP6f6iYZ59iPMQ/uploads?alt=json&max-results=10',
+	  function(data){
+	  	data.feed.entry.forEach(function(idno){
+	  		id = idno.id.$t;
+	  		patt = /\/[a-zA-Z0-9]+$/ig;
+	  		if(patt.test(id))
+	  		{
+	  			testarr.push({
+	  				"id": id.match(patt).toString().substr(1),  
+					"title": idno.title.$t,
+					"aspect":"4x3"
+	  			});
+	  		}
+	  	});
+	  console.log(testarr);
+
+	});
+	console.log(testarr);
+	window.setTimeout(function onYouTubeIframeAPIReady() {
+			
+			$("#yt").youTubeAPI({
+				videoArray: testarr,
+				hash: 'video-',
+				pluginDir: 'scripts/ytapi',
+				playerSettings: {
+					playerVars: {
+						'iv_load_policy': 3,
+						'rel': 0
+					}
+				},
+				apiReturn: {
+					title: $("#youtubeTitle"),
+					description: $("#youtubeDescription"),
+					viewCount: $("#youtubeCount")
+				},
+				build: {
+					dropdown: true
+				}
+			});
+			$(".video").on('click', function(){		
+				var videoID = $(this).data('id');
+				$("#yt").data('youTubeAPI').loadVideo(videoID);
+			});
+			
+		},1000);
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-43056567-1', 'kiranml1.github.io');
+	  ga('send', 'pageview');
+
+	</script>
+  </body>
+</html>
