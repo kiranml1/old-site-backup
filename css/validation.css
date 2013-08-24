@@ -1,31 +1,25 @@
-#myid li
-			{
-				text-decoration:none;
-				list-style:none;
-				color:#000;
-			}
-			#subm
-			{
-				padding:4px;
-			}
-			#fore .vald
-			{
-				background-color:#fff;
-				width:50%;
-				padding:5px;
-				border:1px solid #000;
-				color:#000;
-			}
-			#fore td
-			{
-				width:50%;
-				padding:5px;
-			}
-			#fore td:first-child
-			{
-				text-align:right;
-			}
-			#fore td:last-child
-			{
-				text-align:left;
-			}
+.validation #myid li {
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+.validation #subm {
+  padding: 4px;
+}
+.validation #fore .vald {
+  background-color: #fff;
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #000;
+  color: #000;
+}
+.validation #fore td {
+  width: 50%;
+  padding: 5px;
+}
+.validation #fore td:first-child {
+  text-align: right;
+}
+.validation #fore td:last-child {
+  text-align: left;
+}

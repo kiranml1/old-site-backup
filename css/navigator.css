@@ -1,15 +1,12 @@
-#webcam
-{
-	border:#000 solid 4px;
+.navigator #webcam {
+  border: #000 solid 4px;
 }
-#CloseWebcam
-{
-	visibility:hidden;
-	display:none;
+.navigator #CloseWebcam {
+  visibility: hidden;
+  display: none;
 }
-#canvasImage
-{
-	top: 230px;
-	position: absolute;
-	padding: 10px;
+.navigator #canvasImage {
+  top: 230px;
+  position: absolute;
+  padding: 10px;
 }

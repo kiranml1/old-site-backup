@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>YouTube TV</title>
+		<link href="css/ytv.css" type="text/css" rel="stylesheet" />
+		<link href="css/demo.css" type="text/css" rel="stylesheet" />
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="frame"></div>
+
+		<div class="description">
+			<p>Kiran Kumar's - Tutorials on Javascript, Ubuntu</p>
+		</div>
+
+		<script type="text/javascript" src="js/ytv.js"></script>
+		<script>
+			window.onload = function(){
+				window.controller = new YTV('frame', {
+					user: 'UCmjBUO8t-wP6f6iYZ59iPMQ',
+					accent: 'yellow'
+				});
+			};
+		</script>
+	</body>
+</html>

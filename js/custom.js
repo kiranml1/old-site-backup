@@ -2,12 +2,6 @@ try
 {
 	$(function(){
 		alertify.alert(" Presently Site is Optimized for Chrome, Please Wait for further Development!!");
-		$('h6[rel=#mies1]').click(function(){
-			$('#mies1 #ifrm1').html('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe>');
-		});
-		$('h6[rel=#mies2]').click(function(){
-			$('#mies2 #ifrm2').html('<iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/oCyyHaYCoiI" frameborder="0" allowfullscreen></iframe>');
-		});
 		$('.4u').on('click','h6[rel=#mies3]',function(){
 			$('#mies3 h4').hide();
 			flashembed('flash1','flash/KefexLoader.swf');
@@ -18,7 +12,7 @@ try
 		});
 		$('.simple_overlay').on('click','.close',function(){
 			$('#mies2 h4').show();
-			$('#flash1,#flash2,#ifrm1,#ifrm2').html('');
+			$('#flash1,#flash2').html('');
 		});
 		$('h6[rel]').overlay();
 		$('#ajaxload #contentpage').html('Loading');
@@ -56,7 +50,10 @@ try
 			e.preventDefault();
 			e.stopPropagation();
 		});
-							
+
+		$('.video').magnificPopup({
+					  type: 'iframe'
+					});
 	});
 }
 catch(e)
