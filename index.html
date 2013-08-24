@@ -18,28 +18,28 @@
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
 	</head>
 	<body>
-	<div id="loader">
+	<div id="loader" ng-controller="mainctrl">
 		<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#top">{{topnavitems[0]}}</a></li>
+					<li><a href="#work">{{topnavitems[1]}}</a></li>
+					<li><a href="#portfolio">{{topnavitems[2]}}</a></li>
+					<li><a href="#contact">{{topnavitems[3]}}</a></li> 
 				</ul>
 			</nav>
-
-		<!-- Home -->
+			
+		<!-- Home --> 
 			<div class="wrapper wrapper-style1 wrapper-first">
 				<article class="container" id="top">
 					<div class="row">
 						<div class="4u">
-							<span class="me image image-full"><img src="images/me.jpg" alt="" /></span>
+							<span class="me image image-full"><img src="{{ profilepic }}" alt="" /></span>
 						</div>
 						<div class="8u">
 							<header>
-								<h1>Hi, I'm <strong>Kiran Kumar</strong></h1>
-								<h4>Front End Developer - PHP, HTML5, CSS3, Core JS & JQuery</h4>
+								<h1>Hi, I'm <strong>{{name}}</strong></h1>
+								<h4>{{ designation }}</h4>
 								<h6>Open Source Developer - JavaScript Frameworks ( EXT JS , Sproutcore )</h6>
 								<h6><i>jKefex JS - Creator ( In Active Development ) </i></h6>
 								<i><h5><a href="https://github.com/kiranml1">kiranml1@GitHub</a> - Collection of Repos</h5></i>
@@ -118,164 +118,30 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="4u">
-								<article class="box box-style2">
-									<!-- <a href="demos/navigator.html" class="image image-full" rel="ajaxoverlay"><img src="images/portfolio01.jpg" alt="" /></a>
-									<h3><a href="demos/navigator.html" rel="ajaxoverlay" style="text-decoration:none">
-									jKefex Cam Capture</a></h3>
-									<p>HTML5 Navigator Plug-in</p> -->
-									<a href="demos/navigator.html" class="various fancybox.ajax image image-full"><img src="images/portfolio01.jpg" alt="" /></a>
-									<h3><a href="demos/navigator.html" style="text-decoration:none" class="various fancybox.ajax">
-									jKefex Cam Capture</a></h3>
-									<p>HTML5 Navigator Plug-in</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<!-- <a href="demos/canvaspatt.html" class="image image-full" rel="ajaxoverlay"><img src="images/portfolio02.jpg" alt="" /></a>
-									<h3><a href="demos/canvaspatt.html" rel="ajaxoverlay">jKefex Canvas</a></h3>
-									<p>HTML5 jKefex Canvas Plug-in</p> -->
-									<a href="demos/canvaspatt.html" class="various fancybox.ajax image image-full"><img src="images/portfolio02.jpg" alt="" /></a>
-									<h3><a href="demos/canvaspatt.html" class="various fancybox.ajax">jKefex Canvas</a></h3>
-									<p>HTML5 jKefex Canvas Plug-in</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<!-- <a href="demos/validation.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio03.jpg" alt="" /></a>
-									<h3><a href="demos/validation.html" rel="ajaxoverlay">jKefex Validation</a></h3>
-									<p>HTML5 RegExp Validation Plug-in</p> -->
-									<a href="demos/validation.html" class="various fancybox.ajax image image-full"><img src="images/portfolio03.jpg" alt="" /></a>
-									<h3><a href="demos/validation.html" class="various fancybox.ajax">jKefex Validation</a></h3>
-									<p>HTML5 RegExp Validation Plug-in</p>
-								</article>
-							</div>
+								<jkefexdemo cont="content.cont_one"></jkefexdemo>
 						</div>
 						<div class="row">
-							<div class="4u">
-								<article class="box box-style2">
-									<!-- <a href="demos/trignomentryfuncs.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio04.jpg" alt="" /></a>
-									<h3><a href="demos/trignomentryfuncs.html" rel="ajaxoverlay">jKefex Trignomentry</a></h3>
-									<p>HTML5 Trignomentry Plug-in</p> -->
-									<a href="demos/trignomentryfuncs.html" class="various fancybox.ajax image image-full"><img src="images/portfolio04.jpg" alt="" /></a>
-									<h3><a href="demos/trignomentryfuncs.html" class="various fancybox.ajax">jKefex Trignomentry</a></h3>
-									<p>HTML5 Trignomentry Plug-in</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="demos/dragandrop.html" class="various fancybox.ajax image image-full"><img src="images/portfolio05.jpg" alt="" /></a>
-									<h3><a href="demos/dragandrop.html" class="various fancybox.ajax" >jKefex Drag and Drop</a></h3>
-									<p>HTML5 Drag And Drop Plug-in</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="demos/html5fileupload.html" class="various fancybox.ajax image image-full"><img src="images/portfolio06.jpg" alt="" /></a>
-									<h3><a href="demos/html5fileupload.html" class="various fancybox.ajax">jKefex File API</a></h3>
-									<p>HTML5 File API Plug-in</p>
-								</article>
-							</div>
+								<jkefexdemo cont="content.cont_two"></jkefexdemo>
 						</div>
 						<div class="row">
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="demos/webaudioapi.html" class="various fancybox.ajax image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="demos/webaudioapi.html" class="various fancybox.ajax">jKefex Web Audio API</a></h3>
-									<p>HTML5 Web Audio API Plug-in</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="demos/workers.html" class="various fancybox.ajax image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="demos/workers.html" class="various fancybox.ajax">jKefex Workers</a></h3>
-									<p>HTML5 Workers API Plug-in</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="demos/webfilters.html" class="various fancybox.ajax image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="demos/webfilters.html" class="various fancybox.ajax">jKefex CSS3</a></h3>
-									<p>HTML5 CSS3 API Plug-in</p>
-								</article>
-							</div>
+								<jkefexdemo cont="content.cont_three"></jkefexdemo>
 						</div>
 						<div class="row">
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="demos/particles.html" class="various fancybox.ajax image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="demos/particles.html" class="various fancybox.ajax">jKefex Canvas Particles</a></h3>
-									<p>HTML5 canvas Paticles</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="demos/alpha.html" class="various fancybox.ajax image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="demos/alpha.html" class="various fancybox.ajax">jKefex Canvas Logo</a></h3>
-									<p>HTML5 Canvas Logo</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="demos/localfile_upload.html" class="various fancybox.ajax image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="demos/localfile_upload.html" class="various fancybox.ajax">jKefex Local File Delegation</a></h3>
-									<p>HTML5 File API Plug-in</p>
-								</article>
-							</div> 
+								<jkefexdemo cont="content.cont_four"></jkefexdemo>
 						</div>
-						<!--class="various fancybox.ajax
-						<div class="row">
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="ajaxcore.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="ajaxcore.html" rel="ajaxoverlay">jKefex AJAX Functions</a></h3>
-									<p>HTML5 AJAX Functions</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="ajaxcore.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="ajaxcore.html" rel="ajaxoverlay">jKefex Responsive Slide Show</a></h3>
-									<p>HTML5 Slideshow</p>
-								</article>
-							</div>
-							<div class="4u">
-								<article class="box box-style2">
-									<a href="localfile_upload.html" rel="ajaxoverlay" class="image image-full"><img src="images/portfolio07.jpg" alt="" /></a>
-									<h3><a href="localfile_upload.html" rel="ajaxoverlay">jKefex Local File Delegation</a></h3>
-									<p>HTML5 File API Plug-in</p>
-								</article>
-							</div>  
-						</div>
-						-->
-
-							<!-- <div class="simple_overlay" id="mies1">
-							  <div class="close"></div>
-							  <div id="ifrm1" class="vid">
-							  <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> 
-							  </div>
-							</div>
-							<div class="simple_overlay" id="mies2">
-							  <div class="close"></div>
-							  <div id="ifrm2" class="vid">
-							   <iframe width="520" height="310" src="http://www.youtube-nocookie.com/embed/-Z5BB4Se5e0" frameborder="0" allowfullscreen></iframe> 
-							  </div>
-							</div> -->
-
-							<div class="simple_overlay" id="mies3">
+						<div class="simple_overlay" id="mies3">
 							  <div class="close"></div>
 							  <div id="flash1" class="vid"></div>
-							</div>
-							<div class="simple_overlay" id="mies4">
+						</div>
+						<div class="simple_overlay" id="mies4">
 							  <div class="close"></div>
 							  <div id="flash2" class="vid"></div>
+						</div>
+						<div id="ajaxload">
+							<span class="close"></span>
+							<div id="contentpage">
 							</div>
-							<div id="ajaxload">
-								<span class="close"></span>
-								<div id="contentpage">
-								Kiran Kumar
-								</div>
-							</div>
+						</div>
 					</div>
 					<footer>
 						<p><b>
@@ -316,33 +182,36 @@
 				</article>
 			</div>
 	</div>
-	<script src="js/head.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/controllers/mainctrl.js"></script>
+	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+	<script src="lib/jKefex.js"></script>
+	<script src="js/alertify.min.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/ytv.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script src="js/custom.js"></script>
 	<script type="text/javascript">
-		 document.getElementById("loader").style.display = "none";
-		 head.js("js/jquery-1.9.1.min.js",
-			 "http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js",
-			 "js/alertify.min.js",
-			 "lib/jKefex.js",
-			 "js/config.js",
-			 "js/skel.min.js",
-			 "js/custom.js",
-			 "js/jquery.magnific-popup.js",
-			 "js/ytv.js",
-			 "js/jquery.fancybox.js",
-			 function(){
-				$('#loader').fadeIn();
+		 $(function(){
+		 		angular.element(document).ready(function() {
+			         angular.bootstrap(document, ['jkefex']);
+			     });
+				$('body').fadeIn();
 				$(".various").fancybox({
-						maxWidth	: 930,
-						maxHeight	: 600,
-						fitToView	: false,
-						width		: '100%',
-						height		: '90%',
-						autoSize	: false,
-						closeClick	: false,
-						openEffect	: 'none',
-						closeEffect	: 'none',
-						topRatio	: 0.9
-					});
+					maxWidth	: 930,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '100%',
+					height		: '90%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none',
+					topRatio	: 0.9
+				});
 			});
 	</script>
 	<script>
@@ -350,10 +219,8 @@
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
 	  ga('create', 'UA-43056567-1', 'kiranml1.github.io');
 	  ga('send', 'pageview');
-
 	</script>
 	</body>
 </html>

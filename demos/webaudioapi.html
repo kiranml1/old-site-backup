@@ -4,7 +4,7 @@
 	</head>
 	<body>
 		<center>
-			<h4>Web Audio API</h4>
+			<h4 id="h4">Web Audio API</h4>
 			<button id="buttstart">Play Web Audio</button>
 			<button id="buttstop">Stop Web Audio</button>
 		</center>
@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="lib/jKefex.js"></script>
 		<script type="text/javascript">
 		$(function(){
-				webAudioStop = jKefex.audioplugin("Violan.mp3","h4",'#buttstart','#buttstop',true,false);
+				webAudioStop = jKefex.audioplugin("Violan.mp3","#h4",'#buttstart','#buttstop',true,false);
 				$('.close').one('click',function(){
 					if(!webAudioStop)
 					{
