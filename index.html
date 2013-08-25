@@ -38,7 +38,7 @@
 						</div>
 						<div class="8u">
 							<header>
-								<h1>Hi, I'm <strong>{{name}}</strong></h1>
+								<h1>Hi, I'm <strong>{{ name }}</strong></h1>
 								<h4>{{ designation }}</h4>
 								<h6>Open Source Developer - JavaScript Frameworks ( EXT JS , Sproutcore )</h6>
 								<h6><i>jKefex JS - Creator ( In Active Development ) </i></h6>
@@ -157,10 +157,10 @@
 				<article id="contact">
 					<header>
 						<h2>Get in touch!</h2>
-						<span>"Presently I'm Working on Chrome Experiment as Extension with jKefex JS"
+						<span>"{{ task }}"
 						<br />
 						<hr />
-						kirankumar.amruthaluri@gmail.com</span>
+						{{ email }}</span>
 					</header>
 					<div>
 						<div class="row row-special">
@@ -184,7 +184,10 @@
 	</div>
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/angular.min.js"></script>
+	<script src="js/jkefex.js"></script>
 	<script src="js/controllers/mainctrl.js"></script>
+	<script src="js/directives/jkefexdemo.js"></script>
+	<script src="js/services/factory.js"></script>
 	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 	<script src="lib/jKefex.js"></script>
 	<script src="js/alertify.min.js"></script>
