@@ -1,12 +1,7 @@
-.navigator #webcam {
-  border: #000 solid 4px;
+#snapPhoto,#CloseWebcam {
+	display:none;
+	visibility: hidden;
 }
-.navigator #CloseWebcam {
-  visibility: hidden;
-  display: none;
-}
-.navigator #canvasImage {
-  top: 230px;
-  position: absolute;
-  padding: 10px;
+video {
+	width:100%;
 }

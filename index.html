@@ -207,13 +207,19 @@
 					maxWidth	: 930,
 					maxHeight	: 600,
 					fitToView	: false,
+					centerOnScroll : true,
 					width		: '100%',
-					height		: '90%',
-					autoSize	: false,
+					height		: '80%',
+					autoSize	: true,
 					closeClick	: false,
 					openEffect	: 'none',
 					closeEffect	: 'none',
-					topRatio	: 0.9
+					topRatio	: 0.9,
+					afterClose : function(){
+						if(jKefex.navagatorUserMedia){
+							jKefex.navagatorUserMedia.closeStream();
+						}
+					}
 				});
 			});
 	</script>
