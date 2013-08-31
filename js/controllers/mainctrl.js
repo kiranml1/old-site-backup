@@ -13,7 +13,7 @@ jkefex.controller('mainctrl',['$scope','$http','XHR','$location','$window',funct
 	$scope.task = "Presently I'm Working on Chrome Experiment as Extension with jKefex JS";
 	$scope.email = "kirankumar.amruthaluri@gmail.com";
 	$scope.changeLoc = function(){
-		$window.location.href = '/jkefexjs/ytv/index.html';
+		$window.location.href = '/jkefexjs/ytv/';
 	};
 	$scope.fetch();
 }]);

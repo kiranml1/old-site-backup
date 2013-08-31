@@ -22,3 +22,7 @@
   padding: 3px;
   box-sizing: border-box;
 }
+.workers {
+  width:750px;
+  height:200px;
+}
