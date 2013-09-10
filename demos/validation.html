@@ -1,7 +1,7 @@
 <div class="validation">
 	<h2>jKefex Validation</h2>
 	<hr />
-	<form id="fore" onsubmit="javascript:return false;">
+	<form id="fore" onsubmit="javascript:void(0);">
 		<table>
 			<tbody>
 				<tr>
@@ -25,16 +25,12 @@
 			</tbody>
 		</table>
 	</form>
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="lib/jKefex.js"></script>
 	<script>
 		$(function(){
 			jKefex.validation();
-			$(':button').jKefexValidation({'inputid':['#sub1','#sub2','#sub3'],"containment":"#myid",
-				"onSuccess":function(){
-					alertify.alert(" Successfully Entered Values");
-			}});
+			$(':button').jKefexValidation({'inputid':['#sub1','#sub2','#sub3'],
+				"containment":"#myid"
+			});
 		});
 	</script>
 </div>
