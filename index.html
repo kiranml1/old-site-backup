@@ -40,7 +40,7 @@
 							<header>
 								<h1>Hi, I'm <strong>{{ name }}</strong></h1>
 								<h4>{{ designation }}</h4>
-								<h6>Open Source Developer - JavaScript Frameworks ( EXT JS , Sproutcore )</h6>
+								<h6>Open Source Developer - JavaScript Frameworks ( Angular JS , D3-JS, Sproutcore )</h6>
 								<h6><i>jKefex JS - Creator ( In Active Development ) </i></h6>
 								<i><h5><a href="https://github.com/kiranml1">kiranml1@GitHub</a> - Collection of Repos</h5></i>
 								<i><h5><a href="https://github.com/kiranml1/jKefexJS">kiranml1@jKefexJS</a> - GitHub</h5></i>
@@ -220,11 +220,12 @@
 						if(jKefex.navagatorUserMedia){
 							jKefex.navagatorUserMedia.closeStream();
 						}
-						if(!webAudioStop)
+						if(jKefex.audioplugin.source)
 						{
-							source.stop(0);
-							buffer = null;
+							jKefex.audioplugin.source.stop(0);
+							buffer = null;	
 						}
+						console.clear();
 					}
 				});
 			});
