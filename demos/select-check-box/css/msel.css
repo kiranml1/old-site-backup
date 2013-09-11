@@ -48,3 +48,8 @@
 .msel button span{
 	margin-top: 8px;
 }
+.msel label {
+	display:inline !important;
+	font-weight: normal !important;
+	cursor: pointer; 
+}

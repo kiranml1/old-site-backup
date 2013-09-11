@@ -30,7 +30,7 @@ app.directive('msel',function(){
 			'<div class="listopt" ng-show="selop">'+
 			'<ul class="nav">'+
 			'<li ng-repeat="opts in options">'+
-		    '<input type="checkbox" ng-model="opts.isChecked" name="opts.name"><span>{{opts.name}}</span>'+
+		    '<label><input type="checkbox" ng-model="opts.isChecked" name="opts.name"><span>{{opts.name}}</span></label>'+
 		    '</li>'+
 			'</ul>'+
 			'</div></div>'
