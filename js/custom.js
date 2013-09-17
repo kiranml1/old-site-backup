@@ -1,7 +1,7 @@
 try
 {
 	$(function(){
-		alertify.alert(" Presently Site is Optimized for Chrome, Please Wait for further Development!!");
+		//alertify.alert(" Presently Site is Optimized for Chrome, Please Wait for further Development!!");
 		$('.4u').on('click','h6[rel=#mies3]',function(){
 			$('#mies3 h4').hide();
 			flashembed('flash1','flash/KefexLoader.swf');

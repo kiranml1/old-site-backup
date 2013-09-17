@@ -26,7 +26,7 @@ app.directive('msel',function(){
 			  };
 		},
 		template: '<div class="select msel">'+
-			'<div class="butt"><button class="selectbox btn" ng-click="toggle()">{{ options | selits }} items Selected <span class="caret pull-right"></span></button></div>'+
+			'<div class="butt"><button class="selectbox btn" ng-click="toggle()">{{ options | selits }} items Selected <span class="caret"></span></button></div>'+
 			'<div class="listopt" ng-show="selop">'+
 			'<ul class="nav">'+
 			'<li ng-repeat="opts in options">'+

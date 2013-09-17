@@ -1,5 +1,6 @@
 .validation{
   min-height: 400px;
+  min-width: 500px;
 }
 
 .validation #myid li {

@@ -1,3 +1,9 @@
+.no-js body{
+  display:none;
+}
+.js body{
+  display:block;
+}
 .custom-content * {
   margin: 0;
   padding: 0;

@@ -6,8 +6,6 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="css/core.css">
-		<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
-		</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -17,7 +15,7 @@
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
 	</head>
-	<body>
+	<body id="fouc">
 	<div id="loader" ng-controller="mainctrl">
 		<!-- Nav -->
 			<nav id="nav">
@@ -34,7 +32,7 @@
 				<article class="container" id="top">
 					<div class="row">
 						<div class="4u">
-							<span class="me image image-full"><img src="{{ profilepic }}" alt="" /></span>
+							<span class="me image image-full"><img ng-src="{{ profilepic }}" alt="" /></span>
 						</div>
 						<div class="8u">
 							<header>
@@ -240,26 +238,27 @@
 	</div>
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/angular.min.js"></script>
-	<script src="js/jkefex.js"></script>
+	<script src="js/jkefexangapp.js"></script>
 	<script src="js/controllers/mainctrl.js"></script>
 	<script src="js/directives/jkefexdemo.js"></script>
 	<script src="js/services/factory.js"></script>
-	<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
-	<script src="lib/jKefex.js"></script>
-	<!--<script src="http://kiranml1.github.io/jkefex/lib/jkefex.js"></script>-->
+	<script src="js/jquerytools.min.js"></script>
+	<script src="js/jkefex.js"></script>
 	<script src="js/alertify.min.js"></script>
 	<script src="js/config.js"></script>
 	<script src="js/skel.min.js"></script>
-	<script src="js/ytv.js"></script>
 	<script src="js/jquery.fancybox.js"></script>
 	<script src="js/jquery.magnific-popup.js"></script>
 	<script src="js/custom.js"></script>
 	<script type="text/javascript">
-		 $(function(){
+	    $(function(){
+	    		if(!window.webkitAudioContext && !window.WebKitCSSFilterRule )
+				{ 
+					$('.wrapper-style3 .container .row:nth-child(4)').remove();
+				}
 		 		angular.element(document).ready(function() {
 			         angular.bootstrap(document, ['jkefex']);
-			     });
-				$('body').fadeIn();
+			    });
 				$(".various").fancybox({
 					maxWidth	: 930,
 					maxHeight	: 600,
@@ -286,22 +285,7 @@
 				});
 			});
 	</script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-43056567-1', 'kiranml1.github.io');
-	  ga('send', 'pageview');
-	</script>
-	<script type="text/javascript">
-	var __lc = {};
-	__lc.license = 3172082;
-	(function() {
-		var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-		lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-	})();
+	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
 	</script>
 	</body>
 </html>
