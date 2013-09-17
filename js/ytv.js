@@ -225,8 +225,10 @@
                                     }
                                     
                                     list += '<li'+isFirst+'><a href="#" data-ytv="'+(video.slug)+'" class="ytv-clear">';
-                                    list += '<div class="ytv-thumb"><div class="ytv-thumb-stroke"></div><span>'+(time)+'</span><img src="'+(video.thumb)+'"></div>';
-                                    list += '<div class="ytv-content"><b>'+(video.title)+'</b><span class="ytv-views">'+utils.addCommas(video.stats.viewCount)+' Views</span></div>';
+                                    list += '<div class="ytv-thumb"><div class="ytv-thumb-stroke"></div><span></span><img src="'+(video.thumb)+'"></div>';
+                                    //list += '<div class="ytv-thumb"><div class="ytv-thumb-stroke"></div><span>'+(time)+'</span><img src="'+(video.thumb)+'"></div>';
+                                    list += '<div class="ytv-content"><b>'+(video.title)+'</b><span class="ytv-views"></span></div>';
+                                    //list += '<div class="ytv-content"><b>'+(video.title)+'</b><span class="ytv-views">'+utils.addCommas(video.stats.viewCount)+' Views</span></div>';
                                     list += '</a></li>';
                                 }
                             }
