@@ -1,14 +1,22 @@
-<div class="canvaspattern">
-	<h2>JKefex Canvas</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Global Alpha example</title>
+</head>
+<body>
+	<div class="canvaspattern">
 	<center>
+		<h2>JKefex Canvas</h2>
 		<canvas id="myCanvas" width="920" height="450">This Browser Doesn't Support Canvas</canvas>
 	</center>
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../lib/jKefex.js"></script>
 <script>
 $(function(){
 	jKefex.canvasWallPlugin.createCanvas();
 	//jKefex.canvasWallPlugin.init();
-	jKefex.canvasWallPlugin.createPattern("repeat","images/dark_matter.png");
+	jKefex.canvasWallPlugin.createPattern("repeat","../images/dark_matter.png");
 	//$(window).resize(function(){
 		//jKefex.canvasWallPlugin.init();
 		//jKefex.canvasWallPlugin.createPattern("repeat","images/dark_matter.png");
@@ -16,3 +24,5 @@ $(function(){
 	jKefex.canvasWallPlugin.update();
 })
 </script>
+</body>
+</html>
