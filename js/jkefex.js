@@ -170,12 +170,16 @@ try
 							w.terminate();
 					},
 			"update":function(){
-				console.log(canvas);
-					canvas.addEventListener('mousemove',function(e){
-							jKefex.canvasWallPlugin.drawX = e.offsetX;
-							jKefex.canvasWallPlugin.drawY = e.offsetY;
-							jKefex.canvasWallPlugin.drawthis();
-					},false);
+					$('#myCanvas').mousemove(function(e){
+							if(e.offsetX){
+								jKefex.canvasWallPlugin.drawX = e.offsetX;
+								jKefex.canvasWallPlugin.drawY = e.offsetY;
+								jKefex.canvasWallPlugin.drawthis();
+							}
+							else if(e.clientX){
+								$(this).replaceWith('<p>Mouse Co-ordinates System Presently not supported Well in this Browser</p>');
+							}
+					});
 					canvas.addEventListener('dblclick',jKefex.canvasWallPlugin.stopWorker,false);
 				},
 			"worker":function()
