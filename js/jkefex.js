@@ -1,1 +1,0 @@
-var jkefex = angular.module('jkefex',[]);
