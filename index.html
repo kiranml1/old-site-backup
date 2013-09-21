@@ -1,18 +1,8 @@
-<?php
-	include 'mobile.php';
-	$detect = new Mobile_Detect;
-?>
 <!DOCTYPE HTML>
 <html class="no-js">
 	<head>
 		<title>
 		jKefex JS
-		<?php
-			if ($detect->isMobile())
-			{ 
-				echo "Mobile Version";
-			}
-		?>
 		</title>
 		<meta property="og:image" content="http://kiranml1.github.io/jkefexjs/images/me.jpg"/>
 		<meta http-equiv="content-type" contjkefexjs/images/me.jpgent="text/html; charset=utf-8" />
@@ -102,24 +92,8 @@
 									<span class="icon featured-icon icon-thumbs-up"></span>
 									<h3>Flash Interactive Applications</h3>
 									<p>Developed Flash Applications in AS3.0 for Demonstration of UX Technology</p>
-									<h6 rel="<?php
-											if ((!$detect->isMobile()) && (!$detect->isIE()))
-											{ 
-												echo "#mies3";
-											}
-											else{
-												echo "";
-											}
-										?>">Kefex Studios Flash App</h6>
-									<h6 rel="<?php
-											if ((!$detect->isMobile()) && (!$detect->isIE()))
-											{ 
-												echo "#mies4";
-											}
-											else{
-												echo "";
-											}
-										?>">Love Transformers App</h6>
+									<h6 rel="#mies3">Kefex Studios Flash App</h6>
+									<h6 rel="#mies4">Love Transformers App</h6>
 								</section>
 							</div>
 						</div>
