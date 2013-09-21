@@ -1,22 +1,25 @@
 {
 	"cont_one" : [
-	{"tempurl":"demos/navigator.html","thumb":"images/portfolio01.jpg","title":"jKefex Cam Capture","subtitle":"HTML5 Navigator Plug-in"},
-	{"tempurl":"demos/canvaspatt.html","thumb":"images/portfolio02.jpg","title":"jKefex Canvas","subtitle":"HTML5 jKefex Canvas Plug-in"},
-	{"tempurl":"demos/validation.html","thumb":"images/portfolio03.jpg","title":"jKefex Validation","subtitle":"HTML5 RegExp Validation Plug-in"}
+	{"tempurl":"demos/navigator/","thumb":"images/portfolio01.jpg","title":"jKefex Cam Capture","subtitle":"HTML5 Navigator Plug-in"},
+	{"tempurl":"demos/localfileupload/","thumb":"images/portfolio07.jpg","title":"jKefex Local File Delegation","subtitle":"HTML5 File API Plug-in"},
+	{"tempurl":"demos/particles/","thumb":"images/portfolio07.jpg","title":"jKefex Canvas Particles","subtitle":"HTML5 canvas Paticles"}
 	],
 	"cont_two" : [
-	{"tempurl":"demos/workers.html","thumb":"images/portfolio07.jpg","title":"jKefex Workers","subtitle":"HTML5 Workers API Plug-in"},
-	{"tempurl":"demos/dragandrop.html","thumb":"images/portfolio05.jpg","title":"jKefex Drag and Drop","subtitle":"HTML5 Drag And Drop Plug-in"},
-	{"tempurl":"demos/html5fileupload.html","thumb":"images/portfolio06.jpg","title":"jKefex File API","subtitle":"HTML5 File API Plug-in"}
+	{"tempurl":"demos/workers/","thumb":"images/portfolio07.jpg","title":"jKefex Workers","subtitle":"HTML5 Workers API Plug-in"},
+	{"tempurl":"demos/dragndrop/","thumb":"images/portfolio05.jpg","title":"jKefex Drag and Drop","subtitle":"HTML5 Drag And Drop Plug-in"},
+	{"tempurl":"demos/valid/","thumb":"images/portfolio03.jpg","title":"jKefex Validation","subtitle":"HTML5 RegExp Validation Plug-in"}
 	],
 	"cont_three" : [
-	{"tempurl":"demos/webaudioapi.html","thumb":"images/portfolio07.jpg","title":"jKefex Web Audio API","subtitle":"HTML5 Web Audio API Plug-in"},
-	{"tempurl":"demos/trignomentryfuncs.html","thumb":"images/portfolio04.jpg","title":"jKefex Trignomentry","subtitle":"HTML5 Trignomentry Plug-in"},
-	{"tempurl":"demos/webfilters.html","thumb":"images/portfolio07.jpg","title":"jKefex CSS3","subtitle":"HTML5 CSS3 Plug-in"}
+	{"tempurl":"demos/webaudio/","thumb":"images/portfolio07.jpg","title":"jKefex Web Audio API","subtitle":"HTML5 Web Audio API Plug-in"},
+	{"tempurl":"demos/jkefex-logo/","thumb":"images/portfolio07.jpg","title":"jKefex Canvas Logo","subtitle":"HTML5 Canvas Logo"},
+	{"tempurl":"demos/webfilters/","thumb":"images/portfolio07.jpg","title":"jKefex CSS3","subtitle":"HTML5 CSS3 Plug-in"}
 	],
 	"cont_four" : [
-	{"tempurl":"demos/particles.html","thumb":"images/portfolio07.jpg","title":"jKefex Canvas Particles","subtitle":"HTML5 canvas Paticles"},
-	{"tempurl":"demos/alpha.html","thumb":"images/portfolio07.jpg","title":"jKefex Canvas Logo","subtitle":"HTML5 Canvas Logo"},
-	{"tempurl":"demos/localfile_upload.html","thumb":"images/portfolio07.jpg","title":"jKefex Local File Delegation","subtitle":"HTML5 File API Plug-in"}
+	{"tempurl":"demos/select-check-box/","thumb":"images/portfolio07.jpg","title":"Angular JS Directive","subtitle":"HTML5 canvas Paticles"},
+	{"tempurl":"demos/history/","thumb":"images/portfolio04.jpg","title":"jKefex History","subtitle":"HTML5 History API"},
+	{"tempurl":"demos/d3-svg/","thumb":"images/portfolio02.jpg","title":"SVG Canvas - D3 JS","subtitle":"D3 JS App"}
+	],
+	"cont_five" : [
+	{"tempurl":"demos/trig/","thumb":"images/portfolio04.jpg","title":"jKefex Trignomentry","subtitle":"HTML5 Trignomentry Plug-in"}
 	]
 }

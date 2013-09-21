@@ -1,0 +1,89 @@
+body{
+	font-family: arial, sans-serif;
+	color: #222;
+	font-size: 16px;
+	}
+
+#frame, 
+.description{
+	margin: 50px auto;
+	width: 800px;
+	height: 400px;
+	-webkit-border-top-right-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-border-radius-topright: 7px;
+	-moz-border-radius-bottomright: 7px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+
+	}
+	
+.playlists .special{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: 420px;
+	}
+
+.playlists .ytv-list-header > a{
+	-webkit-animation: pulse 2s infinite;
+	-moz-animation: pulse 2s infinite;
+	-o-animation: pulse 2s infinite;
+	animation: pulse 2s infinite;
+	}
+	.playlists .ytv-list-header.ytv-playlist-open > a{
+		-webkit-animation: none;
+		-moz-animation: none;
+		-o-animation: none;
+		animation: none;
+		}
+
+@-webkit-keyframes pulse {
+  0%   { background: rgba(255,255,255,0); }
+  50%  { background: rgba(255,255,255,0.1); }
+  100% { background: rgba(255,255,255,0); }
+}
+@-moz-keyframes pulse {
+  0%   { background: rgba(255,255,255,0); }
+  50%  { background: rgba(255,255,255,0.1); }
+  100% { background: rgba(255,255,255,0); }
+}
+@-o-keyframes pulse {
+  0%   { background: rgba(255,255,255,0); }
+  50%  { background: rgba(255,255,255,0.1); }
+  100% { background: rgba(255,255,255,0); }
+}
+@keyframes pulse {
+  0%   { background: rgba(255,255,255,0); }
+  50%  { background: rgba(255,255,255,0.1); }
+  100% { background: rgba(255,255,255,0); }
+
+
+/* import font */
+@import "http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic";
+
+body {background:#fff;  
+  /*background: url('http://www.revista.espiritolivre.org/wp-content/uploads/2013/02/18-02-2013_logo-ubuntu.jpg') no-repeat 20px 331px;*/
+  font-family: Ubuntu, sans-serif;  
+  line-height:0px;
+}
+/* Animations */
+.animate-circle {
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-name: loop;
+}
+@keyframes loop {
+  0% {         
+    transform:scale(1);       
+  }
+  5% {    
+     transform:scale(1.6);         
+  }
+  10% {  
+    transform:rotateZ(720deg);    
+  } 
+  20% {
+    transform:scale(1);    
+  }  
+}
