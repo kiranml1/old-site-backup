@@ -7,13 +7,8 @@ jkefex.controller('mainctrl',['$scope','$http','XHR','$location','$window',funct
 				$scope.content = data;
 		});
 	};
-	$scope.topnavitems = ['Top','Work','Portfolio','Contact'];
-	$scope.designation = "Front End Developer - PHP, HTML5, CSS3, Core JS & JQuery";
 	$scope.profilepic = 'images/me.jpg';
 	$scope.task = "Presently I'm Working on Chrome Experiment as Extension with jKefex JS";
 	$scope.email = "kirankumar.amruthaluri@gmail.com";
-	$scope.changeLoc = function(){
-		$window.location.href = '/jkefexjs/ytv/';
-	};
 	$scope.fetch();
 }]);
