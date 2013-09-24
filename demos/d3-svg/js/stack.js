@@ -197,12 +197,15 @@ var renderWater = function(){
 	};
 }
 
-d3.timer(renderWater(),interval)
+var renderClouds = function(){
+	return function(){
+		$kefex.transit();
+		return true;
+	};
+};
 
-(function renderClouds(){
-	$kefex.transit();
-	setTimeout(renderClouds,8000);
-})();
+d3.timer(renderWater(),interval)
+d3.timer(renderClouds(),interval);
 
 
 
