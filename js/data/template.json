@@ -20,6 +20,12 @@
 	{"tempurl":"demos/d3-svg/","thumb":"images/portfolio02.jpg","title":"SVG Canvas - D3 JS","subtitle":"D3 JS App"}
 	],
 	"cont_five" : [
-	{"tempurl":"demos/trig/","thumb":"images/portfolio04.jpg","title":"jKefex Trignomentry","subtitle":"HTML5 Trignomentry Plug-in"}
+	{"tempurl":"demos/trig/","thumb":"images/portfolio04.jpg","title":"jKefex Trignomentry","subtitle":"HTML5 Trignomentry Plug-in"},
+	{"tempurl":"demos/d3jspiechart/","thumb":"images/portfolio04.jpg","title":"D3 JS Pie Chart","subtitle":"D3 JS Pie Chart"},
+	{"tempurl":"demos/d3jsmap/","thumb":"images/portfolio04.jpg","title":"D3 JS - India Map","subtitle":"D3 JS - India Map"}
+	],
+	"cont_six" : [
+	{"tempurl":"demos/d3jsbarchart/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart","subtitle":"D3 JS - Bar Chart"},
+	{"tempurl":"demos/canvas-paper/","thumb":"images/portfolio04.jpg","title":"Paper JS - Drawing Paper","subtitle":"Paper JS - Drawing Paper"}
 	]
 }

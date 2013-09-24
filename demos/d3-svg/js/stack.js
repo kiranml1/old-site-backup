@@ -185,12 +185,19 @@ $kefex.imgPath();
 $kefex.boat();
 $kefex.audio();
 
-(function renderWater(){
-	d3.select('#water').remove();
-	$kefex.data();
-	$kefex.water();
-	setTimeout(renderWater,10000/22);
-})();
+var interval = 333;
+
+var renderWater = function(){
+	return function(){
+		d3.select('#water').remove();
+		$kefex.data();
+		$kefex.water();
+		d3.timer(renderWater(),interval);
+		return true;
+	};
+}
+
+d3.timer(renderWater(),interval)
 
 (function renderClouds(){
 	$kefex.transit();
