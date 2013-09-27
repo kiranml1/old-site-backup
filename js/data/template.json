@@ -26,6 +26,10 @@
 	],
 	"cont_six" : [
 	{"tempurl":"demos/d3jsbarchart/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart","subtitle":"D3 JS - Bar Chart"},
-	{"tempurl":"demos/canvas-paper/","thumb":"images/portfolio04.jpg","title":"Paper JS - Drawing Paper","subtitle":"Paper JS - Drawing Paper"}
+	{"tempurl":"demos/canvas-paper/","thumb":"images/portfolio04.jpg","title":"Paper JS - Drawing Paper","subtitle":"Paper JS - Drawing Paper"},
+	{"tempurl":"demos/paperjs-particles/","thumb":"images/portfolio04.jpg","title":"Paper JS - Particle System","subtitle":"Paper JS - Particle System"}
+	],
+	"cont_seven" : [
+	{"tempurl":"demos/google-doc-demo/","thumb":"images/portfolio04.jpg","title":"Google Doc Demo","subtitle":"Google Doc Demo"}
 	]
 }
