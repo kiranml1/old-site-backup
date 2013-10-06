@@ -171,3 +171,9 @@ a#fork:active {
     position: relative;
     top: 6px;
 }
+#contact span{
+	font-size: 18px;
+}
+.sub-cap {
+	font-size: 15px;
+}

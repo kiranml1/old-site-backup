@@ -8,7 +8,7 @@ jkefex.controller('mainctrl',['$scope','$http','XHR','$location','$window',funct
 		});
 	};
 	$scope.profilepic = 'images/me.jpg';
-	$scope.task = "Presently I'm Working on Chrome Experiment as Extension with jKefex JS";
+	$scope.task = "Working at Innominds - Hyderabad Since 3 Months";
 	$scope.email = "kirankumar.amruthaluri@gmail.com";
 	$scope.fetch();
 }]);

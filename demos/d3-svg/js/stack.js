@@ -185,7 +185,7 @@ $kefex.imgPath();
 $kefex.boat();
 $kefex.audio();
 
-var interval = 333;
+var interval = 333.3333115378;
 
 var renderWater = function(){
 	return function(){

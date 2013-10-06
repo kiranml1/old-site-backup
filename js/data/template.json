@@ -30,6 +30,13 @@
 	{"tempurl":"demos/paperjs-particles/","thumb":"images/portfolio04.jpg","title":"Paper JS - Particle System","subtitle":"Paper JS - Particle System"}
 	],
 	"cont_seven" : [
-	{"tempurl":"demos/google-doc-demo/","thumb":"images/portfolio04.jpg","title":"Google Doc Demo","subtitle":"Google Doc Demo"}
+	{"tempurl":"demos/google-doc-demo/","thumb":"images/portfolio04.jpg","title":"Google Doc Demo","subtitle":"Google Doc Demo"},
+	{"tempurl":"demos/d3js-win-loss%20-barchart/","thumb":"images/portfolio04.jpg","title":"D3 JS Win Loss Chart","subtitle":"Win Loss Chart"},
+	{"tempurl":"demos/d3jsbarchart-4/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart - 2","subtitle":"D3 JS - Bar Chart"}
+	],
+	"cont_eight" : [
+	{"tempurl":"demos/d3jsbarchart-5/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart - 3","subtitle":"D3 JS - Bar Chart"},
+	{"tempurl":"demos/d3jsfunnel/","thumb":"images/portfolio04.jpg","title":"D3 JS - Funnel Chart","subtitle":"D3 JS - Funnel Chart"},
+	{"tempurl":"demos/d3jslinegraph/","thumb":"images/portfolio04.jpg","title":"D3 JS - Line Graph","subtitle":"D3 JS - Line Graph"}
 	]
 }
