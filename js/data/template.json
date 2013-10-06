@@ -38,5 +38,8 @@
 	{"tempurl":"demos/d3jsbarchart-5/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart - 3","subtitle":"D3 JS - Bar Chart"},
 	{"tempurl":"demos/d3jsfunnel/","thumb":"images/portfolio04.jpg","title":"D3 JS - Funnel Chart","subtitle":"D3 JS - Funnel Chart"},
 	{"tempurl":"demos/d3jslinegraph/","thumb":"images/portfolio04.jpg","title":"D3 JS - Line Graph","subtitle":"D3 JS - Line Graph"}
+	],
+	"cont_nine" : [
+	{"tempurl":"demos/d3js-hand/","thumb":"images/portfolio04.jpg","title":"D3 JS - Hand","subtitle":"D3 JS - Hand"}
 	]
 }
