@@ -185,17 +185,27 @@ $kefex.imgPath();
 $kefex.boat();
 $kefex.audio();
 
-(function renderWater(){
-	d3.select('#water').remove();
-	$kefex.data();
-	$kefex.water();
-	setTimeout(renderWater,10000/22);
-})();
+var interval = 333.3333115378;
 
-(function renderClouds(){
-	$kefex.transit();
-	setTimeout(renderClouds,8000);
-})();
+var renderWater = function(){
+	return function(){
+		d3.select('#water').remove();
+		$kefex.data();
+		$kefex.water();
+		d3.timer(renderWater(),interval);
+		return true;
+	};
+}
+
+var renderClouds = function(){
+	return function(){
+		$kefex.transit();
+		return true;
+	};
+};
+
+d3.timer(renderWater(),interval)
+d3.timer(renderClouds(),interval);
 
 
 
