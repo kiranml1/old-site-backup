@@ -1,45 +1,50 @@
 {
 	"cont_one" : [
-	{"tempurl":"demos/navigator/","thumb":"images/portfolio01.jpg","title":"jKefex Cam Capture","subtitle":"HTML5 Navigator Plug-in"},
-	{"tempurl":"demos/localfileupload/","thumb":"images/portfolio07.jpg","title":"jKefex Local File Delegation","subtitle":"HTML5 File API Plug-in"},
-	{"tempurl":"demos/particles/","thumb":"images/portfolio07.jpg","title":"jKefex Canvas Particles","subtitle":"HTML5 canvas Paticles"}
+	{"tempurl":"demos/navigator/","codeurl":"demos/navigator/","thumb":"images/portfolio01.jpg","title":"jKefex Cam Capture","subtitle":"HTML5 Navigator Plug-in"},
+	{"tempurl":"demos/localfileupload/","codeurl":"demos/localfileupload/","thumb":"images/portfolio07.jpg","title":"jKefex Local File Delegation","subtitle":"HTML5 File API Plug-in"},
+	{"tempurl":"demos/particles/","codeurl":"demos/particles/","thumb":"images/portfolio07.jpg","title":"jKefex Canvas Particles","subtitle":"HTML5 canvas Paticles"}
 	],
 	"cont_two" : [
-	{"tempurl":"demos/workers/","thumb":"images/portfolio07.jpg","title":"jKefex Workers","subtitle":"HTML5 Workers API Plug-in"},
-	{"tempurl":"demos/dragndrop/","thumb":"images/portfolio05.jpg","title":"jKefex Drag and Drop","subtitle":"HTML5 Drag And Drop Plug-in"},
-	{"tempurl":"demos/valid/","thumb":"images/portfolio03.jpg","title":"jKefex Validation","subtitle":"HTML5 RegExp Validation Plug-in"}
+	{"tempurl":"demos/workers/","codeurl":"demos/workers/","thumb":"images/portfolio07.jpg","title":"jKefex Workers","subtitle":"HTML5 Workers API Plug-in"},
+	{"tempurl":"demos/dragndrop/","codeurl":"demos/dragndrop/","thumb":"images/portfolio05.jpg","title":"jKefex Drag and Drop","subtitle":"HTML5 Drag And Drop Plug-in"},
+	{"tempurl":"demos/valid/","codeurl":"demos/valid/","thumb":"images/portfolio03.jpg","title":"jKefex Validation","subtitle":"HTML5 RegExp Validation Plug-in"}
 	],
 	"cont_three" : [
-	{"tempurl":"demos/webaudio/","thumb":"images/portfolio07.jpg","title":"jKefex Web Audio API","subtitle":"HTML5 Web Audio API Plug-in"},
-	{"tempurl":"demos/jkefex-logo/","thumb":"images/portfolio07.jpg","title":"jKefex Canvas Logo","subtitle":"HTML5 Canvas Logo"},
-	{"tempurl":"demos/webfilters/","thumb":"images/portfolio07.jpg","title":"jKefex CSS3","subtitle":"HTML5 CSS3 Plug-in"}
+	{"tempurl":"demos/webaudio/","codeurl":"demos/webaudio/","thumb":"images/portfolio07.jpg","title":"jKefex Web Audio API","subtitle":"HTML5 Web Audio API Plug-in"},
+	{"tempurl":"demos/jkefex-logo/","codeurl":"demos/jkefex-logo/","thumb":"images/portfolio07.jpg","title":"jKefex Canvas Logo","subtitle":"HTML5 Canvas Logo"},
+	{"tempurl":"demos/webfilters/","codeurl":"demos/webfilters/","thumb":"images/portfolio07.jpg","title":"jKefex CSS3","subtitle":"HTML5 CSS3 Plug-in"}
 	],
 	"cont_four" : [
-	{"tempurl":"demos/select-check-box/","thumb":"images/portfolio07.jpg","title":"Angular JS Directive","subtitle":"HTML5 canvas Paticles"},
-	{"tempurl":"demos/history/","thumb":"images/portfolio04.jpg","title":"jKefex History","subtitle":"HTML5 History API"},
-	{"tempurl":"demos/d3-svg/","thumb":"images/portfolio02.jpg","title":"SVG Canvas - D3 JS","subtitle":"D3 JS App"}
+	{"tempurl":"demos/select-check-box/","codeurl":"demos/select-check-box/","thumb":"images/portfolio07.jpg","title":"Angular JS Directive","subtitle":"HTML5 canvas Paticles"},
+	{"tempurl":"demos/history/","codeurl":"demos/history/","thumb":"images/portfolio04.jpg","title":"jKefex History","subtitle":"HTML5 History API"},
+	{"tempurl":"demos/d3-svg/","codeurl":"demos/d3-svg/","thumb":"images/portfolio02.jpg","title":"SVG Canvas - D3 JS","subtitle":"D3 JS App"}
 	],
 	"cont_five" : [
-	{"tempurl":"demos/trig/","thumb":"images/portfolio04.jpg","title":"jKefex Trignomentry","subtitle":"HTML5 Trignomentry Plug-in"},
-	{"tempurl":"demos/d3jspiechart/","thumb":"images/portfolio04.jpg","title":"D3 JS Pie Chart","subtitle":"D3 JS Pie Chart"},
-	{"tempurl":"demos/d3jsmap/","thumb":"images/portfolio04.jpg","title":"D3 JS - India Map","subtitle":"D3 JS - India Map"}
+	{"tempurl":"demos/trig/","codeurl":"demos/trig/","thumb":"images/portfolio04.jpg","title":"jKefex Trignomentry","subtitle":"HTML5 Trignomentry Plug-in"},
+	{"tempurl":"demos/d3jspiechart/","codeurl":"http://bl.ocks.org/kiranml1/6872886","thumb":"images/portfolio04.jpg","title":"D3 JS Pie Chart Demo","subtitle":"D3 JS Pie Chart Code"},
+	{"tempurl":"demos/d3jsmap/","codeurl":"demos/d3jsmap/","thumb":"images/portfolio04.jpg","title":"D3 JS - India Map","subtitle":"D3 JS - India Map"}
 	],
 	"cont_six" : [
-	{"tempurl":"demos/d3jsbarchart/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart","subtitle":"D3 JS - Bar Chart"},
-	{"tempurl":"demos/canvas-paper/","thumb":"images/portfolio04.jpg","title":"Paper JS - Drawing Paper","subtitle":"Paper JS - Drawing Paper"},
-	{"tempurl":"demos/paperjs-particles/","thumb":"images/portfolio04.jpg","title":"Paper JS - Particle System","subtitle":"Paper JS - Particle System"}
+	{"tempurl":"demos/d3jsbarchart/","codeurl":"demos/d3jsbarchart/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart","subtitle":"D3 JS - Bar Chart"},
+	{"tempurl":"demos/canvas-paper/","codeurl":"demos/canvas-paper/","thumb":"images/portfolio04.jpg","title":"Paper JS - Drawing Paper","subtitle":"Paper JS - Drawing Paper"},
+	{"tempurl":"demos/paperjs-particles/","codeurl":"demos/paperjs-particles/","thumb":"images/portfolio04.jpg","title":"Paper JS - Particle System","subtitle":"Paper JS - Particle System"}
 	],
 	"cont_seven" : [
-	{"tempurl":"demos/google-doc-demo/","thumb":"images/portfolio04.jpg","title":"Google Doc Demo","subtitle":"Google Doc Demo"},
-	{"tempurl":"demos/d3js-win-loss%20-barchart/","thumb":"images/portfolio04.jpg","title":"D3 JS Win Loss Chart","subtitle":"Win Loss Chart"},
-	{"tempurl":"demos/d3jsbarchart-4/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart - 2","subtitle":"D3 JS - Bar Chart"}
+	{"tempurl":"demos/google-doc-demo/","codeurl":"demos/google-doc-demo/","thumb":"images/portfolio04.jpg","title":"Google Doc Demo","subtitle":"Google Doc Demo"},
+	{"tempurl":"demos/d3js-win-loss%20-barchart/","codeurl":"http://bl.ocks.org/kiranml1/6863671","thumb":"images/portfolio04.jpg","title":"D3 JS Win Loss Demo","subtitle":"Win Loss Chart Code"},
+	{"tempurl":"demos/d3jsbarchart-4/","codeurl":"http://bl.ocks.org/kiranml1/6872226","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart - Demo","subtitle":"Bar Chart Code"}
 	],
 	"cont_eight" : [
-	{"tempurl":"demos/d3jsbarchart-5/","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart - 3","subtitle":"D3 JS - Bar Chart"},
-	{"tempurl":"demos/d3jsfunnel/","thumb":"images/portfolio04.jpg","title":"D3 JS - Funnel Chart","subtitle":"D3 JS - Funnel Chart"},
-	{"tempurl":"demos/d3jslinegraph/","thumb":"images/portfolio04.jpg","title":"D3 JS - Line Graph","subtitle":"D3 JS - Line Graph"}
+	{"tempurl":"demos/d3jsbarchart-5/","codeurl":"http://bl.ocks.org/kiranml1/6872350","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart Demo","subtitle":"Bar Chart Code"},
+	{"tempurl":"demos/d3jsfunnel/","codeurl":"http://bl.ocks.org/kiranml1/6872423","thumb":"images/portfolio04.jpg","title":"D3 JS - Funnel Chart Demo","subtitle":"Funnel Chart Code"},
+	{"tempurl":"demos/d3jslinegraph/","codeurl":"http://bl.ocks.org/kiranml1/6872115","thumb":"images/portfolio04.jpg","title":"D3 JS - Line Graph Demo","subtitle":"Line Graph Code"}
 	],
 	"cont_nine" : [
-	{"tempurl":"demos/d3js-hand/","thumb":"images/portfolio04.jpg","title":"D3 JS - Hand","subtitle":"D3 JS - Hand"}
+	{"tempurl":"demos/d3js-hand/","codeurl":"http://bl.ocks.org/kiranml1/6872489","thumb":"images/portfolio04.jpg","title":"D3 JS - Hand Demo","subtitle":"Hand Code"},
+	{"tempurl":"demos/d3jstreemap/","codeurl":"http://bl.ocks.org/kiranml1/6872571","thumb":"images/portfolio04.jpg","title":"D3 JS - Treemap Demo","subtitle":"Treemap Code"},
+	{"tempurl":"demos/d3jstreemap/","codeurl":"http://bl.ocks.org/kiranml1/6872293","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart Demo","subtitle":"Bar Chart Code"}
+	],
+	"cont_ten":[
+	{"tempurl":"demos/jkefexMultiSortSel/","codeurl":"http://bl.ocks.org/kiranml1/6874480","thumb":"images/portfolio04.jpg","title":"jkefexMultiSortSel jQuery Plug-in","subtitle":"jkefexMultiSortSel Code Example"}
 	]
 }

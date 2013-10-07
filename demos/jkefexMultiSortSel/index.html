@@ -26,14 +26,36 @@
         <!-- Add your site or application content here -->
         <div id="wrapper">
             <header>
-                <div id="img"><img src="img/HTML5CSS3Logos.svg" alt=""></div>
+                <div id="img"><img src="http://www.bobbyberberyan.com/wp-content/uploads/2012/03/HTML5CSS3Logos.svg" alt=""></div>
                  <!-- <div id="img"><img src="http://ohdoylerules.com/content/images/css3.svg" alt=""></div> -->
-                <h3>D3 JS - India Map</h3>
+                <h3>jQuery Multi-Sorting Plugin</h3>
                 
             </header>
             <section id="section">
-                <div class="wrapper">
-                </div>
+                <p><h3>jkefexMultiSortSel jQuery Plug-in</h3></p>
+                <p><h6>jQuery Multi-Sorting Plugin</h6></p>
+                <h6>Maintained By <a href="https://github.com/kiranml1">Kiranml1</a></h6>
+                <input id="equipitems" type="hidden" value=",100,200,300,400,500,600">
+                <p></p>
+            <div id="optSel">
+                    <select name="options-1" id="row-1" class="selectpicker">
+                        <option value=""></option>
+                    </select>
+                    <select name="options-2" id="row-2" class="selectpicker">
+                        <option value=""></option>
+                    </select>
+                        <select name="options-3" id="row-3" class="selectpicker">
+                        <option value=""></option>
+                    </select>
+                    <b>
+                <p>Usage:</p>   
+                <p>$('body').jkefexMultiSortSel({data:values,empty:true,selElem:'row'});</p>
+                <p>data  - data to be passed to the Plugin</p>
+                <p>empty - to be empty or not</p>
+                <p>selElem starting letter for Reg Exp Matching</p>
+                </b>
+                <p><h6 id="footer">Kiran Kumar - jkefexMultiSortSel</h6></p>
+            </div>
             </section>
             <footer id="footer">
                 <h6>jKefex JS - Experiments - Amruthaluri Kiran Kumar</h6>
@@ -43,32 +65,13 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/d3.v3.min.js"></script>
+        <script src="js/jkefexMultiSortSel.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-        var canvas = d3.select('.wrapper').append('svg')
-				.attr({'width':'1200','height':'700'});
-		d3.json('js/india_states.geojson',function(data){
-			var group = canvas.selectAll('g')
-							.data(data.features)
-							.enter()
-							.append('g');
-
-			var projection = d3.geo.mercator().scale(950).translate([-800,700]);
-			var path  = d3.geo.path().projection(projection);
-			var areas = group.append('path')
-							.attr('d',path)
-							.attr('class','areas')
-							.style('fill','steelblue');
-
-			 group.append('text')
-			 	.attr({'x':function(d){ return path.centroid(d)[0]; },
-			 		   'y':function(d){ return path.centroid(d)[1]; },
-			 		   'text-anchor':'middle',
-			 		   'font-size' : '14px'
-			 		}).text(function(d,i){ console.log(d); return d.properties['NAME_1']; });
-
-		});
+        var data = $('#equipitems').val();
+        var values = data.split(',');
+        $('body').jkefexMultiSortSel({data:values,empty:true,selElem:'row'});
         </script>
     </body>
 </html>
