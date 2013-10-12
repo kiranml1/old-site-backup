@@ -45,6 +45,11 @@
 	{"tempurl":"demos/d3jstreemap/","codeurl":"http://bl.ocks.org/kiranml1/6872293","thumb":"images/portfolio04.jpg","title":"D3 JS - Bar Chart Demo","subtitle":"Bar Chart Code"}
 	],
 	"cont_ten":[
-	{"tempurl":"demos/jkefexMultiSortSel/","codeurl":"http://bl.ocks.org/kiranml1/6874480","thumb":"images/portfolio04.jpg","title":"jkefexMultiSortSel jQuery Plug-in","subtitle":"jkefexMultiSortSel Code Example"}
+	{"tempurl":"demos/jkefexMultiSortSel/","codeurl":"http://bl.ocks.org/kiranml1/6874480","thumb":"images/portfolio04.jpg","title":"jkefexMultiSortSel jQuery Plug-in","subtitle":"jkefexMultiSortSel Code Example"},
+	{"tempurl":"http://bl.ocks.org/kiranml1/6955272","codeurl":"http://bl.ocks.org/kiranml1/6955272","thumb":"images/portfolio04.jpg","title":"D3 JS Funnel Chart - Uniform Sides","subtitle":"D3 JS Funnel Chart Code Example"},
+	{"tempurl":"http://bl.ocks.org/kiranml1/6955334","codeurl":"http://bl.ocks.org/kiranml1/6955334","thumb":"images/portfolio04.jpg","title":"D3 JS Funnel Chart - Non-Uniform Sides","subtitle":"D3 JS Funnel Chart Code Example"}
+	],
+	"cont_eleven":[
+	{"tempurl":"http://bl.ocks.org/kiranml1/6956013","codeurl":"http://bl.ocks.org/kiranml1/6956013","thumb":"images/portfolio04.jpg","title":"Bootstrap Tabs - Switch","subtitle":"Bootstrap Tabs - Switch"}
 	]
 }
