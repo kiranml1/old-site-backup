@@ -48,13 +48,7 @@
                         <option value=""></option>
                     </select>
                     <b>
-                <p>Usage:</p>   
-                <p>$('body').jkefexMultiSortSel({data:values,empty:true,selElem:'row'});</p>
-                <p>data  - data to be passed to the Plugin</p>
-                <p>empty - to be empty or not</p>
-                <p>selElem starting letter for Reg Exp Matching</p>
-                </b>
-                <p><h6 id="footer">Kiran Kumar - jkefexMultiSortSel</h6></p>
+                    <p><a href="http://jkefexjs.blogspot.in/2013/10/jkefexmultisortsel-jquery-selectbox.html">Check the Usage Documentation</a></p>
             </div>
             </section>
             <footer id="footer">
@@ -71,7 +65,7 @@
         <script>
         var data = $('#equipitems').val();
         var values = data.split(',');
-        $('body').jkefexMultiSortSel({data:values,empty:true,selElem:'row'});
+        $('#optSel').jkefexMultiSortSel({data:values,empty:true,selElem:'row'});
         </script>
     </body>
 </html>
