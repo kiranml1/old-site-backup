@@ -177,3 +177,6 @@ a#fork:active {
 .sub-cap {
 	font-size: 15px;
 }
+.no-js {
+	display: none;
+}
