@@ -65,6 +65,7 @@
 	{"tempurl":"http://kiranml1.github.io/bootstrap/","codeurl":"http://kiranml1.github.io/bootstrap/","thumb":"images/portfolio04.jpg","title":"Bootstrap Website Layout","subtitle":"Bootstrap Website Layout"}
 	],
 	"cont_fourteen":[
-	{"tempurl":"demos/SlideUpDown/","codeurl":"demos/SlideUpDown/","thumb":"images/portfolio04.jpg","title":"jQuery Slide Up & Down Plugin","subtitle":"jQuery Slide Up & Down Plugin"}
+	{"tempurl":"demos/SlideUpDown/","codeurl":"demos/SlideUpDown/","thumb":"images/portfolio04.jpg","title":"jQuery Slide Up & Down Plugin","subtitle":"jQuery Slide Up & Down Plugin"},
+	{"tempurl":"demos/canvas-d3/","codeurl":"demos/canvas-d3/","thumb":"images/portfolio04.jpg","title":"jKefex Intro D3","subtitle":"jKefex Intro D3"}
 	]
 }
