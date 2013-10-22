@@ -1,7 +1,7 @@
 html, body {
     padding: 0;
     margin: 0;
-    background-color: #adadad;
+    background-color:hsla(120, 100%, 45%, 0.86);
 }
 #wrapper {
     width:960px;
