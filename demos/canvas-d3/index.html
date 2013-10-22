@@ -63,6 +63,15 @@
 		    + lineSeg({x: 206, y: 236})
 			+ lineSeg({x: 173, y: 263});
 
+		var pathK =  move({x: 207, y: 79})
+		    + lineSeg({x: 209, y: 80})
+		    + lineSeg({x: 206, y: 210})
+			+ lineSeg({x: 204, y: 263})
+			+ lineSeg({x: 218, y: 150})
+            + lineSeg({x: 282, y: 77})
+			+ lineSeg({x: 213, y: 155})
+            + lineSeg({x: 292, y: 265});
+
 		var pathE = move({x: 262, y: 82})
 			+ lineSeg({x: 319, y: 85})
 		    + lineSeg({x: 265, y: 85})
@@ -128,7 +137,19 @@
 		    "stroke-linejoin": "round"
 		  })
 
+		var k = svg.append("path")
+		  .attr('transform','translate(50)')
+		  .attr("d", pathK)
+		  .style({
+		    fill: "none",
+		    stroke: "#000000",
+		    "stroke-width": 12,
+		    "stroke-linecap": "round",
+		    "stroke-linejoin": "round"
+		  })
+
 		var e1 = svg.append("path")
+		  .attr('transform','translate(100)')
 		  .attr("d", pathE)
 		  .style({
 		    fill: "none",
@@ -139,7 +160,7 @@
 		  })
 
 		var f = svg.append("path")
-		  .attr('transform','translate(100)')
+		  .attr('transform','translate(200)')
 		  .attr("d", pathF)
 		  .style({
 		    fill: "none",
@@ -150,7 +171,7 @@
 		  })
 
 		var e2 = svg.append("path")
-		  .attr('transform','translate(200)')
+		  .attr('transform','translate(300)')
 		  .attr("d", pathG)
 		  .style({
 		    fill: "none",
@@ -161,7 +182,7 @@
 		  })
 
 		var x = svg.append("path")
-		  .attr('transform','translate(300)')
+		  .attr('transform','translate(400)')
 		  .attr("d", pathH)
 		  .style({
 		    fill: "none",
@@ -176,6 +197,11 @@
 
         j.attr({
           "stroke-dasharray": j.node().getTotalLength() + " " + j.node().getTotalLength(),
+          "stroke-dashoffset": offset
+        });
+
+        k.attr({
+          "stroke-dasharray": k.node().getTotalLength() + " " + k.node().getTotalLength(),
           "stroke-dashoffset": offset
         });
 
@@ -229,6 +255,15 @@
             .attrTween('stroke-dashoffset',function(d,i){
               return function(t){
               return j.node().getTotalLength()*(1-t);
+              }
+            })
+
+            k.transition()
+            .duration(5044)
+            .ease("linear")
+            .attrTween('stroke-dashoffset',function(d,i){
+              return function(t){
+              return k.node().getTotalLength()*(1-t);
               }
             })
 
