@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     'gh-pages': {
       options: {
         base: 'build',
-        repo: 'git@github.com:kiranml1/grunt-gh.git'
+        repo: 'git@github.com:kiranml1/jkefexjs.git'
       },
       src: '**/*'
     },
