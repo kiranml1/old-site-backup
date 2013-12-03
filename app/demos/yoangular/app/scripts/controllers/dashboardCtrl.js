@@ -23,12 +23,12 @@ function command()
 
 function login()
 {
-	window.location = "http://localhost/yoangular/app/#/dashboard";
+	window.location = "http://kiranml1.github.io/jkefexjs/demos/yoangular/app/#/dashboard";
 }
 
 function logout()
 {
-	window.location = "http://localhost/yoangular/app/#/";
+	window.location = "http://kiranml1.github.io/jkefexjs/demos/yoangular/app/#/";
 }
 
 $(function(){
