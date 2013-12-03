@@ -17,6 +17,13 @@ module.exports = function (grunt) {
       app: require('./bower.json').appPath || 'app',
       dist: 'build'
     },
+    'gh-pages': {
+      options: {
+        base: 'build',
+        repo: 'git@github.com:kiranml1/grunt-gh.git'
+      },
+      src: '**/*'
+    },
     watch: {
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
