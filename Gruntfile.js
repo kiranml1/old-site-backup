@@ -18,27 +18,26 @@ module.exports = function (grunt) {
       dist: 'build'
     },
     'gh-pages': {
-      options: {
-        base: 'build',
-        repo: 'git@github.com:kiranml1/jkefexjs.git'
-      },
-      src: '**/*'
-
-
+      // options: {
+      //   base: 'build',
+      //   repo: 'git@github.com:kiranml1/jkefexjs.git'
+      // },
+      // src: '**/*'
       options: {
         // Options for all targets go here.
-        repo: 'git@github.com:kiranml1/jkefexjs.git'
       },
       'gh-pages': {
         options: {
-          base: 'build'
+          base: 'build',
+          repo: 'git@github.com:kiranml1/jkefexjs.git'
         },
         src: '**/*'
       },
       'demos': {
         options: {
           base: 'app/demos',
-          branch: 'experiments'
+          branch: 'experiments',
+          repo: 'git@github.com:kiranml1/jkefexjs.git'
         },
         src: '**/*'
       }
