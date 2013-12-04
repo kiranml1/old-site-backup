@@ -23,6 +23,25 @@ module.exports = function (grunt) {
         repo: 'git@github.com:kiranml1/jkefexjs.git'
       },
       src: '**/*'
+
+
+      options: {
+        // Options for all targets go here.
+        repo: 'git@github.com:kiranml1/jkefexjs.git'
+      },
+      'gh-pages': {
+        options: {
+          base: 'build'
+        },
+        src: '**/*'
+      },
+      'demos': {
+        options: {
+          base: 'app/demos',
+          branch: 'experiments'
+        },
+        src: '**/*'
+      }
     },
     watch: {
       coffee: {
