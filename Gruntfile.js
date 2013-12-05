@@ -29,7 +29,8 @@ module.exports = function (grunt) {
       'gh-pages': {
         options: {
           base: 'build',
-          repo: 'git@github.com:kiranml1/jkefexjs.git'
+          branch: 'master',
+          repo: 'git@github.com:kiranml1/kiranml1.github.io.git'
         },
         src: '**/*'
       },
@@ -37,7 +38,7 @@ module.exports = function (grunt) {
         options: {
           base: 'app/demos',
           branch: 'experiments',
-          repo: 'git@github.com:kiranml1/jkefexjs.git'
+          repo: 'git@github.com:kiranml1/kiranml1.github.io.git'
         },
         src: '**/*'
       }
