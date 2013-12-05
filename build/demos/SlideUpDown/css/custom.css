@@ -1,3 +1,9 @@
+.nojs{
+	display: none;
+}
+.yepjs{
+	display: block;
+}
 body{
 	background: url(../img/grunge_wall.png) repeat;
 	overflow: hidden;
