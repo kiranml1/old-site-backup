@@ -23,10 +23,10 @@ try
 	});
 
 	$(function(){
-	        angular.element(document).ready(function() {
-	               angular.bootstrap(document, ['jkefex']);
-	          });
-	    });
+        angular.element(document).ready(function() {
+               angular.bootstrap(document, ['jkefex']);
+          });
+    });
 }
 catch(e)
 {
