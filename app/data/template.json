@@ -75,6 +75,7 @@
     {"tempurl":"demos/blobdata/","codeurl":"demos/blobdata/","thumb":"images/portThumb/portfolio04.jpg","title":"jKefex JS HTML5 Blob Data","subtitle":"jKefex JS HTML5 Blob Data"}
     ],
     "cont_sixteen":[
-    {"tempurl":"demos/SIP/","codeurl":"demos/SIP/","thumb":"images/portThumb/portfolio04.jpg","title":"HTML5 SIP Client","subtitle":"HTML5 SIP Client"}
+    {"tempurl":"demos/SIP/","codeurl":"demos/SIP/","thumb":"images/portThumb/portfolio04.jpg","title":"HTML5 SIP Client","subtitle":"HTML5 SIP Client"},
+    {"tempurl":"demos/webaudiovis-canvas/","codeurl":"demos/webaudiovis-canvas/","thumb":"images/portThumb/portfolio04.jpg","title":"HTML5 Audio Visualization","subtitle":"HTML5 Audio Visualization"}
     ]
 }
