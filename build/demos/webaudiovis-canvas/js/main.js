@@ -12,7 +12,8 @@ var HEIGHT = 460;
 function init() { 
     console.log("in init"); 
     try { 
-        ctx = new webkitAudioContext(); //is there a better API for this? 
+        ctx = new webkitAudioContext();
+        $('#small').html('Loading...'); //is there a better API for this? 
         setupCanvas(); 
         loadFile(); 
     } catch(e) { 
@@ -26,13 +27,21 @@ function loadFile() {
     var req = new XMLHttpRequest(); 
     req.open("GET","05 - Cocktail - Tera Naam Japdi Phiran [DM].mp3",true); 
     //we can't use jquery because we need the arraybuffer type 
-    req.responseType = "arraybuffer"; 
+    req.responseType = "arraybuffer";
+    req.onprogress = function(e){
+            if(e.lengthComputable)
+            {
+                var percent = e.loaded/e.total;
+                $('#small').html('Loading '+Math.round(percent*100)+'% Please Wait...');
+            }
+        }; 
     req.onload = function() { 
         //decode the loaded data 
         ctx.decodeAudioData(req.response, function(buffer) { 
             buf = buffer; 
             play(); 
-        }); 
+        });
+        $('#small').html('Audio Visualization'); 
     }; 
     req.send(); 
 } 
