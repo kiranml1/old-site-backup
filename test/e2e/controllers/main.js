@@ -3,12 +3,12 @@
 describe('Controller: MainCtrl', function () {
 
   beforeEach(function() {
-    browser().navigateTo('http://localhost/jkefexjs/app/');
+    browser().navigateTo('http://127.0.0.1:9000');
   });
 
 
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    expect(browser().location().url()).toBe("http://localhost/jkefexjs/app/");
+  it('Sample Test', function() {
+    expect(browser().location().url()).toBe("http://127.0.0.1:9000");
   });
   
 });

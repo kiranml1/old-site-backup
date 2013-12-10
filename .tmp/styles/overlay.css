@@ -170,3 +170,41 @@ a#fork:active {
 .no-js {
   display: none;
 }
+
+svg {
+  background: #61b8db;
+  background-image: -webkit-linear-gradient(top, rgba(97,184,219,0), rgba(48,141,196,1));
+  background-image: -ms-linear-gradient(top, rgba(97,184,219,0), rgba(48,141,196,1));
+  background-image: -webkit-linear-gradient(top, rgba(97, 184, 219, 0), rgba(48,141,196,1));
+  background-image: linear-gradient(top, rgba(97,184,219,0), rgba(48,141,196,1));
+  box-shadow: inset 0px 0px 0px 1px #135c86, inset 0px 2px 1px 0px rgba(255,255,255,0.75);
+  -webkit-transition: background-color .2s ease-in-out;
+  -ms-transition: background-color .2s ease-in-out;
+  border-radius: 30px;
+  text-shadow: 3px -1px 8px rgba(150, 150, 150, 1);
+}
+
+.mesh {
+  fill: none;
+  stroke: #000;
+  stroke-width: .25px;
+}
+
+.start {
+  fill: hsla(199, 100%, 33%, 0.5);
+  stroke: steelblue;
+}
+
+.end {
+  fill: hsla(199, 100%, 33%, 0.5);
+  stroke: steelblue;
+}
+
+.wrapper-style6 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.wrapper-style1 {
+  padding-bottom: 4em !important;
+}

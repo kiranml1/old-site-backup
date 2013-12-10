@@ -20,6 +20,10 @@ module.exports = function(config) {
     // web server port
     port: 8080,
 
+    //proxy
+    proxy: {
+      '/': 'http://127.0.0.1:9000/'
+    },
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
     logLevel: config.LOG_INFO,
