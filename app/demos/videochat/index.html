@@ -1,178 +1,95 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js nojs"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html class="full" lang="en"><!-- The full page image background will only work if the html has the custom class set to it! Don't delete it! -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <title>Full Page Image Background Template for Bootstrap 3</title>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/foundation.css">
-        <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
 
-        <!-- Add your site or application content here -->
-        <div id="wrapper">
-            <header>
-                <div id="img"><img src="img/HTML5CSS3Logos.svg" alt=""></div>
-                 <!-- <div id="img"><img src="http://ohdoylerules.com/content/images/css3.svg" alt=""></div> -->
-                <h3>jKefexJS Video Chat</h3>
-                
-            </header>
-            <section id="section">
-            	<div class="pure-g">
-                  <!-- Video area -->
-                  <div class="pure-u-2-3" id="video-container">
-                    <video id="their-video" autoplay></video>
-                    <video id="my-video" muted="true" autoplay></video>
-                  </div>
+    <!-- Custom CSS for the 'Full' Template -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+    <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+  </head>
 
-                  <!-- Steps -->
-                  <div class="pure-u-1-3">
-                    <h2>jKefexJS Video Chat</h2>
-
-                    <!-- Get local audio/video stream -->
-                    <div id="step1">
-                      <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
-                      <div id="step1-error">
-                        <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click allow when asked for permission by the browser.</p>
-                        <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
-                      </div>
-                    </div>
-
-                    <!-- Make calls to others -->
-                    <div id="step2">
-                      <p>Your id: <span id="my-id">...</span></p>
-                      <p>Share this id with others so they can call you.</p>
-                      <h3>Make a call</h3>
-                      <div class="pure-form">
-                        <input type="text" placeholder="Call user id..." id="callto-id">
-                        <a href="#" class="pure-button pure-button-success" id="make-call">Call</a>
-                      </div>
-                    </div>
-
-                    <!-- Call in progress -->
-                    <div id="step3">
-                      <p>Currently in call with <span id="their-id">...</span></p>
-                      <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
-                    </div>
-                  </div>
-              </div>	
-            </section>
-            <footer id="footer">
-                <h6>jKefex JS - Experiments - Amruthaluri Kiran Kumar</h6>
-            </footer>
+  <body>
+      
+    <nav class="navbar navbar-fixed-bottom navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://kiranml1.github.io/">JKEFEX JS - <small>Amruthaluri Kiran Kumar</small></a>
         </div>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-        <script>
 
-            // Compatibility shim
-            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <!-- <ul class="nav navbar-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul> -->
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>Video Chat</h3>
+          <div class="pure-g">
+              <!-- Video area -->
+              <div class="pure-u-2-3" id="video-container">
+                <video id="their-video" autoplay></video>
+                <video id="my-video" muted="true" autoplay></video>
+              </div>
 
-            // PeerJS object
-            var peer = new Peer({ key: 'lwjd5qra8257b9', debug: 3});
+              <!-- Steps -->
+              <div class="pure-u-1-3">
+                <!-- Get local audio/video stream -->
+                <div id="step1">
+                  <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
+                  <div id="step1-error">
+                    <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click allow when asked for permission by the browser.</p>
+                    <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
+                  </div>
+                </div>
 
-            peer.on('open', function(){
-              $('#my-id').text(peer.id);
-            });
+                <!-- Make calls to others -->
+                <div id="step2">
+                  <p>Your id: <span id="my-id">...</span></p>
+                  <p>Share this id with others so they can call you.</p>
+                  <h3>Make a call</h3>
+                  <div class="pure-form">
+                    <input type="text" placeholder="Call user id..." id="callto-id">
+                    <a href="#" class="pure-button pure-button-success" id="make-call">Call</a>
+                  </div>
+                </div>
 
-            // Receiving a call
-            peer.on('call', function(call){
-              // Answer the call automatically (instead of prompting user) for demo purposes
-              call.answer(window.localStream);
-              step3(call);
-            });
-            peer.on('error', function(err){
-              alert(err.message);
-              // Return to step 2 if error occurs
-              step2();
-            });
+                <!-- Call in progress -->
+                <div id="step3">
+                  <p>Currently in call with <span id="their-id">...</span></p>
+                  <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/videochat.js"></script>
+  </body>
 
-            // Click handlers setup
-            $(function(){
-              $('#make-call').click(function(){
-                // Initiate a call!
-                var call = peer.call($('#callto-id').val(), window.localStream);
-
-                step3(call);
-              });
-
-              $('#end-call').click(function(){
-                window.existingCall.close();
-                step2();
-              });
-
-              // Retry if getUserMedia fails
-              $('#step1-retry').click(function(){
-                $('#step1-error').hide();
-                step1();
-              });
-
-              // Get things started
-              step1();
-            });
-
-            function step1 () {
-              // Get audio/video stream
-              navigator.getUserMedia({audio: true, video: true}, function(stream){
-                // Set your video displays
-                $('#my-video').prop('src', URL.createObjectURL(stream));
-
-                window.localStream = stream;
-                step2();
-              }, function(){ $('#step1-error').show(); });
-            }
-
-            function step2 () {
-              $('#step1, #step3').hide();
-              $('#step2').show();
-            }
-
-            function step3 (call) {
-              // Hang up on an existing call if present
-              if (window.existingCall) {
-                window.existingCall.close();
-              }
-
-              // Wait for stream on the call, then set peer video display
-              call.on('stream', function(stream){
-                $('#their-video').prop('src', URL.createObjectURL(stream));
-              });
-
-              // UI stuff
-              window.existingCall = call;
-              $('#their-id').text(call.peer);
-              call.on('close', step2);
-              $('#step1, #step2').hide();
-              $('#step3').show();
-            }
-
-          </script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-43056567-1', 'kiranml1.github.io');
-          ga('send', 'pageview');
-        </script>
-        <script>
-          (function(H){H.className=H.className.replace(/\bnojs\b/,'yepjs')})(document.documentElement);
-        </script>
-    </body>
 </html>

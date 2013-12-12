@@ -203,8 +203,17 @@ svg {
 .wrapper-style6 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  display: none;
 }
 
 .wrapper-style1 {
   padding-bottom: 4em !important;
+}
+
+@media (min-width:1025px) {
+  .wrapper-style6 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    display: block;
+  }
 }
