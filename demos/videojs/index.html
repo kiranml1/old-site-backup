@@ -7,6 +7,7 @@
 		width:100%;
 		height:100%;
 		position: absolute;
+		background: hsla(0, 0%, 80%, 1) !important;
 	}
 	#wrapperone {
 		position: absolute;
@@ -19,7 +20,7 @@
 	body {
 		margin: 0;
 		padding: 0;
-		background: #000;
+		background: hsla(0, 0%, 80%, 1) !important;
 		overflow: hidden;
 	}
 	circle {
@@ -39,11 +40,11 @@
 </head>
 <body>
     <div id='wrapper'>
-	   <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" poster="HTML-5-Logo-HD-Wallpaper.jpg" 
+	   <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" 
 	      data-setup="{}">
 	    <source src="dooriyan.mp4" type='video/mp4' />
-	    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
-	    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+	    <source src="dooriyan.webm" type='video/webm' />
+	    <source src="dooriyan.ogv" type='video/ogg' />
 	    <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
 	    <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
 	  </video>
@@ -52,13 +53,12 @@
     <script src="d3.v3.min.js"></script>
     <script>
     	videojs("example_video_1").ready(function(){
-			  var myPlayer = this;
-			  myPlayer.width(window.innerWidth);
-			  myPlayer.height(window.innerHeight);
-			});
+		  var myPlayer = this;
+		  myPlayer.width(window.innerWidth);
+		  myPlayer.height(window.innerHeight);
+		});
     </script>
     <script>
-
 		function move(p) {
 		  return [" M", p.x, p.y].join(" ");
 		}
@@ -142,7 +142,7 @@
 		    
 		back = d3.scale.linear().domain([0,3]).range(['hsla(69, 100%, 36%, 1)','hsla(37, 100%, 45%, 0.95)']);
 
-		var svg = d3.select("#wrapperone").append('svg').attr({'width':window.innerWidth,'height':(window.innerHeight-35)}).append('g').attr({'transform':'translate('+500+','+320+')'});
+		var svg = d3.select("#wrapperone").append('svg').attr({'width':window.innerWidth,'height':(window.innerHeight-35)}).append('g').attr({'transform':'scale('+0.5+','+0.5+') translate('+1750+','+920+')'}).style('text-shadow','2px -2px 2px rgba(150, 150, 150, 1)');
 
 
 
@@ -245,28 +245,6 @@
         });
 
 		var z = d3.scale.linear().domain([0,1400]).range(['#fff','#fff']),i = 0 ;
-
-		var svgp = d3.select('svg')
-		    .style("pointer-events", "all")
-		    .on("mousemove", particle);
-
-		function particle() {
-		  var m = d3.mouse(this);
-
-		  svgp.append("svg:circle")
-		      .attr("cx", m[0])
-		      .attr("cy", m[1])
-		      .attr("r", 1e-6)
-		      .style("stroke", z(++i))
-		      .style("stroke-opacity", 1)
-		    .transition()
-		      .duration(2000)
-		      .ease(Math.sqrt)
-		      .attr("r", 100)
-		      .style("stroke-opacity", 1e-6)
-		      .remove();
-		}
-
 
             j.transition()
             .duration(5044)
