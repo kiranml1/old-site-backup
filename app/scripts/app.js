@@ -39,6 +39,6 @@ var jkefex = angular.module('jkefex',[])
   });
  
   // Add the interceptor to the $httpProvider.
-  $httpProvider.interceptors.push('MyHttpInterceptor');
+  // $httpProvider.interceptors.push('MyHttpInterceptor');
   // console.log($httpProvider);
 });
