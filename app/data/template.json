@@ -74,6 +74,6 @@
     "cont_thirteen":[
     {"tempurl":"demos/webmvideo/","codeurl":"demos/webmvideo/","thumb":"images/portThumb/portfolio04.jpg","title":"HTML5 Video Recording","subtitle":"HTML5 Video Recording"},
     {"tempurl":"demos/audio-recorder/","codeurl":"demos/audio-recorder/","thumb":"images/portThumb/portfolio04.jpg","title":"HTML5 Audio Recording","subtitle":"HTML5 Audio Recording"},
-    {"tempurl":"demos/angulardemo/","codeurl":"demos/angulardemo/","thumb":"images/portThumb/portfolio04.jpg","title":"Angular Learning","subtitle":"Angular Learning"}
+    {"tempurl":"demos/angularpres/","codeurl":"demos/angularpres/","thumb":"images/portThumb/portfolio04.jpg","title":"Angular Learning","subtitle":"Angular Learning"}
     ]
 }
