@@ -260,6 +260,7 @@ module.exports = function (grunt) {
             'flash/**/*',
             'demos/**/*',
             'ytv/**/*',
+            'projects/**/*',
             '*.swf'
           ]
         }, {
