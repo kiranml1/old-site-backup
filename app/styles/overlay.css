@@ -183,7 +183,7 @@ a#fork:active {
 	display: none;
 }
 
-svg {
+svg#hex {
 	background: #61b8db;
 	background-image: -moz-linear-gradient(top, rgba(97,184,219,0), rgba(48,141,196,1));
 	background-image: -webkit-linear-gradient(top, rgba(97,184,219,0), rgba(48,141,196,1));
@@ -227,10 +227,31 @@ svg {
 	padding-bottom: 4em !important;
 }
 
+#lazy {
+	position: absolute;
+	z-index: 3000;
+	right: 0px;
+	top: 100px;
+	display: none;
+	opacity: 0.4;
+}
+
+#lazy svg{
+	padding: 520px 0px 0px 1px;
+}
+
+body{
+	overflow-x:hidden;
+}
+
 @media (min-width:1025px) { 
 	.wrapper-style6 {
 		padding-top:0 !important;
 		padding-bottom:0 !important;
 		display: block;
 	}
+	#lazy { 
+		display: block;
+	}
 }
+
