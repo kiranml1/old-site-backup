@@ -528,7 +528,7 @@ try
 			            }
 			        ],
 			        "dimensions": {
-			            "width": 420,
+			            "width": 350,
 			            "height": 500
 			        }
 			    }
@@ -539,7 +539,7 @@ try
 				 {
 				    "svgData": pathObj,
 				    "strokeWidth": 3,
-				    "strokeColor": "#ccc"
+				    "strokeColor": "#000"
 				 }).lazylinepainter('paint');
 				$('#lazy').css('overflow','hidden');
 			});

@@ -17,32 +17,6 @@ module.exports = function (grunt) {
       app: require('./bower.json').appPath || 'app',
       dist: 'build'
     },
-    'gh-pages': {
-      // options: {
-      //   base: 'build',
-      //   repo: 'git@github.com:kiranml1/jkefexjs.git'
-      // },
-      // src: '**/*'
-      options: {
-        // Options for all targets go here.
-      },
-      'gh-pages': {
-        options: {
-          base: 'build',
-          branch: 'master',
-          repo: 'git@github.com:kiranml1/kiranml1.github.io.git'
-        },
-        src: '**/*'
-      },
-      'demos': {
-        options: {
-          base: 'app/demos',
-          branch: 'experiments',
-          repo: 'git@github.com:kiranml1/kiranml1.github.io.git'
-        },
-        src: '**/*'
-      }
-    },
     watch: {
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
@@ -303,7 +277,7 @@ module.exports = function (grunt) {
       },
       e2e: {
         configFile: 'karma-e2e.conf.js',
-        singleRun: true
+        //singleRun: true
       }
     },
     cdnify: {

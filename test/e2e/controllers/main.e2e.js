@@ -8,7 +8,7 @@ describe('Controller: MainCtrl', function () {
 
 
   it('Sample Test', function() {
-    expect(browser().location().hash()).toBe("");
+    expect(element('nav ul li').count()).toEqual(0);
   });
   
 });
