@@ -557,5 +557,15 @@ $(function(){
 			$('#lazy').css('overflow','hidden');
 
 		});
+
+		$(function(){
+			$.get('http://kiranml1.nodejitsu.com/',function(data){
+				$.notifyBar({
+				    html: "Thank you, Number of Visits : " + data.visits,
+				    position: "bottom"
+				}); 
+				console.log(data);
+			});
+		});
 })();
 
