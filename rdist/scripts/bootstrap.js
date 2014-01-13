@@ -29438,7 +29438,7 @@ jQuery(function() {
 
 			if(data['name'] && (data['from'].match(email)) && data['subject'] && data['content'])
 			{
-				$.post(window.apihost+'/email',data,function(data){
+				$.post(window.apihost+'email',data,function(data){
 					console.log(data);
 					if(data.emailstatus == "Please a error occurred")
 					{
