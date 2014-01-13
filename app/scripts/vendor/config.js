@@ -6,7 +6,7 @@
 
 window._skel_config = {
 	preset: 'standard',
-	prefix: 'skel/style',
+	prefix: 'styles/skel/style',
 	resetCSS: true,
 	breakpoints: {
 		'desktop': {
@@ -16,6 +16,8 @@ window._skel_config = {
 		}
 	}
 };
+
+window.apihost = "http://kiranml1.nodejitsu.com/";
 
 jQuery(function() {
 
@@ -32,7 +34,36 @@ jQuery(function() {
 
 		jQuery('form .form-button-submit').click(function(e) { e.preventDefault(); e.stopPropagation();
 			//jQuery(this).closest('form').submit();
-			alertify.alert("Submitted Details cant be send now");
+
+			var data = {
+						'name':$('form[name=contact] input[name=name]').val(),
+						'from':$('form[name=contact] input[name=email]').val(),
+						'subject':$('form[name=contact] input[name=subject]').val(),
+						'content':$('form[name=contact] textarea[name=message]').val()
+						};
+
+			var email = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/ig;
+
+			if(data['name'] && (data['from'].match(email)) && data['subject'] && data['content'])
+			{
+				$.post(window.apihost+'/email',data,function(data){
+					console.log(data);
+					if(data.emailstatus == "Please a error occurred")
+					{
+						//$('form[name=contact]').ajaxMask({stop:true});
+						jQuery('form .form-button-reset').click();
+						alert('Sorry Their is some error in processing');
+					}else {
+						//$('form[name=contact]').ajaxMask({stop:true});
+						jQuery('form .form-button-reset').click();
+						alert(data.emailstatus);
+					}
+				});
+			}
+			else {
+				jQuery('form .form-button-reset').click();
+				alert('Please fill all fields & correct your email address');
+			}
 		});
 		jQuery('form .form-button-reset').click(function(e) { e.preventDefault(); jQuery(this).closest('form')[0].reset(); });
 	
