@@ -17,6 +17,6 @@ jkefex.controller('mainctrl',['$scope','$http','$window','$timeout',function($sc
 	$scope.profilepic = 'images/me.jpg';
 	$scope.task = "Working at Innominds - Hyderabad Since "+ dhm((new Date("July 01, 2013 10:00:00"))-(new Date())) +" Years";
 	$scope.email = "kirankumar.amruthaluri@gmail.com";
-	$scope.experience = dhm((new Date("October 15, 2012 10:00:00"))-(new Date()));
+	$scope.experience = dhm((new Date("Febraury 1, 2013 10:00:00"))-(new Date()));
 	$scope.fetch();
 }]);
